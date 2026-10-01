@@ -126,10 +126,11 @@ add_custom_command(TARGET proot-carrier POST_BUILD
 add_library(prootloader-carrier SHARED executable_carrier.c)
 set_target_properties(prootloader-carrier PROPERTIES OUTPUT_NAME prootloader)
 add_dependencies(prootloader-carrier prootloader)
+set_property(TARGET prootloader-carrier APPEND PROPERTY LINK_DEPENDS "$<TARGET_FILE:prootloader>")
 add_custom_command(TARGET prootloader-carrier POST_BUILD
     COMMAND "${CMAKE_COMMAND}" -E copy "$<TARGET_FILE:prootloader>" "$<TARGET_FILE:prootloader-carrier>"
 )
 
-foreach(target pocketspawn talloc android-shmem proot proot-carrier prootloader-carrier)
+foreach(target pocketspawn talloc android-shmem proot prootloader proot-carrier prootloader-carrier)
     target_link_options(${target} PRIVATE "-Wl,-z,max-page-size=16384")
 endforeach()

@@ -47,7 +47,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jarves.mh.ui.theme.PocketOrange
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -121,7 +120,7 @@ private fun BulletBlock(item: MarkdownBlock.BulletItem, color: Color) {
             modifier = Modifier
                 .padding(top = 8.dp, end = 8.dp)
                 .size(5.dp)
-                .background(PocketOrange, CircleShape),
+                .background(MaterialTheme.colorScheme.primary, CircleShape),
         )
         Text(
             text = formatInlineMarkdown(item.text),
@@ -140,7 +139,7 @@ private fun NumberedBlock(item: MarkdownBlock.NumberedItem, color: Color) {
     ) {
         Text(
             text = item.number,
-            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold, color = PocketOrange),
+            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary),
             modifier = Modifier.padding(end = 6.dp),
         )
         Text(
@@ -166,7 +165,7 @@ private fun QuoteBlock(quote: MarkdownBlock.BlockQuote) {
             modifier = Modifier
                 .width(3.dp)
                 .height(24.dp)
-                .background(PocketOrange, RoundedCornerShape(2.dp)),
+                .background(MaterialTheme.colorScheme.primary, RoundedCornerShape(2.dp)),
         )
         Spacer(Modifier.width(10.dp))
         Text(
@@ -218,7 +217,7 @@ private fun CodeSnippetBlock(block: MarkdownBlock.CodeBlock, onRunCode: ((String
                             Icon(
                                 Icons.Default.PlayArrow,
                                 contentDescription = "Run in project terminal",
-                                tint = PocketOrange,
+                                tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(18.dp),
                             )
                         }
@@ -237,7 +236,7 @@ private fun CodeSnippetBlock(block: MarkdownBlock.CodeBlock, onRunCode: ((String
                         Icon(
                             imageVector = if (copied) Icons.Default.Check else Icons.Default.ContentCopy,
                             contentDescription = "Copy code",
-                            tint = if (copied) PocketOrange else Color(0xFF9AA0A6),
+                            tint = if (copied) MaterialTheme.colorScheme.primary else Color(0xFF9AA0A6),
                             modifier = Modifier.size(16.dp),
                         )
                     }
@@ -264,7 +263,7 @@ private fun CodeSnippetBlock(block: MarkdownBlock.CodeBlock, onRunCode: ((String
 @Composable
 private fun formatInlineMarkdown(text: String): AnnotatedString {
     val codeBg = MaterialTheme.colorScheme.surfaceVariant
-    val codeColor = PocketOrange
+    val codeColor = MaterialTheme.colorScheme.primary
     val primaryColor = MaterialTheme.colorScheme.primary
 
     return remember(text, codeBg, codeColor, primaryColor) {

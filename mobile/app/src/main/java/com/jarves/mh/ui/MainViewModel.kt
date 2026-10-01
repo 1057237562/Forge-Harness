@@ -151,6 +151,7 @@ data class AppUiState(
     val provider: ProviderProfile = ProviderProfile(ProviderKind.ANTHROPIC),
     val activeApiKeyName: String? = null,
     val themeMode: com.jarves.mh.ui.theme.AppThemeMode = com.jarves.mh.ui.theme.AppThemeMode.DARK,
+    val themeStyle: com.jarves.mh.ui.theme.AppThemeStyle = com.jarves.mh.ui.theme.AppThemeStyle.FORGE,
     val apiPingStatus: ApiPingStatus = ApiPingStatus.IDLE,
     val apiPingMessage: String? = null,
     val projects: List<Project> = emptyList(),
@@ -327,6 +328,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             antigravityEffort = preferences.antigravityEffort,
             themeMode = runCatching { com.jarves.mh.ui.theme.AppThemeMode.valueOf(preferences.themeMode.uppercase()) }
                 .getOrDefault(com.jarves.mh.ui.theme.AppThemeMode.DARK),
+            themeStyle = runCatching { com.jarves.mh.ui.theme.AppThemeStyle.valueOf(preferences.themeStyle.uppercase()) }
+                .getOrDefault(com.jarves.mh.ui.theme.AppThemeStyle.FORGE),
             projects = preferences.loadProjects(),
             githubAuthStatus = GitHubAuthStatus.DISCONNECTED,
             githubLogin = preferences.githubLogin.takeIf(String::isNotBlank),
@@ -337,6 +340,21 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     )
 
     init {
+        viewModelScope.launch(Dispatchers.IO) {
+            val previous = com.jarves.mh.runtime.AndroidInstallResults.lastResult(application)
+            if (previous != null) _state.update { current ->
+                if (current.androidArtifact != null || current.androidBuildRunning) current
+                else current.copy(toastMessage = "${previous.packageName}: ${previous.message}")
+            }
+        }
+        viewModelScope.launch {
+            com.jarves.mh.runtime.AndroidInstallResults.updates.collect { result ->
+                if (result != null && result.buildId != null) _state.update { current ->
+                    if (current.androidArtifact?.buildId != result.buildId) current
+                    else current.copy(androidBuildMessage = "Build succeeded. ${result.message}", toastMessage = result.message)
+                }
+            }
+        }
         // GitHub's official CLI owns its OAuth credential. Remove credentials from
         // the retired custom OAuth implementation and discover the real CLI status.
         vault.remove(LEGACY_GITHUB_TOKEN_KEY)
@@ -898,12 +916,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     ?: error("Cannot read generated APK package information")
                 val artifact = AndroidBuildArtifact(apk.path, result.getString("sha256"), result.getString("buildId"),
                     info.packageName, info.versionName.orEmpty(), apk.length(), workspace.path, result.getString("sourceSnapshotId"))
-                _state.update { it.copy(androidArtifact = artifact) }
-                AndroidAppInstaller.install(getApplication(), apk)
+                _state.update { it.copy(androidArtifact = artifact, androidBuildMessage = "Build succeeded. Opening Android installer…") }
+                AndroidArtifactStore(getApplication()).save(project.id, artifact)
+                AndroidAppInstaller.install(getApplication(), apk, artifact.buildId)
             }.onSuccess {
-                _state.update { it.copy(androidBuildRunning = false, androidBuildMessage = "APK sent to Android installer", toastMessage = "APK built. Complete Android's install prompt.") }
+                _state.update { it.copy(androidBuildRunning = false) }
             }.onFailure { error ->
-                _state.update { it.copy(androidBuildRunning = false, androidBuildMessage = error.message ?: "Native build failed", toastMessage = error.message ?: "Could not build APK") }
+                _state.update { it.copy(androidBuildRunning = false,
+                    androidBuildMessage = if (it.androidArtifact != null) "Build succeeded. Installation could not start: ${error.message}" else error.message ?: "Native build failed",
+                    toastMessage = error.message ?: "Could not build or install APK") }
             }
         }
     }
@@ -964,9 +985,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 val snapshot = dev.forge.build.InputSnapshot.digest(dev.forge.build.InputSnapshot.hashInputs(dev.forge.build.ProjectInspector().inspect(root)))
                 check(snapshot == artifact.sourceSnapshotId) { "Project changed since this APK was built. Build again before installing." }
                 val apk = dev.forge.build.VerifiedBuildArtifact.resolve(File(getApplication<Application>().filesDir, "native-builds"), artifact.buildId, artifact.path, artifact.sha256)
-                AndroidAppInstaller.install(getApplication(), apk)
-            }.onSuccess {
-                _state.update { it.copy(androidBuildMessage = "APK sent to Android installer", toastMessage = "Complete Android's install prompt") }
+                _state.update { it.copy(androidBuildMessage = "Build succeeded. Opening Android installer…") }
+                AndroidAppInstaller.install(getApplication(), apk, artifact.buildId)
             }.onFailure { error -> _state.update { it.copy(toastMessage = error.message ?: "Could not install APK") } }
         }
     }
@@ -998,6 +1018,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun setThemeMode(mode: com.jarves.mh.ui.theme.AppThemeMode) {
         preferences.themeMode = mode.name.lowercase()
         _state.update { it.copy(themeMode = mode) }
+    }
+
+    fun setThemeStyle(style: com.jarves.mh.ui.theme.AppThemeStyle) {
+        preferences.themeStyle = style.name.lowercase()
+        _state.update { it.copy(themeStyle = style) }
     }
 
     fun getSavedApiKey(kind: ProviderKind): String = vault.get(kind.name).orEmpty()
@@ -1318,7 +1343,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val message = if (isOffline) {
             "Connect to Wi-Fi or mobile data, then try again. Internet is required to finish the first-time setup."
         } else {
-            error.message?.take(300) ?: "Something went wrong while preparing Mobile Harness. Please try again."
+            error.message?.take(300) ?: "Something went wrong while preparing Forge Harness. Please try again."
         }
         _state.update {
             it.copy(
@@ -1891,7 +1916,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
             return
         }
-        if (current.isRunning || current.projectTerminalRunning) {
+        if (current.isRunning || current.projectTerminalRunning || current.androidBuildRunning) {
             val chats = preferences.loadProjectChats(project.id).ifEmpty {
                 listOf(ProjectChat(title = "Main chat"))
             }
@@ -1918,6 +1943,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _state.update {
             it.copy(
                 activeProject = project,
+                androidArtifact = null,
+                androidBuildProjectId = null,
+                androidBuildMessage = null,
                 workspaceVisible = true,
                 readOnlyProject = null,
                 readOnlyProjectChats = emptyList(),
@@ -1948,6 +1976,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             )
         }
         refreshProjectFiles()
+        viewModelScope.launch(Dispatchers.IO) {
+            val artifact = AndroidArtifactStore(getApplication()).load(project.id, projectWorkspaceRoot(project))
+            val installation = com.jarves.mh.runtime.AndroidInstallResults.lastResult(getApplication())
+            if (artifact != null) _state.update { currentState ->
+                if (currentState.activeProject?.id != project.id || currentState.androidBuildRunning || currentState.androidArtifact != null) currentState
+                else currentState.copy(androidArtifact = artifact, androidBuildProjectId = project.id,
+                    androidBuildMessage = if (installation?.buildId == artifact.buildId) "Build succeeded. ${installation.message}"
+                        else "Previous build restored. Source changes are checked before installation.")
+            }
+        }
         viewModelScope.launch {
             val pending = activeRuntime().loadPendingChanges(project.id)
             if (_state.value.activeProject?.id == project.id) _state.update { it.copy(changes = pending) }

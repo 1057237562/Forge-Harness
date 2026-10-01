@@ -1,0 +1,92 @@
+[
+  {
+    "name": "libandroid-shmem.so",
+    "loadAlignments": [
+      "0x4000",
+      "0x4000",
+      "0x4000"
+    ],
+    "aligned16KB": true,
+    "sha256": "d457e4019e9979b19169900f9bd77a61e2d4a229805dc1edbcf988f1b33e37d5"
+  },
+  {
+    "name": "libandroidx.graphics.path.so",
+    "loadAlignments": [
+      "0x4000",
+      "0x4000",
+      "0x4000"
+    ],
+    "aligned16KB": true,
+    "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6"
+  },
+  {
+    "name": "libforge_aapt2.so",
+    "loadAlignments": [
+      "0x1000",
+      "0x1000",
+      "0x1000",
+      "0x1000"
+    ],
+    "aligned16KB": false,
+    "sha256": "be2cea61814678f7a9e61bf818a6666e6097a7d67d6c19498a4d7aa690bc4151"
+  },
+  {
+    "name": "libforge_zipalign.so",
+    "loadAlignments": [
+      "0x1000",
+      "0x1000",
+      "0x1000",
+      "0x1000"
+    ],
+    "aligned16KB": false,
+    "sha256": "cb9486230c1589d065eacfd6c294a628eb1f94c941be0a48862562d75a406d57"
+  },
+  {
+    "name": "libpocketspawn.so",
+    "loadAlignments": [
+      "0x4000",
+      "0x4000"
+    ],
+    "aligned16KB": true,
+    "sha256": "ba20e597419eb227b8701048e0599f6914ac6374c9d6fdfdf89f142fa30fcffe"
+  },
+  {
+    "name": "libproot.so",
+    "loadAlignments": [
+      "0x4000",
+      "0x4000",
+      "0x4000"
+    ],
+    "aligned16KB": true,
+    "sha256": "6f2069a3db17656e47b717111422bfae98b0f36322a7e4d0eb972693e53bcabc"
+  },
+  {
+    "name": "libprootloader.so",
+    "loadAlignments": [
+      "0x1000",
+      "0x1000",
+      "0x1000"
+    ],
+    "aligned16KB": false,
+    "sha256": "dbea1d513b7c7da43697019f3ea279a138edf4ff8ad04910a6ee8054d674d464"
+  },
+  {
+    "name": "libtalloc.so",
+    "loadAlignments": [
+      "0x4000",
+      "0x4000",
+      "0x4000"
+    ],
+    "aligned16KB": true,
+    "sha256": "cc4a56d229776f97ca1a664c3d64853bbfc5557922c81d4e951d31b88a66aa79"
+  },
+  {
+    "name": "libzstd-jni-1.5.6-9.so",
+    "loadAlignments": [
+      "0x10000",
+      "0x10000"
+    ],
+    "aligned16KB": true,
+    "sha256": "084cb57c6c82da25827139370e6e49d9ccae7c3392376f46621a489372186c66"
+  }
+]

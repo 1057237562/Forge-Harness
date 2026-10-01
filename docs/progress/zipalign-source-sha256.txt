@@ -1,0 +1,5 @@
+
+Algorithm : SHA256
+Hash      : 6542329DACBD8108E6F5FEA888432AE056B0123B51D8192C1668EDA78DF7AF69
+Path      : E:\Workspace\AI\Forge\.cache\sdk-tools-build\zipalign
+

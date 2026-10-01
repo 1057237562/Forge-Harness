@@ -1,0 +1,221 @@
+[1/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o
+FAILED: CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o 
+E:\Android_SDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android28 --sysroot=E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -D_FILE_OFFSET_BITS=64 -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/core/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/fmtlib/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -fPIC -std=gnu++20 -MD -MT CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o -MF CMakeFiles\libbase.dir\E_\Workspace\AI\Forge\research\android-sdk-tools\src\libbase\mapped_file.cpp.o.d -o CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o -c E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp:17:
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/mapped_file.h:25:
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:156:9: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  156 |     if (android_fdsan_exchange_owner_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:157:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  157 |       uint64_t old_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:159:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  159 |       uint64_t new_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:161:7: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  161 |       android_fdsan_exchange_owner_tag(fd, old_tag, new_tag);
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:165:9: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  165 |     if (android_fdsan_close_with_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:166:22: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+
+  166 |       uint64_t tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+
+      |                      ^
+
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:168:7: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+
+  168 |       android_fdsan_close_with_tag(fd, tag);
+
+      |       ^
+
+7 errors generated.
+
+[2/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/parsebool.cpp.o
+[3/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o
+FAILED: CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o 
+E:\Android_SDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android28 --sysroot=E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -D_FILE_OFFSET_BITS=64 -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/core/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/fmtlib/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -fPIC -std=gnu++20 -MD -MT CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o -MF CMakeFiles\libbase.dir\E_\Workspace\AI\Forge\research\android-sdk-tools\src\libbase\abi_compatibility.cpp.o.d -o CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o -c E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp:19:
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/cmsg.h:27:
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:156:9: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  156 |     if (android_fdsan_exchange_owner_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:157:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  157 |       uint64_t old_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:159:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  159 |       uint64_t new_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:161:7: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  161 |       android_fdsan_exchange_owner_tag(fd, old_tag, new_tag);
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:165:9: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  165 |     if (android_fdsan_close_with_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:166:22: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  166 |       uint64_t tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:168:7: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  168 |       android_fdsan_close_with_tag(fd, tag);
+      |       ^
+
+7 errors generated.
+
+[4/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o
+FAILED: CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o 
+E:\Android_SDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android28 --sysroot=E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -D_FILE_OFFSET_BITS=64 -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/core/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/fmtlib/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -fPIC -std=gnu++20 -MD -MT CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o -MF CMakeFiles\libbase.dir\E_\Workspace\AI\Forge\research\android-sdk-tools\src\libbase\file.cpp.o.d -o CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o -c E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp:17:
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/file.h:26:
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:156:9: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  156 |     if (android_fdsan_exchange_owner_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:157:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  157 |       uint64_t old_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:159:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  159 |       uint64_t new_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:161:7: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  161 |       android_fdsan_exchange_owner_tag(fd, old_tag, new_tag);
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:165:9: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  165 |     if (android_fdsan_close_with_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:166:22: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+
+  166 |       uint64_t tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+
+      |                      ^
+
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:168:7: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+
+  168 |       android_fdsan_close_with_tag(fd, tag);
+
+      |       ^
+
+7 errors generated.
+
+[5/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o
+FAILED: CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o 
+E:\Android_SDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android28 --sysroot=E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -D_FILE_OFFSET_BITS=64 -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/core/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/fmtlib/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -fPIC -std=gnu++20 -MD -MT CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o -MF CMakeFiles\libbase.dir\E_\Workspace\AI\Forge\research\android-sdk-tools\src\libbase\cmsg.cpp.o.d -o CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o -c E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp:17:
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/cmsg.h:27:
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:156:9: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  156 |     if (android_fdsan_exchange_owner_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:157:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  157 |       uint64_t old_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:159:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  159 |       uint64_t new_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:161:7: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  161 |       android_fdsan_exchange_owner_tag(fd, old_tag, new_tag);
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:165:9: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  165 |     if (android_fdsan_close_with_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:166:22: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  166 |       uint64_t tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+
+      |                      ^
+
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:168:7: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+
+  168 |       android_fdsan_close_with_tag(fd, tag);
+
+      |       ^
+
+7 errors generated.
+
+[6/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/hex.cpp.o
+[7/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/chrono_utils.cpp.o
+[8/80] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o
+FAILED: CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o 
+E:\Android_SDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android28 --sysroot=E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -D_FILE_OFFSET_BITS=64 -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/core/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/fmtlib/include -IE:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -fPIC -std=gnu++20 -MD -MT CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o -MF CMakeFiles\libbase.dir\E_\Workspace\AI\Forge\research\android-sdk-tools\src\libbase\logging.cpp.o.d -o CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o -c E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:53:
+In file included from E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/file.h:26:
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:156:9: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  156 |     if (android_fdsan_exchange_owner_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:157:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  157 |       uint64_t old_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:159:26: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  159 |       uint64_t new_tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                          ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:161:7: error: use of undeclared identifier 'android_fdsan_exchange_owner_tag'
+  161 |       android_fdsan_exchange_owner_tag(fd, old_tag, new_tag);
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:165:9: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  165 |     if (android_fdsan_close_with_tag) {
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:166:22: error: use of undeclared identifier 'android_fdsan_create_owner_tag'
+  166 |       uint64_t tag = android_fdsan_create_owner_tag(ANDROID_FDSAN_OWNER_TYPE_UNIQUE_FD,
+      |                      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/include/android-base/unique_fd.h:168:7: error: use of undeclared identifier 'android_fdsan_close_with_tag'
+  168 |       android_fdsan_close_with_tag(fd, tag);
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:219:5: error: '__android_log_set_default_tag' is unavailable: introduced in Android 30
+  219 |     __android_log_set_default_tag(tag.c_str());
+      |     ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:384:6: note: '__android_log_set_default_tag' has been explicitly marked unavailable here
+  384 | void __android_log_set_default_tag(const char* tag) __INTRODUCED_IN(30);
+      |      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:242:7: warning: array designators are a C99 extension [-Wc99-designator]
+  242 |       [android::base::VERBOSE] = 7,              // KERN_DEBUG (there is no verbose kernel log
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:329:5: error: '__android_log_logd_logger' is unavailable: introduced in Android 30
+  329 |     __android_log_logd_logger(&log_message);
+      |     ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:270:6: note: '__android_log_logd_logger' has been explicitly marked unavailable here
+  270 | void __android_log_logd_logger(const struct __android_log_message* log_message) __INTRODUCED_IN(30);
+      |      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:409:5: error: '__android_log_set_logger' is unavailable: introduced in Android 30
+  409 |     __android_log_set_logger([](const struct __android_log_message* log_message) {
+      |     ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:260:6: note: '__android_log_set_logger' has been explicitly marked unavailable here
+  260 | void __android_log_set_logger(__android_logger_function logger) __INTRODUCED_IN(30);
+      |      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:425:5: error: '__android_log_set_aborter' is unavailable: introduced in Android 30
+  425 |     __android_log_set_aborter([](const char* abort_message) { Aborter()(abort_message); });
+      |     ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:292:6: note: '__android_log_set_aborter' has been explicitly marked unavailable here
+  292 | void __android_log_set_aborter(__android_aborter_function aborter) __INTRODUCED_IN(30);
+      |      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:513:7: error: '__android_log_call_aborter' is unavailable: introduced in Android 30
+  513 |       __android_log_call_aborter(msg.c_str());
+      |       ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:303:6: note: '__android_log_call_aborter' has been explicitly marked unavailable here
+  303 | void __android_log_call_aborter(const char* abort_message) __INTRODUCED_IN(30);
+      |      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:530:5: error: '__android_log_write_log_message' is unavailable: introduced in Android 30
+  530 |     __android_log_write_log_message(&log_message);
+      |     ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:248:6: note: '__android_log_write_log_message' has been explicitly marked unavailable here
+  248 | void __android_log_write_log_message(struct __android_log_message* log_message) __INTRODUCED_IN(30);
+      |      ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:547:34: error: '__android_log_get_minimum_priority' is unavailable: introduced in Android 30
+  547 |     return PriorityToLogSeverity(__android_log_get_minimum_priority());
+      |                                  ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:373:9: note: '__android_log_get_minimum_priority' has been explicitly marked unavailable here
+  373 | int32_t __android_log_get_minimum_priority(void) __INTRODUCED_IN(30);
+      |         ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:559:12: error: '__android_log_is_loggable' is unavailable: introduced in Android 30
+  559 |     return __android_log_is_loggable(priority, tag, ANDROID_LOG_INFO);
+      |            ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:333:5: note: '__android_log_is_loggable' has been explicitly marked unavailable here
+  333 | int __android_log_is_loggable(int prio, const char* tag, int default_prio) __INTRODUCED_IN(30);
+      |     ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:568:34: error: '__android_log_set_minimum_priority' is unavailable: introduced in Android 30
+  568 |     return PriorityToLogSeverity(__android_log_set_minimum_priority(priority));
+      |                                  ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/logging/liblog/include/android/log.h:364:9: note: '__android_log_set_minimum_priority' has been explicitly marked unavailable here
+  364 | int32_t __android_log_set_minimum_priority(int32_t priority) __INTRODUCED_IN(30);
+
+      |         ^
+
+1 warning and 16 errors generated.
+
+ninja: build stopped: subcommand failed.

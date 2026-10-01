@@ -1,0 +1,45 @@
+cmake_minimum_required(VERSION 3.22)
+project(forge_sdk_tools LANGUAGES C CXX)
+
+if(NOT ANDROID)
+    message(FATAL_ERROR "Build with the Android NDK toolchain")
+endif()
+if(NOT FORGE_SDK_SOURCE)
+    message(FATAL_ERROR "FORGE_SDK_SOURCE must name the pinned android-sdk-tools checkout")
+endif()
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
+set(SRC "${FORGE_SDK_SOURCE}/src")
+add_compile_definitions(_FILE_OFFSET_BITS=64)
+# libbase guards newer log APIs with __builtin_available; ask the NDK to
+# declare them as weak so those guards remain usable on API 28.
+add_compile_definitions(__ANDROID_UNAVAILABLE_SYMBOLS_ARE_WEAK__)
+# fdsan is unavailable before API 29; retain the upstream close() fallback.
+file(READ "${SRC}/libbase/include/android-base/unique_fd.h" UNIQUE_FD_HEADER)
+string(REPLACE "#if defined(__BIONIC__)" "#if defined(__BIONIC__) && __ANDROID_API__ >= 29" UNIQUE_FD_HEADER "${UNIQUE_FD_HEADER}")
+file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/compat/android-base")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/compat/android-base/unique_fd.h" "${UNIQUE_FD_HEADER}")
+include_directories(BEFORE "${CMAKE_CURRENT_BINARY_DIR}/compat")
+add_link_options("-Wl,-z,max-page-size=16384")
+add_subdirectory("${SRC}/fmtlib" fmtlib EXCLUDE_FROM_ALL)
+add_subdirectory("${SRC}/zopfli" zopfli EXCLUDE_FROM_ALL)
+include("${FORGE_SDK_SOURCE}/lib/libbase.cmake")
+add_library(liblog INTERFACE)
+target_link_libraries(liblog INTERFACE log)
+# zipalign uses the container primitives, not Android's Binder/looper runtime.
+add_library(libutils STATIC
+    "${SRC}/core/libutils/binder/VectorImpl.cpp"
+    "${SRC}/core/libutils/binder/SharedBuffer.cpp")
+include_directories(BEFORE "${SRC}/core/libutils/binder/include")
+target_include_directories(libutils PRIVATE "${SRC}/core/libutils/include" "${SRC}/logging/liblog/include")
+include("${FORGE_SDK_SOURCE}/lib/libziparchive.cmake")
+# The upstream ZIP destructor calls fdsan without an availability check.
+# Use its existing plain-close branch when targeting pre-29 devices.
+file(READ "${SRC}/libziparchive/zip_archive.cc" ZIP_ARCHIVE_SOURCE)
+string(REPLACE "#if defined(__BIONIC__)" "#if defined(__BIONIC__) && __ANDROID_API__ >= 29" ZIP_ARCHIVE_SOURCE "${ZIP_ARCHIVE_SOURCE}")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/compat/zip_archive.cc" "${ZIP_ARCHIVE_SOURCE}")
+get_target_property(ZIP_SOURCES libziparchive SOURCES)
+list(REMOVE_ITEM ZIP_SOURCES "${SRC}/libziparchive/zip_archive.cc")
+set_property(TARGET libziparchive PROPERTY SOURCES "${ZIP_SOURCES};${CMAKE_CURRENT_BINARY_DIR}/compat/zip_archive.cc")
+target_include_directories(libziparchive PRIVATE "${SRC}/libziparchive")
+include("${FORGE_SDK_SOURCE}/build-tools/zipalign.cmake")

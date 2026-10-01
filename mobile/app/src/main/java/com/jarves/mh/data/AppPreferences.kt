@@ -98,6 +98,11 @@ class AppPreferences(private val context: Context) {
         get() = preferences.getString("theme_mode", "dark") ?: "dark"
         set(value) { preferences.edit().putString("theme_mode", value).apply() }
 
+    /** Color style (name of [com.jarves.mh.ui.theme.AppThemeStyle]); lowercase, like [themeMode]. */
+    var themeStyle: String
+        get() = preferences.getString("theme_style", "forge") ?: "forge"
+        set(value) { preferences.edit().putString("theme_style", value).apply() }
+
     var legacySeededCredentialRemoved: Boolean
         get() = preferences.getBoolean("legacy_seeded_credential_removed", false)
         set(value) { preferences.edit().putBoolean("legacy_seeded_credential_removed", value).apply() }

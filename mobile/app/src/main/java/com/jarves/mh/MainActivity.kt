@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val vm: MainViewModel = viewModel()
             val state by vm.state.collectAsStateWithLifecycle()
-            PocketTheme(themeMode = state.themeMode) {
+            PocketTheme(themeMode = state.themeMode, themeStyle = state.themeStyle) {
                 PocketDevApp(vm)
             }
         }

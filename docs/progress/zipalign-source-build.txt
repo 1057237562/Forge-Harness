@@ -1,0 +1,58 @@
+-- Version: 10.2.0
+-- Build type: Release
+CMake Deprecation Warning at E:/Workspace/AI/Forge/research/android-sdk-tools/src/zopfli/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/Workspace/AI/Forge/.cache/sdk-tools-build
+[0/1] Re-running CMake...
+[1/23] Building CXX object CMakeFiles/libutils.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/core/libutils/binder/SharedBuffer.cpp.o
+[2/23] Linking CXX static library liblibutils.a
+[3/23] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o
+[4/23] Building CXX object CMakeFiles/libziparchive.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/zip_error.cpp.o
+[5/23] Building CXX object CMakeFiles/libziparchive.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/incfs_support/signal_handling.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/incfs_support/signal_handling.cpp:42:19: warning: ISO C++ requires field designators to be specified in declaration order; field 'sigaction::(anonymous union at E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/signal_types.h:76:20)' will be initialized after field 'sa_flags' [-Wreorder-init-list]
+   42 |       .sa_flags = SA_SIGINFO,
+      |       ~~~~~~~~~~~~^~~~~~~~~~
+E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/signal-defs.h:17:20: note: expanded from macro 'SA_SIGINFO'
+   17 | #define SA_SIGINFO 0x00000004
+      |                    ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/incfs_support/signal_handling.cpp:41:7: note: previous initialization for field 'sigaction::(anonymous union at E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/signal_types.h:76:20)' is here
+
+   41 |       .sa_sigaction = &handler,
+
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[6/23] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o
+[7/23] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipAlignMain.cpp.o
+[8/23] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o
+[9/23] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/test_utils.cpp.o
+[10/23] Building CXX object CMakeFiles/libziparchive.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/zip_archive_stream_entry.cc.o
+[11/23] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o
+[12/23] Building C object zopfli/CMakeFiles/libzopfli.dir/src/zopfli/zopfli_lib.c.o
+[13/23] Building C object zopfli/CMakeFiles/libzopfli.dir/src/zopfli/zlib_container.c.o
+[14/23] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:242:7: warning: array designators are a C99 extension [-Wc99-designator]
+  242 |       [android::base::VERBOSE] = 7,              // KERN_DEBUG (there is no verbose kernel log
+
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[15/23] Linking C static library zopfli\libzopfli.a
+[16/23] Linking CXX static library liblibbase.a
+[17/23] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipAlign.cpp.o
+[18/23] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipEntry.cpp.o
+[19/23] Building CXX object CMakeFiles/libziparchive.dir/compat/zip_archive.cc.o
+[20/23] Building CXX object CMakeFiles/libziparchive.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/zip_writer.cc.o
+[21/23] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipFile.cpp.o
+[22/23] Linking CXX static library liblibziparchive.a
+[23/23] Linking CXX executable zipalign

@@ -1,0 +1,61 @@
+
+Elf file type is DYN (Shared object file)
+Entry point 0x19bc0
+There are 10 program headers, starting at offset 64
+
+Program Headers:
+  Type           Offset   VirtAddr           PhysAddr           FileSiz  MemSiz   Flg Align
+  PHDR           0x000040 0x0000000000000040 0x0000000000000040 0x000230 0x000230 R   0x8
+  INTERP         0x000270 0x0000000000000270 0x0000000000000270 0x000015 0x000015 R   0x1
+      [Requesting program interpreter: /system/bin/linker64]
+  LOAD           0x000000 0x0000000000000000 0x0000000000000000 0x0479c0 0x0479c0 R E 0x4000
+  LOAD           0x0479c0 0x000000000004b9c0 0x000000000004b9c0 0x0033d0 0x003640 RW  0x4000
+  LOAD           0x04ad90 0x0000000000052d90 0x0000000000052d90 0x000090 0x000bf0 RW  0x4000
+  DYNAMIC        0x04a888 0x000000000004e888 0x000000000004e888 0x0001b0 0x0001b0 RW  0x8
+  GNU_RELRO      0x0479c0 0x000000000004b9c0 0x000000000004b9c0 0x0033d0 0x003640 R   0x1
+  GNU_EH_FRAME   0x0116a4 0x00000000000116a4 0x00000000000116a4 0x001214 0x001214 R   0x4
+  GNU_STACK      0x000000 0x0000000000000000 0x0000000000000000 0x000000 0x000000 RW  0x0
+  NOTE           0x000288 0x0000000000000288 0x0000000000000288 0x0000bc 0x0000bc R   0x4
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .note.android.ident .note.gnu.build-id .dynsym .gnu.version .gnu.version_r .gnu.hash .dynstr .rela.dyn .rela.plt .gcc_except_table .rodata .eh_frame_hdr .eh_frame .text .plt 
+   03     .data.rel.ro .init_array .dynamic .got .got.plt .relro_padding 
+   04     .data .bss 
+   05     .dynamic 
+   06     .data.rel.ro .init_array .dynamic .got .got.plt .relro_padding 
+   07     .eh_frame_hdr 
+   08     
+   09     .note.android.ident .note.gnu.build-id 
+   None   .comment .debug_loc .debug_abbrev .debug_info .debug_ranges .debug_str .debug_line .symtab .shstrtab .strtab 
+Dynamic section at offset 0x4a888 contains 27 entries:
+  Tag                Type           Name/Value
+  0x0000000000000001 (NEEDED)       Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)       Shared library: [libz.so]
+  0x0000000000000001 (NEEDED)       Shared library: [libm.so]
+  0x0000000000000001 (NEEDED)       Shared library: [liblog.so]
+  0x0000000000000001 (NEEDED)       Shared library: [libc.so]
+  0x000000000000001e (FLAGS)        BIND_NOW 
+  0x000000006ffffffb (FLAGS_1)      NOW PIE 
+  0x0000000000000015 (DEBUG)        0x0
+  0x0000000000000007 (RELA)         0x10e0
+  0x0000000000000008 (RELASZ)       32568 (bytes)
+  0x0000000000000009 (RELAENT)      24 (bytes)
+  0x000000006ffffff9 (RELACOUNT)    1353
+  0x0000000000000017 (JMPREL)       0x9018
+  0x0000000000000002 (PLTRELSZ)     2040 (bytes)
+  0x0000000000000003 (PLTGOT)       0x4ead0
+  0x0000000000000014 (PLTREL)       RELA
+  0x0000000000000006 (SYMTAB)       0x348
+  0x000000000000000b (SYMENT)       24 (bytes)
+  0x0000000000000005 (STRTAB)       0xcfc
+  0x000000000000000a (STRSZ)        994 (bytes)
+  0x000000006ffffef5 (GNU_HASH)     0xce0
+  0x0000000000000019 (INIT_ARRAY)   0x4e870
+  0x000000000000001b (INIT_ARRAYSZ) 24 (bytes)
+  0x000000006ffffff0 (VERSYM)       0xbb8
+  0x000000006ffffffe (VERNEED)      0xc6c
+  0x000000006fffffff (VERNEEDNUM)   3
+  0x0000000000000000 (NULL)         0x0

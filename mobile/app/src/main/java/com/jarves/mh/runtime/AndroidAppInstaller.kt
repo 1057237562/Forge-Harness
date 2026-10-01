@@ -13,7 +13,7 @@ import java.io.File
 
 /** Installs a locally-built APK through Android's package manager, without ADB. */
 object AndroidAppInstaller {
-    fun install(context: Context, apk: File) {
+    fun install(context: Context, apk: File, buildId: String? = null) {
         require(apk.isFile && apk.extension.equals("apk", ignoreCase = true) && apk.length() > 0L) {
             "A valid APK was not produced: ${apk.name}"
         }
@@ -43,6 +43,9 @@ object AndroidAppInstaller {
             }
         val sessionId = installer.createSession(params)
         try {
+            val packageName = context.packageManager.getPackageArchiveInfo(apk.path, 0)?.packageName
+                ?: error("Cannot read APK package information")
+            AndroidInstallResults.register(context, sessionId, buildId, packageName)
             installer.openSession(sessionId).use { session ->
                 apk.inputStream().use { input ->
                     session.openWrite(apk.name, 0, apk.length()).use { output ->
@@ -68,6 +71,7 @@ object AndroidAppInstaller {
             }
         } catch (error: Throwable) {
             runCatching { installer.abandonSession(sessionId) }
+            runCatching { AndroidInstallResults.record(context, sessionId, PackageInstaller.STATUS_FAILURE, error.message ?: "Installation could not start") }
             throw error
         }
     }
