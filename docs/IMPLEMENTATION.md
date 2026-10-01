@@ -63,6 +63,24 @@
 
 ## 当前环境与下一步
 
+源码工具增量构建修复：兼容头/源及生成 CMake 配方仅在内容变化时写入；protoc 输出先进入 staging，
+再用 COPYONLY 内容比较更新实际编译输入。连续两次完整 build-tools.ps1 执行均显示
+`ninja: no work to do`，两个工具 SHA-256 与修改前相同，避免每次配置重编译约百个对象文件。
+证据 source-tools-incremental-first.txt、source-tools-incremental-second.txt。
+这证明当前环境未变输入的重建稳定性，尚不能替代干净目录/机器的字节级复现验证。
+
+第三方通知收集扩展：新增 collect-notices.ps1，扫描固定仓库受跟踪的嵌套 LICENSE/NOTICE/COPYING/
+COPYRIGHT 文件，已收集 151 份，逐份记录仓库、提交、路径与摘要。主应用校验清单摘要并打包
+NOTICE.txt/notice-inventory.json；源码工具及主 APK 构建通过，检查 APK 内两份文件与输出一致。
+清单证据 native-notice-inventory.json。它包含部分未链接源码的通知，不是最终链接许可结论；
+libziparchive 没有独立通知文件，源码头部审查及最终发行义务检查仍未完成。
+
+工具来源清单已接入：源码构建输出 provenance.json，记录 19 个源码提交、适配文件摘要、
+NDK/CMake/API/ABI、protoc 归档、NOTICE 和最终工具摘要。主应用打包前核对工具/NOTICE 摘要并
+嵌入清单。完整源码构建及 APK 构建通过，读取 APK 验证其 native 文件与内嵌清单匹配；
+复制候选目录并修改 aapt2 后打包明确失败，证据 provenance-tamper-rejection.txt。
+完整来源记录见 source-tools-provenance.json。该清单提供可追溯性，不是独立签名认证或许可完整性证明。
+
 探针来源更正与验证：审查 native-probe/build.gradle.kts 确认其始终复用主应用 generated/forge-native，
 此前“独立探针仍保留旧工具路径”的描述不正确；默认切换后探针也使用源码工具。已删除准备脚本
 中不再使用的 34.0.4 归档下载/解压，BUILDING.md 同步更正。完整执行 probe build.ps1（含源码准备）

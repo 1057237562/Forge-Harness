@@ -1,0 +1,1067 @@
+{
+  "schemaVersion": 1,
+  "scope": "tracked standalone notices, including nested directories",
+  "sourceHeaderReviewComplete": false,
+  "repositoriesWithoutStandaloneNotice": [
+    "libziparchive"
+  ],
+  "files": [
+    {
+      "repository": "recipes",
+      "url": "https://github.com/lzhiyong/android-sdk-tools",
+      "commit": "50713285d4de73dd36735928217523817ad16988",
+      "path": "LICENSE.txt",
+      "sha256": "bf25ec0af35c90dc1a6f8eecc13af3abdab65377a4a3d4406f5e33dfe16afe88"
+    },
+    {
+      "repository": "libbase",
+      "url": "https://android.googlesource.com/platform/system/libbase",
+      "commit": "328768fabb054387ad7f64c984d4afcea70d25c9",
+      "path": "NOTICE",
+      "sha256": "3c28ef7c9590b184f6b5156ad3ef42dddd2ca3062bb2b45d31c8dbeab6c8df71"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "fastboot/LICENSE",
+      "sha256": "728c1c9604b45e48af9ff9bf27221a341c8e2d4d69c2e7c2ef2ce0333cfb2395"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "fs_mgr/NOTICE",
+      "sha256": "adfa1005bc765a62ce95211406bfe001a21cb5101eb91f0f5d770bd9e003dff4"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "init/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "libcutils/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "libgrallocusage/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "libkeyutils/NOTICE",
+      "sha256": "1784f04bf6411859f19f8fa187e74555807b76b61e123b5eed64bebcc4feb055"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "libnetutils/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "libsync/NOTICE",
+      "sha256": "20c5e84245f134c0a4a92cff8e085eff0bcddc0fadc22d2dd1003e092d95b76f"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "libutils/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "run-as/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "path": "toolbox/NOTICE",
+      "sha256": "880eb1310ce218aedd378a88f656d742045cb896b47180daf6dbdafeb06296b7"
+    },
+    {
+      "repository": "logging",
+      "url": "https://android.googlesource.com/platform/system/logging",
+      "commit": "153a153f1fccc0cc6b96766d1557518303aebd5e",
+      "path": "liblog/NOTICE",
+      "sha256": "791b147482d49a892e6d8423bca45958882a9a01bec390298f9e2afd9e978562"
+    },
+    {
+      "repository": "logging",
+      "url": "https://android.googlesource.com/platform/system/logging",
+      "commit": "153a153f1fccc0cc6b96766d1557518303aebd5e",
+      "path": "logcat/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "logging",
+      "url": "https://android.googlesource.com/platform/system/logging",
+      "commit": "153a153f1fccc0cc6b96766d1557518303aebd5e",
+      "path": "logwrapper/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "fmtlib",
+      "url": "https://android.googlesource.com/platform/external/fmtlib",
+      "commit": "c230d4f0a5a7058a6f0468cd384200ba2ed2d8c6",
+      "path": "LICENSE",
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf"
+    },
+    {
+      "repository": "fmtlib",
+      "url": "https://android.googlesource.com/platform/external/fmtlib",
+      "commit": "c230d4f0a5a7058a6f0468cd384200ba2ed2d8c6",
+      "path": "NOTICE",
+      "sha256": "3151d306661dc1628402efed126bc7415e283b2d4e404f4a0c8bcf4f60e847ad"
+    },
+    {
+      "repository": "zopfli",
+      "url": "https://android.googlesource.com/platform/external/zopfli",
+      "commit": "502a8f40590050c27a0a6259a0c08ed858f27f8e",
+      "path": "COPYING",
+      "sha256": "675fc1c25ad23d5e14255152262598b591a6e3fc65f0871655f5f6585f120acd"
+    },
+    {
+      "repository": "zopfli",
+      "url": "https://android.googlesource.com/platform/external/zopfli",
+      "commit": "502a8f40590050c27a0a6259a0c08ed858f27f8e",
+      "path": "NOTICE",
+      "sha256": "675fc1c25ad23d5e14255152262598b591a6e3fc65f0871655f5f6585f120acd"
+    },
+    {
+      "repository": "build",
+      "url": "https://android.googlesource.com/platform/build",
+      "commit": "46581c7be3390d0ecd0a037e6e6ebc2893d5768a",
+      "path": "core/notice_files.mk",
+      "sha256": "5fbac1cf4e7b317b4809f1a854bea512987dbfe02e8930ebd527708a1630dd1b"
+    },
+    {
+      "repository": "build",
+      "url": "https://android.googlesource.com/platform/build",
+      "commit": "46581c7be3390d0ecd0a037e6e6ebc2893d5768a",
+      "path": "tools/compliance/cmd/testdata/notice/NOTICE_LICENSE",
+      "sha256": "0b19921ad5dd3eaa9be4a02a098e0b2c950b916a84f383862804c6573dd35234"
+    },
+    {
+      "repository": "build",
+      "url": "https://android.googlesource.com/platform/build",
+      "commit": "46581c7be3390d0ecd0a037e6e6ebc2893d5768a",
+      "path": "tools/droiddoc/LICENSE",
+      "sha256": "441f8143b4fb363c071fd394cc9c1c15a6ca506fbf819bcb689cd7220a5cfaca"
+    },
+    {
+      "repository": "unwinding",
+      "url": "https://android.googlesource.com/platform/system/unwinding",
+      "commit": "540353061e864599723d4a838d503b80ecdf61ed",
+      "path": "libunwindstack/LICENSE_BSD",
+      "sha256": "dafd6bad1b40f6382960df77243046c652ee84a7e37bd0686a0f3405a76f81d7"
+    },
+    {
+      "repository": "googletest",
+      "url": "https://android.googlesource.com/platform/external/googletest",
+      "commit": "b9640af0b0a5b0e94bbef3f584763be6926b1ce3",
+      "path": "googlemock/LICENSE",
+      "sha256": "1e881ecf2862d01e6e5bc2b861e46886d2a6fb01499c0c508a209a7271b13cf2"
+    },
+    {
+      "repository": "googletest",
+      "url": "https://android.googlesource.com/platform/external/googletest",
+      "commit": "b9640af0b0a5b0e94bbef3f584763be6926b1ce3",
+      "path": "googlemock/NOTICE",
+      "sha256": "1e881ecf2862d01e6e5bc2b861e46886d2a6fb01499c0c508a209a7271b13cf2"
+    },
+    {
+      "repository": "googletest",
+      "url": "https://android.googlesource.com/platform/external/googletest",
+      "commit": "b9640af0b0a5b0e94bbef3f584763be6926b1ce3",
+      "path": "googletest/LICENSE",
+      "sha256": "1e881ecf2862d01e6e5bc2b861e46886d2a6fb01499c0c508a209a7271b13cf2"
+    },
+    {
+      "repository": "googletest",
+      "url": "https://android.googlesource.com/platform/external/googletest",
+      "commit": "b9640af0b0a5b0e94bbef3f584763be6926b1ce3",
+      "path": "googletest/NOTICE",
+      "sha256": "1e881ecf2862d01e6e5bc2b861e46886d2a6fb01499c0c508a209a7271b13cf2"
+    },
+    {
+      "repository": "googletest",
+      "url": "https://android.googlesource.com/platform/external/googletest",
+      "commit": "b9640af0b0a5b0e94bbef3f584763be6926b1ce3",
+      "path": "LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "cmds/atrace/NOTICE",
+      "sha256": "fe7d8972c7c5392467b7e898842a76c3f723e076bbfe399dc864d9e41abeb8f0"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "cmds/cmd/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "cmds/dumpsys/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "cmds/rawbu/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "cmds/service/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/arect/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/binder/ndk/NOTICE",
+      "sha256": "4f07e532e0d628b6653feede93333e8a6b916f4311fd0f3f5f955f8a03512059"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/math/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/nativebase/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/nativedisplay/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/nativewindow/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/ui/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "libs/ultrahdr/adobe-hdr-gain-map-license/NOTICE",
+      "sha256": "b94dbc08e4ee43ec8271763e83dc7749710c2bc7bd919fe829539303e3844a56"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "NOTICE",
+      "sha256": "c33527e650cae336d6be07614caef6f38750221c7505208b2d64ce2a2fa246c2"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/include/EGL/NOTICE",
+      "sha256": "6ef7c52b45db00e7bb1e7755d7eb1e870dae43b0b81364f803eff773419bf8d2"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/include/GLES/NOTICE",
+      "sha256": "989ca8621825725d53adaef2f614f6e6878d3e1e1f80ce3718c93f63a9e86f56"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/include/GLES2/NOTICE",
+      "sha256": "989ca8621825725d53adaef2f614f6e6878d3e1e1f80ce3718c93f63a9e86f56"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/include/GLES3/NOTICE",
+      "sha256": "eaf3f88b4cac47433f82290166a74202e1619de1731ba46b5a47849942c4e07f"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/include/KHR/NOTICE",
+      "sha256": "e32e44c3fc0b5de032231c6e1f28e7196e47e06a13e142de73a8e3b3d19156e3"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/tests/angeles/license-BSD.txt",
+      "sha256": "ad17d7b0ac1783b22c6e3b8b8676370d59fa29180246e091fd15211bf4cd4e8a"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/tests/angeles/license-LGPL.txt",
+      "sha256": "885a03f54b157961236f46843e79972abfcd6890b6cbb368bc7eca328ff95a12"
+    },
+    {
+      "repository": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "path": "opengl/tests/angeles/license.txt",
+      "sha256": "f8aee8d46d147e6bf916d1041fffe3ad1303416be6a264f10444936d76d9acfb"
+    },
+    {
+      "repository": "protobuf",
+      "url": "https://android.googlesource.com/platform/external/protobuf",
+      "commit": "5b489930dd17777ea9173840faba912c2db1748a",
+      "path": "conformance/third_party/jsoncpp/LICENSE",
+      "sha256": "ecf1a272af5d660ed0054701b5662e6a9f208b56502dc67983fce60a657d58b2"
+    },
+    {
+      "repository": "protobuf",
+      "url": "https://android.googlesource.com/platform/external/protobuf",
+      "commit": "5b489930dd17777ea9173840faba912c2db1748a",
+      "path": "LICENSE",
+      "sha256": "f4df8b2457697851385d9ebb93267832c1dfa24e0e61881952f6b0c452663dc9"
+    },
+    {
+      "repository": "protobuf",
+      "url": "https://android.googlesource.com/platform/external/protobuf",
+      "commit": "5b489930dd17777ea9173840faba912c2db1748a",
+      "path": "third_party/utf8_range/LICENSE",
+      "sha256": "2317ba964cb26897602b47271a156b2c9ee140d923fa25e8f2229f20d6f3a819"
+    },
+    {
+      "repository": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "path": "ci/LICENSE_MIT.txt",
+      "sha256": "9eb6f69d48a1dd764e8a33f14a584f460d3cec653477c136a95dd6df9c249211"
+    },
+    {
+      "repository": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "path": "contrib/gregbook/COPYING",
+      "sha256": "f77926ade9d6c7c3e48c3868ceedd5c9fc4bc79cfa186bb0001d067f59492af8"
+    },
+    {
+      "repository": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "path": "contrib/gregbook/LICENSE",
+      "sha256": "e2eb2ac0e798b3903a8f23b245c7c188e2e1378b3ad5d73680aba890083f6575"
+    },
+    {
+      "repository": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "path": "contrib/pngexif/LICENSE_MIT.txt",
+      "sha256": "9eb6f69d48a1dd764e8a33f14a584f460d3cec653477c136a95dd6df9c249211"
+    },
+    {
+      "repository": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "path": "contrib/pngminus/LICENSE.txt",
+      "sha256": "f21b33f60215447bb76ead66849014cca5bdf4b257f0317ef5829e8a5a8438e3"
+    },
+    {
+      "repository": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "path": "LICENSE",
+      "sha256": "905fe5046517c4fe3bc63f36cb7b80d373e174e4afe03da1f5ad0077379dce0a"
+    },
+    {
+      "repository": "expat",
+      "url": "https://android.googlesource.com/platform/external/expat",
+      "commit": "20fd404393d65d2aff6dbc79dcbf4da6e68cabb2",
+      "path": "COPYING",
+      "sha256": "8a9cfe4b5924f4b25881aa0c9f5e4561c5f31065d0c4a13cdcdbcf917edf39aa"
+    },
+    {
+      "repository": "expat",
+      "url": "https://android.googlesource.com/platform/external/expat",
+      "commit": "20fd404393d65d2aff6dbc79dcbf4da6e68cabb2",
+      "path": "expat/COPYING",
+      "sha256": "8a9cfe4b5924f4b25881aa0c9f5e4561c5f31065d0c4a13cdcdbcf917edf39aa"
+    },
+    {
+      "repository": "incremental_delivery",
+      "url": "https://android.googlesource.com/platform/system/incremental_delivery",
+      "commit": "d5b8d81edc4a1e5a1995e1e4858cb1b340080137",
+      "path": "incfs/NOTICE",
+      "sha256": "eda4c3bfeec2d2a4f55b7e3addc33c51d463874a51fc6264c8050839a1a2f5f0"
+    },
+    {
+      "repository": "incremental_delivery",
+      "url": "https://android.googlesource.com/platform/system/incremental_delivery",
+      "commit": "d5b8d81edc4a1e5a1995e1e4858cb1b340080137",
+      "path": "libdataloader/NOTICE",
+      "sha256": "eda4c3bfeec2d2a4f55b7e3addc33c51d463874a51fc6264c8050839a1a2f5f0"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "android/license_kind_test.go",
+      "sha256": "5cb99630200439c52da87765313c29c8f9e05a58f262ac2513d17a357377d347"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "android/license_kind.go",
+      "sha256": "4b85a8b28ddf03e75c40ad6af24ca15749ef2eeda548161f2015797e1eb9242c"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "android/license_metadata.go",
+      "sha256": "d39bad052a88a54602ece2da921f50a43703d8e772b7324446768c0b52cd4fa2"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "android/license_sdk_member.go",
+      "sha256": "9133d2cc9890ef186cdaa3b6ed17b8c9e9169e399253e0cdc27819c3a6438f1d"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "android/license_test.go",
+      "sha256": "41c18f1da7e1693d571363a9ecb0f4b4ccdb2bcdc12a4fada00ded6bc2ce0f37"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "android/license.go",
+      "sha256": "b002991778f30773ec50002666e2cacc94775ff4f711ac16ffabc6ce699bf636"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "compliance/license_metadata_proto/license_metadata.pb.go",
+      "sha256": "57100a2789ac3031052ad07b268272f5ea4cdc2ddc8633d9bd20c57ffe56a114"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "compliance/license_metadata_proto/license_metadata.proto",
+      "sha256": "cf9fe075cb67f0db3a275d66e1a961a37565cca2791479327e0b2387f05f2b5e"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "finder/fs/LICENSE",
+      "sha256": "d8e78a42dbaf42773badf4e704fd0370759c360d78bebdbe046769216cb6f8bf"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "licenses/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "sdk/license_sdk_test.go",
+      "sha256": "8aa7e88fd1449e75d8a4fe73dcb399b734b8a96fcb78758ea3808f57855fe911"
+    },
+    {
+      "repository": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "path": "third_party/zip/LICENSE",
+      "sha256": "d8e78a42dbaf42773badf4e704fd0370759c360d78bebdbe046769216cb6f8bf"
+    },
+    {
+      "repository": "boringssl",
+      "url": "https://android.googlesource.com/platform/external/boringssl",
+      "commit": "2a7146e5d8c55fb53d31f66f8e1351baa3fb0d4e",
+      "path": "LICENSE",
+      "sha256": "2c647d6a8baa61d721d2ebb8cd9cd112b903bdd8840baf666a9ec219a9da7a26"
+    },
+    {
+      "repository": "boringssl",
+      "url": "https://android.googlesource.com/platform/external/boringssl",
+      "commit": "2a7146e5d8c55fb53d31f66f8e1351baa3fb0d4e",
+      "path": "NOTICE",
+      "sha256": "0a18845b529cbf4a09662e28ea061c8a3a8e789b721642afa308c4f80c29b081"
+    },
+    {
+      "repository": "boringssl",
+      "url": "https://android.googlesource.com/platform/external/boringssl",
+      "commit": "2a7146e5d8c55fb53d31f66f8e1351baa3fb0d4e",
+      "path": "src/LICENSE",
+      "sha256": "0a18845b529cbf4a09662e28ea061c8a3a8e789b721642afa308c4f80c29b081"
+    },
+    {
+      "repository": "boringssl",
+      "url": "https://android.googlesource.com/platform/external/boringssl",
+      "commit": "2a7146e5d8c55fb53d31f66f8e1351baa3fb0d4e",
+      "path": "src/third_party/fiat/LICENSE",
+      "sha256": "7655166f026e793d40f6fe317938ffb8c7f1a4ef6452a2fee1b3bede39144ff6"
+    },
+    {
+      "repository": "boringssl",
+      "url": "https://android.googlesource.com/platform/external/boringssl",
+      "commit": "2a7146e5d8c55fb53d31f66f8e1351baa3fb0d4e",
+      "path": "src/third_party/wycheproof_testvectors/LICENSE",
+      "sha256": "49bbe9114e49214df2ccc324cb3ac8d1d1aa1c3a0947f94c286765e86647b32e"
+    },
+    {
+      "repository": "pcre",
+      "url": "https://android.googlesource.com/platform/external/pcre",
+      "commit": "06781197cc1b93713b9c07aebc75d9790d2d4d76",
+      "path": "cmake/COPYING-CMAKE-SCRIPTS",
+      "sha256": "aa0b8a646f93095b37444389af30a5d5786a04608f4e9fee3fdd5694ce20a06f"
+    },
+    {
+      "repository": "pcre",
+      "url": "https://android.googlesource.com/platform/external/pcre",
+      "commit": "06781197cc1b93713b9c07aebc75d9790d2d4d76",
+      "path": "COPYING",
+      "sha256": "4f8defd8b03d6e0df53c3a37fd37caf2bd8a5e8e77f7886fe3557ba4cda45e8c"
+    },
+    {
+      "repository": "pcre",
+      "url": "https://android.googlesource.com/platform/external/pcre",
+      "commit": "06781197cc1b93713b9c07aebc75d9790d2d4d76",
+      "path": "NOTICE",
+      "sha256": "532cf3bbe6319973eaa6b35e47a79adaa11a3d99033295ca5c5e36c468b5c676"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "checkpolicy/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "dbus/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "gui/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "libselinux/LICENSE",
+      "sha256": "288ec30d2ff7f45954052860fdeb10f07fb99cc5089d8085c7bb4149b6031964"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "libsemanage/LICENSE",
+      "sha256": "3a872bea527c9329f6aee2182de19bc40c5d030f1e08296e45d4bc3218946cd4"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "libsepol/LICENSE",
+      "sha256": "3a872bea527c9329f6aee2182de19bc40c5d030f1e08296e45d4bc3218946cd4"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "LICENSE",
+      "sha256": "6b38aa017eea8ed51d399156a5a5f35e901825ea862036376fed8bf9f80c1ba6"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "mcstrans/LICENSE",
+      "sha256": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "NOTICE",
+      "sha256": "35e3dbc6f3aee6d797091d551330a19f36088cca9c52f583318e910c16465f03"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "policycoreutils/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "python/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "python/sepolgen/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "restorecond/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "sandbox/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "scripts/ci/LICENSE",
+      "sha256": "4736b5d379253afa45744afc79ddb475912b213e939bdf7cb97d9a8b6f700e5f"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "secilc/LICENSE",
+      "sha256": "eb78e1234973164aca2ae59e873b6f928b8cc3aaa6b1437b80e70e070ac24e72"
+    },
+    {
+      "repository": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "path": "semodule-utils/LICENSE",
+      "sha256": "19404e184cf45ec991b54e1e6f05f847ad8f13fee2a51f3a2d9a960c8f7cb26b"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/abx/NOTICE",
+      "sha256": "692430a71a706f6dbc4fa7a5324b4ac14aac9bfcc28527724d6ccd41428b2ed4"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/am/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/app_process/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/appops/NOTICE",
+      "sha256": "791b147482d49a892e6d8423bca45958882a9a01bec390298f9e2afd9e978562"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/appwidget/NOTICE",
+      "sha256": "791b147482d49a892e6d8423bca45958882a9a01bec390298f9e2afd9e978562"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/backup/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/bmgr/NOTICE",
+      "sha256": "8c7788899f273f209560850d202d04b5515e2c4fae0bda6004761081c1c9d409"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/bu/NOTICE",
+      "sha256": "dcbd171bed2508ddeb886adc3ded9ef5962d37ce5e142468e3c46affe1007fbc"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/content/NOTICE",
+      "sha256": "885f265b4d6990c03feffcc98fd6c5ec82f791dd14926bec51096face7fc89c5"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/dpm/NOTICE",
+      "sha256": "ee216e1399b5f7f39d499bbe813f93a105b4e83fea96b08cc2e6a22e25d64d59"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/hid/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/ime/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/input/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/pm/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/requestsync/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/sm/NOTICE",
+      "sha256": "8bdc4a1e37cba4e35d960875f674ab6f7553570602ebb461577debdb7386d2a8"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/svc/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/telecom/NOTICE",
+      "sha256": "99a0a5265be37da6e4fcf72002613723ca0a4a094af17d00b0436f66f0de5b9c"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/uinput/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/vr/NOTICE",
+      "sha256": "c92fde63bd2ec6cdd45e8644605e5a0545e0951cfe8019f55588737521a36a3e"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "cmds/wm/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "config/copyright-header",
+      "sha256": "9ad44d193fc4b6f971725093408b7b8561076b864dca45427f6c0452c9bbafd2"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "core/jni/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "core/res/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "data/fonts/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "identity/NOTICE",
+      "sha256": "8c7788899f273f209560850d202d04b5515e2c4fae0bda6004761081c1c9d409"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "keystore/NOTICE",
+      "sha256": "8c7788899f273f209560850d202d04b5515e2c4fae0bda6004761081c1c9d409"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "libs/androidfw/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "libs/hwui/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "libs/storage/NOTICE",
+      "sha256": "7d691ef085f57d36991cd69cd39d998bd5d570ec2db5bbe8f8bfcc3cf3269626"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "media/jni/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "media/jni/soundpool/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "media/native/midi/include/amidi/NOTICE",
+      "sha256": "8af4c039c72dc0ae62c43e6ffc49af32fc1b1c03643408ae25b4b7bee2b53017"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "native/webview/plat_support/LICENSE",
+      "sha256": "870965602b52b27a0a209bfcd659fa6b623facabdce942c8efa9c87113922d87"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "NOTICE",
+      "sha256": "26f4de375809e4a3bf888cdbe703490d12b5c2021a11bc2ca6ad0b47fb204489"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "obex/NOTICE",
+      "sha256": "9cc84ad8330c49601e16310b8a1fe335049c7a4d5ff0f3b71978ff471db24807"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/CompanionDeviceManager/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/DynamicSystemInstallationService/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/ExtShared/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/FakeOemFeatures/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/FusedLocation/NOTICE",
+      "sha256": "885f265b4d6990c03feffcc98fd6c5ec82f791dd14926bec51096face7fc89c5"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/InputDevices/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/Keyguard/NOTICE",
+      "sha256": "885f265b4d6990c03feffcc98fd6c5ec82f791dd14926bec51096face7fc89c5"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/PackageInstaller/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/PrintRecommendationService/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/PrintSpooler/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/SettingsProvider/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/SystemUI/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "packages/WAPPushManager/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    },
+    {
+      "repository": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "path": "tools/aapt/NOTICE",
+      "sha256": "51d8f4d0ad492381dbe33a874f89eff51ee8b96b701ede2ada4e2dfc2985b624"
+    }
+  ]
+}

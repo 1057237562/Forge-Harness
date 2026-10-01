@@ -1,7 +1,9 @@
 param(
     [Parameter(Mandatory)][string]$Sdk,
     [string]$NdkVersion = '27.2.12479018',
-    [string]$CMakeVersion = '3.22.1'
+    [string]$CMakeVersion = '3.22.1',
+    [string]$BuildDirectory,
+    [string]$OutputDirectory
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -21,28 +23,19 @@ $protoc = Join-Path $protocRoot 'extracted/bin/protoc.exe'
 $cmake = Join-Path $Sdk "cmake/$CMakeVersion/bin/cmake.exe"
 $ninja = Join-Path $Sdk "cmake/$CMakeVersion/bin/ninja.exe"
 $ndk = Join-Path $Sdk "ndk/$NdkVersion"
-$build = Join-Path $cache 'sdk-tools-build'
+$build = if ($BuildDirectory) { [IO.Path]::GetFullPath($BuildDirectory) } else { Join-Path $cache 'sdk-tools-build' }
 & $cmake -S $PSScriptRoot -B $build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=$ndk/build/cmake/android.toolchain.cmake" "-DCMAKE_MAKE_PROGRAM=$ninja" '-DANDROID_ABI=arm64-v8a' '-DANDROID_PLATFORM=android-28' '-DANDROID_STL=c++_static' '-DCMAKE_BUILD_TYPE=Release' "-DFORGE_SDK_SOURCE=$source" '-DFORGE_BUILD_AAPT2=ON' "-DPROTOC_PATH=$protoc"
 if ($LASTEXITCODE -ne 0) { throw 'Native tool configuration failed' }
 & $cmake --build $build --target aapt2 zipalign -j 8
 if ($LASTEXITCODE -ne 0) { throw 'Native tool build failed' }
-$output = Join-Path $cache 'native-tools/forge-source-candidate'
+$output = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $cache 'native-tools/forge-source-candidate' }
 New-Item -ItemType Directory -Force $output | Out-Null
 foreach ($name in @('aapt2','zipalign')) {
     Copy-Item -LiteralPath (Join-Path $build $name) -Destination (Join-Path $output $name)
     & "$ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-strip.exe" --strip-debug (Join-Path $output $name)
     if ($LASTEXITCODE -ne 0) { throw "Stripping failed: $name" }
 }
-$notices = [Collections.Generic.List[string]]::new()
-$notices.Add('Forge source-built tools; recipes pinned to 50713285d4de73dd36735928217523817ad16988. See sources.lock.json and local CMake compatibility changes. Dependency notice inventory remains under review.')
-$notices.Add((Get-Content (Join-Path $source 'LICENSE.txt') -Raw))
-foreach ($dependency in Get-Content (Join-Path $PSScriptRoot 'sources.lock.json') -Raw | ConvertFrom-Json) {
-    foreach ($file in Get-ChildItem (Join-Path $source "src/$($dependency.name)") -File | Where-Object Name -match '^(LICENSE|NOTICE|COPYING)(\..*)?$') {
-        $notices.Add("Source: $($dependency.url) @ $($dependency.commit) / $($file.Name)")
-        $notices.Add((Get-Content $file.FullName -Raw))
-    }
-}
-[IO.File]::WriteAllText((Join-Path $output 'NOTICE.txt'), ($notices -join "`n`n"))
+& (Join-Path $PSScriptRoot 'collect-notices.ps1') -Source $source -Output $output
 $adaptations = [ordered]@{}
 foreach ($file in Get-ChildItem $PSScriptRoot -File | Sort-Object Name) {
     $adaptations[$file.Name] = (Get-FileHash $file.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
@@ -64,6 +57,7 @@ $provenance = [ordered]@{
     protocArchiveSha256 = (Get-FileHash $archive -Algorithm SHA256).Hash.ToLowerInvariant()
     tools = $tools
     noticeSha256 = (Get-FileHash (Join-Path $output 'NOTICE.txt') -Algorithm SHA256).Hash.ToLowerInvariant()
+    noticeInventorySha256 = (Get-FileHash (Join-Path $output 'notice-inventory.json') -Algorithm SHA256).Hash.ToLowerInvariant()
 }
 $provenance | ConvertTo-Json -Depth 8 | Set-Content (Join-Path $output 'provenance.json') -Encoding utf8
 Get-FileHash (Join-Path $output 'aapt2'),(Join-Path $output 'zipalign') -Algorithm SHA256

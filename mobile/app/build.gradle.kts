@@ -77,7 +77,7 @@ fun forgeSha(file: File): String {
 }
 val prepareForgeNativeTools = tasks.register("prepareForgeNativeTools") {
     inputs.files(forgeSdkJar, forgeD8, forgeApksig, forgeSources, kotlinProbeStdlib)
-    inputs.files(listOf("aapt2", "zipalign", "NOTICE.txt", "provenance.json").map { File(forgeTools, it) })
+    inputs.files(listOf("aapt2", "zipalign", "NOTICE.txt", "notice-inventory.json", "provenance.json").map { File(forgeTools, it) })
     outputs.dir(forgeGenerated)
     doLast {
         check(forgeSdkJar.isFile && File(forgeTools, "aapt2").isFile) {
@@ -92,9 +92,11 @@ val prepareForgeNativeTools = tasks.register("prepareForgeNativeTools") {
             check(recordedTools[name] == forgeSha(File(forgeTools, name))) { "Native tool differs from build provenance: $name" }
         }
         check(provenance["noticeSha256"] == forgeSha(File(forgeTools, "NOTICE.txt"))) { "Native tool notices differ from provenance" }
+        check(provenance["noticeInventorySha256"] == forgeSha(File(forgeTools, "notice-inventory.json"))) { "Native notice inventory differs from provenance" }
         val assets = File(base, "assets/forge-native").apply { mkdirs() }
         val jni = File(base, "jniLibs/arm64-v8a").apply { mkdirs() }
         provenanceFile.copyTo(File(assets, "provenance.json"), overwrite = true)
+        File(forgeTools, "notice-inventory.json").copyTo(File(assets, "notice-inventory.json"), overwrite = true)
         forgeSdkJar.copyTo(File(assets, "android-29.jar"), overwrite = true)
         val kotlinStdlib = kotlinProbeStdlib.singleFile
         kotlinStdlib.copyTo(File(assets, "kotlin-stdlib-1.9.24.jar"), overwrite = true)
