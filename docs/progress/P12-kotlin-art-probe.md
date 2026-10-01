@@ -6,7 +6,13 @@
 打包现在保留这些资源，同时排除 class 文件与旧 JAR 签名；与依赖资源重名时明确失败，
 不静默覆盖。完整 APK 缓存版本已更新，防止返回缺少元数据的旧产物。
 native-compiler 的 17 项 JVM 测试通过，新增两项验证元数据字节保留与重名拒绝，
-证据为 p12-evidence/ApkAssemblerTest.xml。本次修改尚待重新构建主 APK 和设备验证。
+证据为 p12-evidence/ApkAssemblerTest.xml。
+
+主 APK 与测试 APK 已重建并安装；两项混编设备测试通过（51.855 秒），分别覆盖内置
+和显式 Maven 标准库，直接检查生成 APK 的 META-INF/main.kotlin_module 非空且没有 class 文件。
+最新离线产物独立 v2 验签、安装、启动后返回 kotlin-apk:43。
+证据：p12-evidence/kotlin-metadata-device-test.txt、kotlin-metadata-runtime.json。
+本次 apksigner 输出 v1=false、v2=true；不据此声称该 minSdk 28 示例验证了低版本系统安装。
 
 ## 2026-10-01：正式混编 APK 链路通过
 
