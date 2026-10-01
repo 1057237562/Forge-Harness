@@ -200,8 +200,6 @@ data class AppUiState(
     val taskFinishedAtMillis: Long? = null,
     val workSegmentStartedAtMillis: Long? = null,
     val currentTaskRequest: String? = null,
-    val previewReady: Boolean = false,
-    val previewUrl: String? = null,
     val isRunning: Boolean = false,
     val activeSessionId: String? = null,
     val toastMessage: String? = null,
@@ -596,15 +594,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val startingCwd = _state.value.projectTerminalCwd
         val existingLines = _state.value.projectTerminalLines
         projectTerminalStopRequested = false
-        val requestedPreviewUrl = detectServerUrl(command)
         _state.update {
             it.copy(
                 projectTerminalRunning = true,
                 projectTerminalLiveOutput = "",
                 projectTerminalCommand = command,
                 pendingTerminalCommand = null,
-                previewReady = it.previewReady || requestedPreviewUrl != null,
-                previewUrl = requestedPreviewUrl ?: it.previewUrl,
             )
         }
         viewModelScope.launch {
@@ -724,13 +719,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     process.outputStream.flush()
                     autoConfirmed = true
                 }
-                val detectedPreviewUrl = detectPreviewUrl(visible)
                 _state.update { current ->
                     if (current.activeProject?.id == projectId) {
                         current.copy(
                             projectTerminalLiveOutput = visible,
-                            previewReady = current.previewReady || detectedPreviewUrl != null,
-                            previewUrl = detectedPreviewUrl ?: current.previewUrl,
                         )
                     } else current
                 }
@@ -799,23 +791,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             "rm -rf", "rm -fr", "git reset --hard", "git clean -f", "git push --force",
             "mkfs", "dd if=", "chmod -r 777", "shutdown", "reboot", ":(){", "kill \$(pgrep", "pkill -f",
         ).any(normalized::contains) || Regex("(curl|wget).*(\\||>)\\s*(sh|bash)").containsMatchIn(normalized)
-    }
-
-    private fun detectPreviewUrl(output: String): String? {
-        val match = Regex("https?://(?:localhost|127\\.0\\.0\\.1|0\\.0\\.0\\.0):(\\d{2,5})(?:/[^\\s]*)?")
-            .findAll(output)
-            .lastOrNull()
-            ?: return null
-        val port = match.groupValues[1].toIntOrNull()?.takeIf { it in 1..65535 } ?: return null
-        return "http://127.0.0.1:$port/"
-    }
-
-    private fun detectServerUrl(command: String): String? {
-        val match = Regex("""python(?:3)?\s+-m\s+http\.server(?:\s+(\d{2,5}))?""")
-            .find(command)
-            ?: return null
-        val port = match.groupValues.getOrNull(1)?.toIntOrNull() ?: 8000
-        return port.takeIf { it in 1..65535 }?.let { "http://127.0.0.1:$it/" }
     }
 
     private fun shellQuote(value: String): String = "'${value.replace("'", "'\\''")}'"
@@ -1970,8 +1945,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 projectTerminalDraft = null,
                 pendingTerminalCommand = null,
                 suggestedProjectRoot = suggestedRoot,
-                previewReady = false,
-                previewUrl = null,
                 pendingAttachments = emptyList(),
             )
         }
@@ -2052,8 +2025,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 projectTerminalDraft = null,
                 pendingTerminalCommand = null,
                 suggestedProjectRoot = null,
-                previewReady = false,
-                previewUrl = null,
                 pendingAttachments = emptyList(),
             )
         }
@@ -2140,8 +2111,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 projectTerminalDraft = null,
                 pendingTerminalCommand = null,
                 suggestedProjectRoot = null,
-                previewReady = false,
-                previewUrl = null,
             )
         }
         preferences.saveProjects(_state.value.projects)
@@ -3564,14 +3533,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                             "Files changed",
                             event.paths.take(4).joinToString(", ") + if (event.paths.size > 4) " +${event.paths.size - 4} more" else "",
                         ),
-                    workSegmentStartedAtMillis = current.workSegmentStartedAtMillis ?: System.currentTimeMillis(),
-                )
-                is RuntimeEvent.PreviewStarted -> current.copy(
-                    previewReady = true,
-                    previewUrl = event.url,
-                    activity = listOf(ActivityItem("Preview ready", event.url)) + current.activity,
-                    liveProcess = current.liveProcess + ActivityItem("Preview ready", event.url),
-                    liveThinking = false,
                     workSegmentStartedAtMillis = current.workSegmentStartedAtMillis ?: System.currentTimeMillis(),
                 )
                 is RuntimeEvent.SessionCompleted -> {

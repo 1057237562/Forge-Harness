@@ -43,3 +43,8 @@ list(REMOVE_ITEM ZIP_SOURCES "${SRC}/libziparchive/zip_archive.cc")
 set_property(TARGET libziparchive PROPERTY SOURCES "${ZIP_SOURCES};${CMAKE_CURRENT_BINARY_DIR}/compat/zip_archive.cc")
 target_include_directories(libziparchive PRIVATE "${SRC}/libziparchive")
 include("${FORGE_SDK_SOURCE}/build-tools/zipalign.cmake")
+
+option(FORGE_BUILD_AAPT2 "Build the resource compiler from pinned AOSP sources" OFF)
+if(FORGE_BUILD_AAPT2)
+    include("${CMAKE_CURRENT_SOURCE_DIR}/aapt2.cmake")
+endif()

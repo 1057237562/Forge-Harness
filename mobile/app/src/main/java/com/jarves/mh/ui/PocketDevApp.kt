@@ -9,11 +9,6 @@ import android.os.Build
 import android.os.PowerManager
 import android.net.Uri
 import android.provider.Settings
-import android.webkit.WebResourceRequest
-import android.webkit.WebResourceResponse
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.webkit.WebChromeClient
 import android.widget.Toast
 import com.jarves.mh.BuildConfig
 import androidx.activity.compose.BackHandler
@@ -67,7 +62,6 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
@@ -103,7 +97,6 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.BatterySaver
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Preview
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
@@ -174,7 +167,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jarves.mh.model.ActivityItem
@@ -213,7 +205,6 @@ import com.jarves.mh.network.ConnectionValidation
 import com.jarves.mh.network.DiscoveredModel
 import com.jarves.mh.network.ModelDiscoveryResult
 import com.jarves.mh.network.GitHubRepository
-import java.io.ByteArrayInputStream
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -233,7 +224,6 @@ private enum class WorkspaceTab(val label: String, val icon: ImageVector) {
     FILES("Files", Icons.Default.Folder),
     TERMINAL("Terminal", Icons.Default.Terminal),
     CHANGES("Changes", Icons.Default.Code),
-    PREVIEW("Preview", Icons.Default.Preview),
 }
 
 @Composable
@@ -3114,7 +3104,7 @@ private fun ProjectsScreen(
         ) {
             item {
                 Text("Build from your phone", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-                Text("Chat, review changes, and preview your project.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text("Chat, review changes, and run commands for your project.", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Spacer(Modifier.height(16.dp))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -4136,7 +4126,6 @@ private fun WorkspaceScreen(
                     onUndoFileChange,
                     onKeepFileChange,
                 )
-                WorkspaceTab.PREVIEW -> PreviewTab(state.previewReady, state.previewUrl)
             }
         }
     }
@@ -4378,7 +4367,7 @@ private fun FilesTab(
                     Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text("Project folder detected", fontWeight = FontWeight.Bold)
                         Text(
-                            "Use $suggestedProjectRoot as the project root so Chat, Terminal, Changes, and Preview all run from the same folder.",
+                            "Use $suggestedProjectRoot as the project root so Chat, Terminal, and Changes all run from the same folder.",
                             fontSize = 13.sp,
                         )
                         Button(onClick = onUseSuggestedProjectRoot, modifier = Modifier.fillMaxWidth()) {
@@ -5314,159 +5303,6 @@ private fun DiffLineRow(line: DiffLine) {
         softWrap = false,
     )
 }
-
-@Composable
-private fun PreviewTab(ready: Boolean, url: String?) {
-    var address by rememberSaveable(url) { mutableStateOf(if (ready) url.orEmpty() else "") }
-    var activeUrl by rememberSaveable(url) { mutableStateOf(if (ready) url else null) }
-    var addressError by remember { mutableStateOf<String?>(null) }
-    var loading by remember { mutableStateOf(false) }
-    var webView by remember { mutableStateOf<WebView?>(null) }
-
-    val navigate = {
-        val normalized = normalizePreviewUrl(address)
-        if (normalized == null) {
-            addressError = "Use a local URL such as localhost:3000"
-        } else {
-            addressError = null
-            address = normalized
-            activeUrl = normalized
-        }
-    }
-
-    LaunchedEffect(ready, url) {
-        if (ready && !url.isNullOrBlank() && activeUrl == null) {
-            normalizePreviewUrl(url)?.let {
-                address = it
-                activeUrl = it
-            }
-        }
-    }
-
-    Column(Modifier.fillMaxSize()) {
-        Surface(
-            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
-            tonalElevation = 1.dp,
-        ) {
-            Column(Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    OutlinedTextField(
-                        value = address,
-                        onValueChange = {
-                            address = it
-                            addressError = null
-                        },
-                        modifier = Modifier.weight(1f),
-                        singleLine = true,
-                        label = { Text("Preview URL") },
-                        placeholder = { Text("localhost:3000") },
-                        leadingIcon = {
-                            Box(
-                                Modifier.size(8.dp).background(
-                                    if (activeUrl != null) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.outline,
-                                    CircleShape,
-                                ),
-                            )
-                        },
-                        trailingIcon = {
-                            IconButton(onClick = navigate) {
-                                Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Open URL")
-                            }
-                        },
-                        isError = addressError != null,
-                        keyboardOptions = KeyboardOptions(
-                            keyboardType = KeyboardType.Uri,
-                            imeAction = ImeAction.Go,
-                        ),
-                        keyboardActions = KeyboardActions(onGo = { navigate() }),
-                    )
-                    IconButton(
-                        onClick = { webView?.reload() ?: navigate() },
-                        enabled = address.isNotBlank(),
-                    ) {
-                        Icon(Icons.Default.Refresh, contentDescription = "Refresh preview")
-                    }
-                }
-                if (addressError != null) {
-                    Text(
-                        addressError.orEmpty(),
-                        color = MaterialTheme.colorScheme.error,
-                        fontSize = 11.sp,
-                        modifier = Modifier.padding(start = 16.dp, top = 3.dp),
-                    )
-                } else if (loading) {
-                    LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 5.dp))
-                }
-            }
-        }
-        val targetUrl = activeUrl
-        if (targetUrl == null) {
-            EmptyState(Icons.Default.PlayArrow, "Preview not running", "Enter a localhost URL above, or start a local web server in the project Terminal.")
-        } else {
-            AndroidView(
-                factory = { context ->
-                    WebView(context).apply {
-                        webView = this
-                        settings.javaScriptEnabled = true
-                        settings.domStorageEnabled = true
-                        webChromeClient = object : WebChromeClient() {
-                            override fun onProgressChanged(view: WebView?, newProgress: Int) {
-                                loading = newProgress < 100
-                            }
-                        }
-                        webViewClient = object : WebViewClient() {
-                            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-                                val target = request?.url ?: return true
-                                if (!target.isLoopbackPreviewUrl()) {
-                                    addressError = "External navigation is blocked in project preview"
-                                    return true
-                                }
-                                address = target.toString()
-                                return false
-                            }
-
-                            override fun shouldInterceptRequest(view: WebView?, request: WebResourceRequest?): WebResourceResponse? {
-                                val target = request?.url ?: return blockedPreviewResponse()
-                                return if (target.isLoopbackPreviewUrl()) null else blockedPreviewResponse()
-                            }
-                        }
-                        loadUrl(targetUrl)
-                    }
-                },
-                update = { current ->
-                    webView = current
-                    if (current.url != targetUrl) current.loadUrl(targetUrl)
-                },
-                modifier = Modifier.fillMaxSize(),
-            )
-        }
-    }
-}
-
-private fun normalizePreviewUrl(input: String): String? {
-    val raw = input.trim()
-    if (raw.isBlank()) return null
-    val withScheme = if ("://" in raw) raw else "http://$raw"
-    val parsed = runCatching { Uri.parse(withScheme) }.getOrNull() ?: return null
-    if (!parsed.isLoopbackPreviewUrl() || parsed.host.isNullOrBlank()) return null
-    return if (parsed.host == "0.0.0.0") {
-        parsed.buildUpon().encodedAuthority(
-            buildString {
-                append("127.0.0.1")
-                if (parsed.port >= 0) append(":${parsed.port}")
-            },
-        ).build().toString()
-    } else {
-        parsed.toString()
-    }
-}
-
-private fun Uri.isLoopbackPreviewUrl(): Boolean =
-    scheme in setOf("data", "blob", "about") ||
-        (scheme in setOf("http", "https", "ws", "wss") && host in setOf("127.0.0.1", "localhost", "0.0.0.0"))
-
-private fun blockedPreviewResponse(): WebResourceResponse =
-    WebResourceResponse("text/plain", "UTF-8", 403, "Blocked", emptyMap(), ByteArrayInputStream(ByteArray(0)))
 
 @Composable
 private fun EmptyState(icon: ImageVector, title: String, body: String) {

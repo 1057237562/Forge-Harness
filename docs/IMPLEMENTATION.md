@@ -63,6 +63,13 @@
 
 ## 当前环境与下一步
 
+aapt2 构建更新：新增可选 FORGE_BUILD_AAPT2 和 aapt2.cmake，严格核对 protoc 3.21.12，
+在构建目录生成 protobuf 文件，不修改固定源码。修正 Expat/PNG 生成头、Windows 符号链接对应的
+Binder 真实 include 目录，以及 protobuf Android config.h。C++ 编译推进至最终链接；
+链接仍缺 libincfs/SELinux/packagelistparser/libcutils/crypto/ssl/pcre 等目标，尚无可用 aapt2。
+证据 `docs/progress/aapt2-source-configure.txt`、`aapt2-source-link-attempt.txt`。
+下一步补齐实际静态依赖，不能以配置或对象文件编译成功代替可运行工具验收。
+
 aapt2 重建准备：frameworks/base 及新增九个依赖仓库均下载完成，连同 zipalign 依赖共 19 个
 源码提交已写入 sources.lock.json；新增 fetch-sources.ps1，验证已有 checkout 的固定提交，
 不覆盖版本不符的本地目录，已在当前 checkout 执行通过。

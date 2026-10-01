@@ -1,0 +1,446 @@
+-- Version: 10.2.0
+-- Build type: Release
+CMake Deprecation Warning at E:/Workspace/AI/Forge/research/android-sdk-tools/src/zopfli/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- 
+-- 3.21.12.0
+-- Could not find an AWK-compatible program
+-- ===========================================================================
+-- 
+-- Configuration
+--   Generator .................. Ninja
+--   Build type ................. Release
+--   Prefix ..................... C:/Program Files (x86)/forge_sdk_tools
+--   Shared libraries ........... ON
+--   Character type ............. char (UTF-8)
+--   Library name postfix ....... 
+-- 
+--   Build documentation ........ OFF
+--   Build examples ............. OFF
+--   Build fuzzers .............. OFF
+--   Build tests ................ OFF
+--   Build tools (xmlwf) ........ OFF
+--   Build pkg-config file ...... ON
+--   Install files .............. ON
+-- 
+--   Features
+--     // Advanced options, changes not advised
+--     Attributes info .......... OFF
+--     Context bytes ............ 1024
+--     DTD support .............. ON
+--     General entities ......... ON
+--     Large size ............... OFF
+--     Minimum size ............. OFF
+--     Namespace support ........ ON
+-- 
+--   Entropy sources
+--     getrandom ................ 1
+--     syscall SYS_getrandom .... 1
+--     libbsd ................... OFF
+--     /dev/random .............. ON
+-- 
+-- ===========================================================================
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/Workspace/AI/Forge/.cache/sdk-tools-build
+[0/1] Re-running CMake...
+[1/324] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o
+[2/324] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o
+[3/324] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o
+[4/324] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o
+[5/324] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:242:7: warning: array designators are a C99 extension [-Wc99-designator]
+
+  242 |       [android::base::VERBOSE] = 7,              // KERN_DEBUG (there is no verbose kernel log
+
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[6/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Resource.cpp.o
+[7/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/ProguardRules.cpp.o
+[8/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/SdkConstants.cpp.o
+[9/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/ManifestClassGenerator.cpp.o
+[10/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlActionExecutor.cpp.o
+[11/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceTable.cpp.o
+[12/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/LoadedApk.cpp.o
+[13/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/trace/TraceBuffer.cpp.o
+[14/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceUtils.cpp.o
+[15/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlUtil.cpp.o
+[16/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ValueTransformer.cpp.o
+[17/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceParser.cpp.o
+[18/324] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/Configuration.pb.cc.o
+[19/324] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/ResourcesInternal.pb.cc.o
+[20/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlPullParser.cpp.o
+[21/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceValues.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceValues.cpp:447:17: warning: implicit conversion from 'type' (aka 'long') to 'float' changes value from 9223372036854775807 to 9223372036854775808 [-Wimplicit-const-int-float-conversion]
+  447 |   if (fabs(f) > std::numeric_limits<int64_t>::max() || fabs(f) < 1e-10) {
+      |               ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[22/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/ApkInfo.cpp.o
+[23/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlDom.cpp.o
+[24/324] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/ResourceMetadata.pb.cc.o
+[25/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Main.cpp.o
+[26/324] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/ApkInfo.pb.cc.o
+[27/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Command.cpp.o
+[28/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Convert.cpp.o
+[29/324] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/Resources.pb.cc.o
+[30/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Diff.cpp.o
+[31/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Dump.cpp.o
+[32/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/enum_field.cc.o
+[33/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Compile.cpp.o
+[34/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/code_generator.cc.o
+[35/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/extension.cc.o
+[36/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/enum.cc.o
+[37/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/generator.cc.o
+[38/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/field.cc.o
+[39/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Optimize.cpp.o
+[40/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/arenaz_sampler.cc.o
+[41/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/map_field.cc.o
+[42/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Util.cpp.o
+[43/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/command_line_interface.cc.o
+[44/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/arena.cc.o
+[45/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/file.cc.o
+[46/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/arenastring.cc.o
+[47/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/any_lite.cc.o
+[48/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/helpers.cc.o
+[49/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_util.cc.o
+[50/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_enum_util.cc.o
+[51/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/implicit_weak_message.cc.o
+[52/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/io_win32.cc.o
+[53/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/inlined_string_field.cc.o
+[54/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[55/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/coded_stream.cc.o
+[56/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/extension_set.cc.o
+[57/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/strtod.cc.o
+[58/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_tctable_lite.cc.o
+[59/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream.cc.o
+[60/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream_impl.cc.o
+[61/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/bytestream.cc.o
+[62/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/repeated_ptr_field.cc.o
+[63/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/map.cc.o
+[64/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/int128.cc.o
+[65/324] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Link.cpp.o
+[66/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/parse_context.cc.o
+[67/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/message_lite.cc.o
+[68/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/common.cc.o
+[69/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/repeated_field.cc.o
+[70/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/statusor.cc.o
+[71/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/status.cc.o
+[72/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/stringpiece.cc.o
+[73/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/stringprintf.cc.o
+[74/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/any.cc.o
+[75/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/any.pb.cc.o
+[76/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/structurally_valid.cc.o
+[77/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/time.cc.o
+[78/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/wire_format_lite.cc.o
+[79/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/strutil.cc.o
+[80/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/message.cc.o
+[81/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/api.pb.cc.o
+[82/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/compiler/importer.cc.o
+[83/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/extension_set_heavy.cc.o
+[84/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/dynamic_message.cc.o
+[85/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/empty.pb.cc.o
+[86/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/field_mask.pb.cc.o
+[87/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor_database.cc.o
+[88/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/gzip_stream.cc.o
+[89/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/duration.pb.cc.o
+[90/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/tokenizer.cc.o
+[91/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/compiler/parser.cc.o
+[92/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_bases.cc.o
+[93/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_tctable_full.cc.o
+[94/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor.pb.cc.o
+[95/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/service.cc.o
+[96/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/printer.cc.o
+[97/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/source_context.pb.cc.o
+[98/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/reflection_ops.cc.o
+[99/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/unknown_field_set.cc.o
+[100/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/map_field.cc.o
+[101/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/timestamp.pb.cc.o
+[102/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/message.cc.o
+[103/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_reflection.cc.o
+[104/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/type.pb.cc.o
+[105/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/substitute.cc.o
+[106/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/delimited_message_util.cc.o
+[107/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/field_comparator.cc.o
+[108/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/text_format.cc.o
+[109/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/struct.pb.cc.o
+[110/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/json_stream_parser.cc.o
+[111/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/default_value_objectwriter.cc.o
+[112/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/field_mask_util.cc.o
+[113/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/error_listener.cc.o
+[114/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/datapiece.cc.o
+[115/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/json_escaping.cc.o
+[116/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/object_writer.cc.o
+[117/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/json_objectwriter.cc.o
+[118/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/field_mask_utility.cc.o
+[119/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/type_info.cc.o
+[120/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/proto_writer.cc.o
+[121/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/time_util.cc.o
+[122/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/protostream_objectsource.cc.o
+[123/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/protostream_objectwriter.cc.o
+[124/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/json_util.cc.o
+[125/324] Building C object libpng/CMakeFiles/png_static.dir/pngwrite.c.o
+[126/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/utility.cc.o
+[127/324] Building C object libpng/CMakeFiles/png_static.dir/pngwio.c.o
+[128/324] Building C object libpng/CMakeFiles/png_static.dir/pngwtran.c.o
+[129/324] Building C object libpng/CMakeFiles/png_static.dir/pngset.c.o
+[130/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/type_resolver_util.cc.o
+[131/324] Building C object libpng/CMakeFiles/png_static.dir/pngtrans.c.o
+[132/324] Building C object libpng/CMakeFiles/png_static.dir/arm/palette_neon_intrinsics.c.o
+[133/324] Building C object libpng/CMakeFiles/png_static.dir/pngwutil.c.o
+[134/324] Building C object libpng/CMakeFiles/png_static.dir/arm/filter_neon_intrinsics.c.o
+[135/324] Building ASM object libpng/CMakeFiles/png_static.dir/arm/filter_neon.S.o
+[136/324] Building C object libpng/CMakeFiles/png_static.dir/arm/arm_init.c.o
+[137/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/wrappers.pb.cc.o
+[138/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor.cc.o
+[139/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/message_field.cc.o
+[140/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/wire_format.cc.o
+[141/324] Building CXX object protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/util/message_differencer.cc.o
+[142/324] Building C object expat/CMakeFiles/expat.dir/lib/xmlparse.c.o
+[143/324] Linking CXX static library protobuf\libprotobuf.a
+[144/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/service.cc.o
+[145/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_doc_comment.cc.o
+[146/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/padding_optimizer.cc.o
+[147/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/primitive_field.cc.o
+[148/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/string_field.cc.o
+[149/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_enum_field.cc.o
+[150/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_helpers.cc.o
+[151/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_generator.cc.o
+[152/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_enum.cc.o
+[153/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_message_field.cc.o
+[154/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_field_base.cc.o
+[155/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_map_field.cc.o
+[156/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_message.cc.o
+[157/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_reflection_class.cc.o
+[158/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc.o
+[159/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_primitive_field.cc.o
+[160/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc.o
+[161/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc.o
+[162/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/parse_function_generator.cc.o
+[163/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/context.cc.o
+[164/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc.o
+[165/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc.o
+[166/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/doc_comment.cc.o
+[167/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum_field_lite.cc.o
+[168/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum_field.cc.o
+[169/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum_lite.cc.o
+[170/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum.cc.o
+[171/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/extension.cc.o
+[172/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/generator_factory.cc.o
+[173/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/extension_lite.cc.o
+[174/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/generator.cc.o
+[175/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/field.cc.o
+[176/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/map_field_lite.cc.o
+[177/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/kotlin_generator.cc.o
+[178/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/file.cc.o
+[179/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/map_field.cc.o
+[180/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/helpers.cc.o
+[181/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/name_resolver.cc.o
+[182/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_builder.cc.o
+[183/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_field_lite.cc.o
+[184/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message.cc.o
+[185/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_field.cc.o
+[186/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_builder_lite.cc.o
+[187/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/primitive_field.cc.o
+[188/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_lite.cc.o
+[189/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/primitive_field_lite.cc.o
+[190/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/string_field.cc.o
+[191/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/string_field_lite.cc.o
+[192/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/shared_code_generator.cc.o
+[193/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc.o
+[194/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/service.cc.o
+[195/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_extension.cc.o
+[196/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_field.cc.o
+[197/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_generator.cc.o
+[198/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_enum.cc.o
+[199/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_map_field.cc.o
+[200/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_message_field.cc.o
+[201/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_oneof.cc.o
+[202/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_file.cc.o
+[203/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc.o
+[204/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/python/helpers.cc.o
+[205/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_message.cc.o
+[206/324] Building C object expat/CMakeFiles/expat.dir/lib/xmlrole.c.o
+[207/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/plugin.cc.o
+[208/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/plugin.pb.cc.o
+[209/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/zip_writer.cc.o
+[210/324] Building C object libpng/CMakeFiles/png_static.dir/pngmem.c.o
+[211/324] Building C object libpng/CMakeFiles/png_static.dir/pngget.c.o
+[212/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/python/generator.cc.o
+[213/324] Building C object libpng/CMakeFiles/png_static.dir/pngerror.c.o
+[214/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_helpers.cc.o
+[215/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/python/pyi_generator.cc.o
+[216/324] Building C object expat/CMakeFiles/expat.dir/lib/xmltok.c.o
+[217/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/ruby/ruby_generator.cc.o
+[218/324] Building C object libpng/CMakeFiles/png_static.dir/pngrio.c.o
+[219/324] Linking C shared library expat\libexpat.so
+[220/324] Building C object libpng/CMakeFiles/png_static.dir/png.c.o
+[221/324] Building C object libpng/CMakeFiles/png_static.dir/pngread.c.o
+[222/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/subprocess.cc.o
+[223/324] Building C object libpng/CMakeFiles/png_static.dir/pngpread.c.o
+[224/324] Building C object libpng/CMakeFiles/png_static.dir/pngrutil.c.o
+[225/324] Building C object libpng/CMakeFiles/png_static.dir/pngrtran.c.o
+[226/324] Linking C static library libpng\libpng16.a
+[227/324] Building CXX object protobuf/CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/php/php_generator.cc.o
+[228/324] Linking CXX static library protobuf\libprotoc.a
+[229/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/ClassDefinition.cpp.o
+[230/324] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/test_utils.cpp.o
+[231/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/util/Util.cpp.o
+[232/324] Linking CXX static library liblibbase.a
+[233/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/DominatorTree.cpp.o
+[234/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ApkParsing.cpp.o
+[235/324] Building CXX object CMakeFiles/libziparchive.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/zip_archive_stream_entry.cc.o
+[236/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetDir.cpp.o
+[237/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/AnnotationProcessor.cpp.o
+[238/324] Building CXX object CMakeFiles/libziparchive.dir/compat/zip_archive.cc.o
+[239/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/JavaClassGenerator.cpp.o
+[240/324] Linking CXX static library liblibziparchive.a
+[241/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Debug.cpp.o
+[242/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ApkAssets.cpp.o
+[243/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Asset.cpp.o
+[244/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/BigBuffer.cpp.o
+[245/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/BigBufferStream.cpp.o
+[246/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/FileStream.cpp.o
+[247/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetsProvider.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetsProvider.cpp:107:18: warning: nested designators are a C99 extension [-Wc99-designator]
+  107 |   struct stat sb{.st_mtime = -1};
+      |                  ^~~~~~~~~
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetsProvider.cpp:140:18: warning: nested designators are a C99 extension [-Wc99-designator]
+  140 |   struct stat sb{.st_mtime = -1};
+
+      |                  ^~~~~~~~~
+
+2 warnings generated.
+
+[248/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AttributeResolution.cpp.o
+[249/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetManager.cpp.o
+[250/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ChunkIterator.cpp.o
+[251/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Locale.cpp.o
+[252/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ConfigDescription.cpp.o
+[253/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/PosixUtils.cpp.o
+[254/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Idmap.cpp.o
+[255/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/misc.cpp.o
+[256/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Png.cpp.o
+[257/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/NinePatch.cpp.o
+[258/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ObbFile.cpp.o
+[259/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/LocaleData.cpp.o
+[260/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/PngChunkFilter.cpp.o
+[261/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/LoadedArsc.cpp.o
+[262/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ZipFileRO.cpp.o
+[263/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceTimer.cpp.o
+[264/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/PngCrunch.cpp.o
+[265/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetManager2.cpp.o
+[266/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceUtils.cpp.o
+[267/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ZipUtils.cpp.o
+[268/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/StreamingZipInflater.cpp.o
+[269/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/PathUtils.cpp.o
+[270/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/TypeWrappers.cpp.o
+[271/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Util.cpp.o
+[272/324] Building CXX object CMakeFiles/libbuildversion.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/soong/cc/libbuildversion/libbuildversion.cpp.o
+[273/324] Linking CXX static library liblibbuildversion.a
+[274/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceTypes.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceTypes.cpp:2288:52: warning: bitwise operation between different enumeration types ('android::ResTable_config::(unnamed enum at E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/include/androidfw/ResourceTypes.h:1065:5)' and 'android::ResTable_config::(unnamed enum at E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/include/androidfw/ResourceTypes.h:1073:5)') is deprecated [-Wdeprecated-anon-enum-enum-conversion]
+ 2288 |     if (((inputFlags^o.inputFlags)&(MASK_KEYSHIDDEN|MASK_NAVHIDDEN)) != 0)
+
+      |                                     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[275/324] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/StringPool.cpp.o
+[276/324] Linking CXX static library liblibandroidfw.a
+[277/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/IdAssigner.cpp.o
+[278/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/InlineXmlFormatParser.cpp.o
+[279/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/XmlIdCollector.cpp.o
+[280/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/filter/AbiFilter.cpp.o
+[281/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/PseudolocaleGenerator.cpp.o
+[282/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/ResChunkPullParser.cpp.o
+[283/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/Pseudolocalizer.cpp.o
+[284/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/filter/ConfigFilter.cpp.o
+[285/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/Container.cpp.o
+[286/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/Archive.cpp.o
+[287/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/configuration/ConfigurationParser.cpp.o
+[288/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/ResEntryWriter.cpp.o
+[289/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/BinaryResourceParser.cpp.o
+[290/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/XmlFlattener.cpp.o
+[291/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/File.cpp.o
+[292/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoSerialize.cpp.o
+[293/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/FileSystem.cpp.o
+[294/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/FeatureFlagsFilter.cpp.o
+[295/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/ZipArchive.cpp.o
+[296/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoDeserialize.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoDeserialize.cpp:947:37: warning: 'dimension_value_deprecated' is deprecated [-Wdeprecated-declarations]
+  947 |           float dimen_val = pb_prim.dimension_value_deprecated();
+      |                                     ^
+E:/Workspace/AI/Forge/.cache/sdk-tools-build/aapt-proto/Resources.pb.h:6562:3: note: 'dimension_value_deprecated' has been explicitly marked deprecated here
+ 6562 |   PROTOBUF_DEPRECATED float dimension_value_deprecated() const;
+      |   ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/protobuf/src/google/protobuf/port_def.inc:339:45: note: expanded from macro 'PROTOBUF_DEPRECATED'
+  339 | # define PROTOBUF_DEPRECATED __attribute__((deprecated))
+      |                                             ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoDeserialize.cpp:952:40: warning: 'fraction_value_deprecated' is deprecated [-Wdeprecated-declarations]
+  952 |           float fraction_val = pb_prim.fraction_value_deprecated();
+      |                                        ^
+E:/Workspace/AI/Forge/.cache/sdk-tools-build/aapt-proto/Resources.pb.h:6575:3: note: 'fraction_value_deprecated' has been explicitly marked deprecated here
+
+ 6575 |   PROTOBUF_DEPRECATED float fraction_value_deprecated() const;
+
+      |   ^
+
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/protobuf/src/google/protobuf/port_def.inc:339:45: note: expanded from macro 'PROTOBUF_DEPRECATED'
+
+  339 | # define PROTOBUF_DEPRECATED __attribute__((deprecated))
+
+      |                                             ^
+
+2 warnings generated.
+
+[297/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/Util.cpp.o
+[298/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/StringStream.cpp.o
+[299/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/AutoVersioner.cpp.o
+[300/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/TableFlattener.cpp.o
+[301/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/dump/DumpManifest.cpp.o
+[302/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/PrivateAttributeMover.cpp.o
+[303/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/XmlNamespaceRemover.cpp.o
+[304/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/XmlCompatVersioner.cpp.o
+[305/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/ResourceExcluder.cpp.o
+[306/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/ReferenceLinker.cpp.o
+[307/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/ManifestFixer.cpp.o
+[308/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/NoDefaultResourceRemover.cpp.o
+[309/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/ResourceDeduper.cpp.o
+[310/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/TableMerger.cpp.o
+[311/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/VersionCollapser.cpp.o
+[312/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/ResourceFilter.cpp.o
+[313/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/text/Unicode.cpp.o
+[314/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/XmlReferenceLinker.cpp.o
+[315/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/Obfuscator.cpp.o
+[316/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/text/Utf8Iterator.cpp.o
+[317/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/text/Printer.cpp.o
+[318/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/split/TableSplitter.cpp.o
+[319/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/process/ProductFilter.cpp.o
+[320/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/MultiApkGenerator.cpp.o
+[321/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/process/SymbolTable.cpp.o
+[322/324] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/util/Files.cpp.o
+[323/324] Linking CXX static library liblibaapt2.a
+[324/324] Linking CXX executable aapt2
+FAILED: aapt2 
+cmd.exe /C "cd . && E:\Android_SDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android28 --sysroot=E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -Wl,--gc-sections    -Wl,-z,max-page-size=16384 CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Main.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/ApkInfo.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Command.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Compile.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Convert.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Diff.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Dump.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Link.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Optimize.cpp.o CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Util.cpp.o -o aapt2  liblibaapt2.a  liblibandroidfw.a  -llibincfs  -llibselinux  -llibsepol  -llibpackagelistparser  liblibutils.a  -llibcutils  liblibziparchive.a  liblibbase.a  liblibbuildversion.a  protobuf/libprotoc.a  protobuf/libprotobuf.a  expat/libexpat.so  -lcrypto  -lssl  -lpcre2-8  libpng/libpng16.a  -lc++_static  -ldl  fmtlib/libfmt.a  -llog  -pthread  -lm  E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libz.so  -latomic -lm && cd ."
+ld.lld: error: unable to find library -llibincfs
+ld.lld: error: unable to find library -llibselinux
+ld.lld: error: unable to find library -llibsepol
+ld.lld: error: unable to find library -llibpackagelistparser
+ld.lld: error: unable to find library -llibcutils
+ld.lld: error: unable to find library -lcrypto
+ld.lld: error: unable to find library -lssl
+ld.lld: error: unable to find library -lpcre2-8
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+
+ninja: build stopped: subcommand failed.
