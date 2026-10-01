@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "recipeUrl": "https://github.com/lzhiyong/android-sdk-tools",
+  "recipeCommit": "50713285d4de73dd36735928217523817ad16988",
+  "sources": [
+    {
+      "name": "libbase",
+      "url": "https://android.googlesource.com/platform/system/libbase",
+      "commit": "328768fabb054387ad7f64c984d4afcea70d25c9",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "core",
+      "url": "https://android.googlesource.com/platform/system/core",
+      "commit": "90e4908e776d2be9b26b87af649e63e4208cf085",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "logging",
+      "url": "https://android.googlesource.com/platform/system/logging",
+      "commit": "153a153f1fccc0cc6b96766d1557518303aebd5e",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "fmtlib",
+      "url": "https://android.googlesource.com/platform/external/fmtlib",
+      "commit": "c230d4f0a5a7058a6f0468cd384200ba2ed2d8c6",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "libziparchive",
+      "url": "https://android.googlesource.com/platform/system/libziparchive",
+      "commit": "b1d0c47e59e1a59b79f38ed0cbb94191cbf37416",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "zopfli",
+      "url": "https://android.googlesource.com/platform/external/zopfli",
+      "commit": "502a8f40590050c27a0a6259a0c08ed858f27f8e",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "build",
+      "url": "https://android.googlesource.com/platform/build",
+      "commit": "46581c7be3390d0ecd0a037e6e6ebc2893d5768a",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "unwinding",
+      "url": "https://android.googlesource.com/platform/system/unwinding",
+      "commit": "540353061e864599723d4a838d503b80ecdf61ed",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "googletest",
+      "url": "https://android.googlesource.com/platform/external/googletest",
+      "commit": "b9640af0b0a5b0e94bbef3f584763be6926b1ce3",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "native",
+      "url": "https://android.googlesource.com/platform/frameworks/native",
+      "commit": "55c639d4b83235438ae431c76ffcb6e49be34f75",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "protobuf",
+      "url": "https://android.googlesource.com/platform/external/protobuf",
+      "commit": "5b489930dd17777ea9173840faba912c2db1748a",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "libpng",
+      "url": "https://android.googlesource.com/platform/external/libpng",
+      "commit": "3f98a222b00621de0815c70bcbee9f3d19434359",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "expat",
+      "url": "https://android.googlesource.com/platform/external/expat",
+      "commit": "20fd404393d65d2aff6dbc79dcbf4da6e68cabb2",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "incremental_delivery",
+      "url": "https://android.googlesource.com/platform/system/incremental_delivery",
+      "commit": "d5b8d81edc4a1e5a1995e1e4858cb1b340080137",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "soong",
+      "url": "https://android.googlesource.com/platform/build/soong",
+      "commit": "050e044df577a106757e9df904535bde9e6f83ce",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "boringssl",
+      "url": "https://android.googlesource.com/platform/external/boringssl",
+      "commit": "2a7146e5d8c55fb53d31f66f8e1351baa3fb0d4e",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "pcre",
+      "url": "https://android.googlesource.com/platform/external/pcre",
+      "commit": "06781197cc1b93713b9c07aebc75d9790d2d4d76",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "selinux",
+      "url": "https://android.googlesource.com/platform/external/selinux",
+      "commit": "0496d8248e0cb20d6512387f109f41f37f68f6e1",
+      "tag": "platform-tools-35.0.2"
+    },
+    {
+      "name": "base",
+      "url": "https://android.googlesource.com/platform/frameworks/base",
+      "commit": "723419df1a0769b63587722a8a0a0980f454ffd2",
+      "tag": "platform-tools-35.0.2"
+    }
+  ],
+  "adaptations": {
+    "aapt2.cmake": "988c1b87f171aa7210a44df057d048aa18432746cc3db8a944683ee07b46f9d4",
+    "build-tools.ps1": "19740a31fc4271daf63c50e8158eb8487a57e6d8f9bcfe32fd4469c2c8a3f024",
+    "CMakeLists.txt": "12f6476ae487d3fceafe009444e3cb650f61152f4ecfad075daa8a93e308d45b",
+    "fetch-sources.ps1": "83ce42a3d4c6d4633ae4daf7cfa7fcafe670371687a676fe756c5b6a3c14d4d1",
+    "security_log_compat.cpp": "acbe5bba93d5d8af87e81d1aa6eed2db84b22199c835730f57aa190d2b27575f",
+    "sources.lock.json": "85e8c6093c751e553e4a3ba72983ffbeea09cc7ff1827615b9a36e84613e467d"
+  },
+  "ndkVersion": "27.2.12479018",
+  "cmakeVersion": "3.22.1",
+  "abi": "arm64-v8a",
+  "minimumApi": 28,
+  "protocArchiveSha256": "71852a30cf62975358edfcbbff93086e8857a079c8e4d6904881aa968d65c7f9",
+  "tools": {
+    "aapt2": "d8da9ebc60bc50d48a426f75b79f672370a283c659e951a3939fb66d83f824bb",
+    "zipalign": "177e17f064c236c9e96b55311490ca3e01559588eb1ebbae532dd4ed35673661"
+  },
+  "noticeSha256": "3dd47e5a756c28a057154a68a847c030fcf08699debaad21b5fa926b37dabccf"
+}

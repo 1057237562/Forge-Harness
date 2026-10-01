@@ -77,15 +77,24 @@ fun forgeSha(file: File): String {
 }
 val prepareForgeNativeTools = tasks.register("prepareForgeNativeTools") {
     inputs.files(forgeSdkJar, forgeD8, forgeApksig, forgeSources, kotlinProbeStdlib)
-    inputs.files(listOf("aapt2", "zipalign", "NOTICE.txt").map { File(forgeTools, it) })
+    inputs.files(listOf("aapt2", "zipalign", "NOTICE.txt", "provenance.json").map { File(forgeTools, it) })
     outputs.dir(forgeGenerated)
     doLast {
         check(forgeSdkJar.isFile && File(forgeTools, "aapt2").isFile) {
             "Run mobile/scripts/prepare-native-tools.ps1 and install SDK Platform 29 / Build Tools 30.0.3."
         }
         val base = forgeGenerated.get().asFile
+        val provenanceFile = File(forgeTools, "provenance.json")
+        val provenance = groovy.json.JsonSlurper().parse(provenanceFile) as Map<*, *>
+        check(provenance["schemaVersion"] == 1 && provenance["abi"] == "arm64-v8a") { "Unsupported native tool provenance" }
+        val recordedTools = provenance["tools"] as Map<*, *>
+        listOf("aapt2", "zipalign").forEach { name ->
+            check(recordedTools[name] == forgeSha(File(forgeTools, name))) { "Native tool differs from build provenance: $name" }
+        }
+        check(provenance["noticeSha256"] == forgeSha(File(forgeTools, "NOTICE.txt"))) { "Native tool notices differ from provenance" }
         val assets = File(base, "assets/forge-native").apply { mkdirs() }
         val jni = File(base, "jniLibs/arm64-v8a").apply { mkdirs() }
+        provenanceFile.copyTo(File(assets, "provenance.json"), overwrite = true)
         forgeSdkJar.copyTo(File(assets, "android-29.jar"), overwrite = true)
         val kotlinStdlib = kotlinProbeStdlib.singleFile
         kotlinStdlib.copyTo(File(assets, "kotlin-stdlib-1.9.24.jar"), overwrite = true)
