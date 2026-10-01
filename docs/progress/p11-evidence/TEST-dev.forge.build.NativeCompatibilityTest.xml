@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.NativeCompatibilityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-26T21:09:30.483Z" hostname="MSI" time="0.188">
+  <properties/>
+  <testcase name="previewsThenMigratesWithoutChangingSource" classname="dev.forge.build.NativeCompatibilityTest" time="0.102"/>
+  <testcase name="unsupportedProjectHasNoMigrationThatHidesItsProblems" classname="dev.forge.build.NativeCompatibilityTest" time="0.005"/>
+  <testcase name="rejectsStalePreviewAndProfileMismatch" classname="dev.forge.build.NativeCompatibilityTest" time="0.08"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

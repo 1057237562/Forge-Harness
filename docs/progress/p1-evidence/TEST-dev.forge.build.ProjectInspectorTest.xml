@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.ProjectInspectorTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2026-09-26T18:45:08.085Z" hostname="MSI" time="0.575">
+  <properties/>
+  <testcase name="rejectsDynamicMavenVersions" classname="dev.forge.build.ProjectInspectorTest" time="0.054"/>
+  <testcase name="rejectsJetifierRatherThanProducingUntransformedLibraries" classname="dev.forge.build.ProjectInspectorTest" time="0.016"/>
+  <testcase name="importsStaticGroovyAndScopes" classname="dev.forge.build.ProjectInspectorTest" time="0.042"/>
+  <testcase name="explicitConfigRejectsUnknownKeys" classname="dev.forge.build.ProjectInspectorTest" time="0.016"/>
+  <testcase name="acceptsIrrelevantGradleJvmOptionsWithoutExecutingThem" classname="dev.forge.build.ProjectInspectorTest" time="0.048"/>
+  <testcase name="rejectsCustomPlugin" classname="dev.forge.build.ProjectInspectorTest" time="0.026"/>
+  <testcase name="rejectsDtdBeforeXmlParsing" classname="dev.forge.build.ProjectInspectorTest" time="0.02"/>
+  <testcase name="rejectsDebugSourceSetRatherThanOmittingIt" classname="dev.forge.build.ProjectInspectorTest" time="0.029"/>
+  <testcase name="rejectsDynamicSdkWithLine" classname="dev.forge.build.ProjectInspectorTest" time="0.029"/>
+  <testcase name="explicitConfigRejectsPathEscape" classname="dev.forge.build.ProjectInspectorTest" time="0.019"/>
+  <testcase name="rejectsQuotedDeclarationNames" classname="dev.forge.build.ProjectInspectorTest" time="0.038"/>
+  <testcase name="explicitConfigOverridesUnsupportedGradleWithNotice" classname="dev.forge.build.ProjectInspectorTest" time="0.026"/>
+  <testcase name="rejectsCustomRootLogicEvenWithoutSettingsFile" classname="dev.forge.build.ProjectInspectorTest" time="0.024"/>
+  <testcase name="rejectsInterpolatedDependency" classname="dev.forge.build.ProjectInspectorTest" time="0.028"/>
+  <testcase name="rejectsKotlinOutsideJavaDirectory" classname="dev.forge.build.ProjectInspectorTest" time="0.026"/>
+  <testcase name="explicitConfigRejectsNonIntegralSdk" classname="dev.forge.build.ProjectInspectorTest" time="0.012"/>
+  <testcase name="handlesBracesInCommentsAndQuotedStrings" classname="dev.forge.build.ProjectInspectorTest" time="0.043"/>
+  <testcase name="rejectsExtraModules" classname="dev.forge.build.ProjectInspectorTest" time="0.017"/>
+  <testcase name="rejectsBuildConfigAndManifestPlaceholders" classname="dev.forge.build.ProjectInspectorTest" time="0.028"/>
+  <testcase name="rejectsDisabledApplicationPlugin" classname="dev.forge.build.ProjectInspectorTest" time="0.031"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

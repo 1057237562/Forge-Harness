@@ -1,0 +1,58 @@
+{
+  "broken": {
+    "buildId": "2ed2d4ca-51fe-4469-a1d4-680edf033abe",
+    "state": "FAILED",
+    "backend": "android-native",
+    "pid": 11570,
+    "offline": true,
+    "projectPath": "\/workspace\/guest-test",
+    "startedAt": 1790453753919,
+    "stage": "java",
+    "error": "Java compilation failed; see diagnostics",
+    "durationMs": 832,
+    "diagnostics": [
+      {
+        "severity": "error",
+        "file": "\/workspace\/guest-test\/src\/dev\/forge\/guest\/Thing.java",
+        "line": 1,
+        "column": 0,
+        "message": "MissingType cannot be resolved to a type"
+      }
+    ],
+    "attempt": 1,
+    "remainingBuilds": 1
+  },
+  "repaired": {
+    "buildId": "6a390c58-74fc-4ee6-abe3-077e5202aac4",
+    "state": "SUCCEEDED",
+    "backend": "android-native",
+    "pid": 11570,
+    "offline": true,
+    "projectPath": "\/workspace\/guest-test",
+    "startedAt": 1790453755258,
+    "stage": "cache-store",
+    "artifact": "\/data\/user\/0\/dev.forge.mobile\/files\/native-builds\/6a390c58-74fc-4ee6-abe3-077e5202aac4\/output\/app.apk",
+    "sha256": "c51aab90b5321d0ca80a0399d11da55e4b998ad96e6bc63b86211c67526d50a8",
+    "sourceSnapshotId": "c16803d7c9ceb1c7624ca391bf11a4532c4d230073c5894d7ab44ed449b6af8c",
+    "cacheHit": false,
+    "stagesMs": {
+      "inspect": 4,
+      "snapshot": 13,
+      "dependencies": 0,
+      "manifest": 1,
+      "resources": 303,
+      "java": 137,
+      "dex": 365,
+      "package": 8,
+      "align": 102,
+      "sign": 84,
+      "verify": 109,
+      "cache-store": 3
+    },
+    "dependencyFingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "durationMs": 1242,
+    "diagnostics": [],
+    "attempt": 2,
+    "remainingBuilds": 0
+  }
+}

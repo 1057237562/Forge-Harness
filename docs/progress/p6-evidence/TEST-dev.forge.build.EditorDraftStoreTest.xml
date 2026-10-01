@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.EditorDraftStoreTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-26T20:36:03.432Z" hostname="MSI" time="0.043">
+  <properties/>
+  <testcase name="restoresAfterStoreRecreationWithoutChangingSource" classname="dev.forge.build.EditorDraftStoreTest" time="0.012"/>
+  <testcase name="recoveryKeepsOriginalHashSoExternalChangesCannotBeOverwritten" classname="dev.forge.build.EditorDraftStoreTest" time="0.019"/>
+  <testcase name="staleQueuedWriteCannotResurrectDiscardedDraft" classname="dev.forge.build.EditorDraftStoreTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

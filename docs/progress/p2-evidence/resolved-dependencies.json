@@ -1,0 +1,17 @@
+{
+  "fingerprint": "67d5303af91e7f1ed521d584d44626604ecf7e0ebfcfaac88dd60d1e7ff58dd7",
+  "metadata": {
+    "pom:com.google.code.gson:gson-parent:2.10.1": "4248e0882426c615182385d6086c3ef3262e769957189e29306280b85482b833@https:\/\/repo.maven.apache.org\/maven2\/",
+    "pom:com.google.code.gson:gson:2.10.1": "d2b115634f5c085db4b9c9ffc2658e89e231fdbfbe2242121a1cd95d4d948dd7@https:\/\/repo.maven.apache.org\/maven2\/"
+  },
+  "artifacts": [
+    {
+      "id": "com.google.code.gson:gson:2.10.1",
+      "type": "jar",
+      "sha256": "4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593",
+      "repository": "https:\/\/repo.maven.apache.org\/maven2\/",
+      "compile": true,
+      "runtime": true
+    }
+  ]
+}

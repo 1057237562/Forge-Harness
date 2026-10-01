@@ -1,0 +1,43 @@
+{
+  "buildId": "e1295fed-5b50-4b7d-a159-c854f398a839",
+  "state": "SUCCEEDED",
+  "backend": "android-native",
+  "pid": 22733,
+  "offline": true,
+  "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-292bfe0f-9ef3-4bcb-873f-dfcc44d1ef8e",
+  "startedAt": 1790834028002,
+  "stage": "cache-store",
+  "artifact": "/data/user/0/dev.forge.mobile/files/native-builds/e1295fed-5b50-4b7d-a159-c854f398a839/output/app.apk",
+  "sha256": "8ad08128855f0a6fdfb92b4fec0fb8d5033ff05b6f5aa30c93f508d549bdfe69",
+  "sourceSnapshotId": "c63ba5320b5c6872c18ad85e3fecacf8997abffda0fae539b4d0fcf47e58ef51",
+  "cacheHit": false,
+  "stagesMs": {
+    "inspect": 4,
+    "snapshot": 16,
+    "dependencies": 32,
+    "manifest": 2,
+    "resources": 312,
+    "java": 391,
+    "dex": 13891,
+    "package": 168,
+    "align": 106,
+    "sign": 169,
+    "verify": 122,
+    "cache-store": 7
+  },
+  "dependencyFingerprint": "c4aa2568ed424419599ac8230e5be26c9a81180284aad25e0bdf22e26f53f014",
+  "stageCacheHits": {
+    "resources": 1
+  },
+  "durationMs": 15362,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "file": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-292bfe0f-9ef3-4bcb-873f-dfcc44d1ef8e/src/dev/forge/integration/MainActivity.java",
+      "line": 3,
+      "column": 0,
+      "message": "Resource leak: '<unassigned Closeable value>' is never closed"
+    }
+  ],
+  "runtimeResult": "module-on-android"
+}

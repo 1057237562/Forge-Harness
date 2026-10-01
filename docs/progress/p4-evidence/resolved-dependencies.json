@@ -1,0 +1,14 @@
+{
+  "fingerprint": "f9ee511d7670ee3341a35f4121932bda1851d316aff6d1e3373f94ddec9cd451",
+  "metadata": {},
+  "artifacts": [
+    {
+      "id": "local:libs\/library.aar",
+      "type": "aar",
+      "sha256": "d5c7febc4932508c62e418ee58560fb3310a00d2f3affca6095bbf37737e1421",
+      "repository": "workspace",
+      "compile": true,
+      "runtime": true
+    }
+  ]
+}

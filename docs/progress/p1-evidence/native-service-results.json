@@ -1,0 +1,82 @@
+[
+  {
+    "buildId": "08827f81-8627-4387-a8ca-350ff376b87c",
+    "state": "SUCCEEDED",
+    "backend": "android-native",
+    "pid": 25365,
+    "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-2e78ee96-4fe0-49f4-b2fa-7055f6fc121c",
+    "startedAt": 1790449507580,
+    "stage": "cache-store",
+    "artifact": "/data/user/0/dev.forge.mobile/files/native-builds/08827f81-8627-4387-a8ca-350ff376b87c/output/app.apk",
+    "sha256": "cdf7073644b39cd091b0002fb5aa987199f4b0b768183eafcfb1f5740caf830e",
+    "sourceSnapshotId": "b0f88c293bc9d7bf37cbd1e11ceff39e68c77c385db15ae4b19820b0419ce740",
+    "cacheHit": false,
+    "stagesMs": {
+      "inspect": 11,
+      "snapshot": 29,
+      "dependencies": 0,
+      "manifest": 19,
+      "resources": 416,
+      "java": 525,
+      "dex": 469,
+      "package": 16,
+      "align": 106,
+      "sign": 95,
+      "verify": 121,
+      "cache-store": 5
+    },
+    "durationMs": 2823,
+    "diagnostics": []
+  },
+  {
+    "buildId": "0a9687f9-a5eb-4b0d-b65b-0d8a27cd6555",
+    "state": "FAILED",
+    "backend": "android-native",
+    "pid": 25365,
+    "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-7f78b3d7-e941-4292-9709-e88e987489d5",
+    "startedAt": 1790449510677,
+    "stage": "java",
+    "error": "Java compilation failed; see diagnostics",
+    "durationMs": 763,
+    "diagnostics": [
+      {
+        "severity": "error",
+        "file": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-7f78b3d7-e941-4292-9709-e88e987489d5/src/dev/forge/integration/MainActivity.java",
+        "line": 2,
+        "column": 0,
+        "message": "MissingType cannot be resolved to a type"
+      }
+    ]
+  },
+  {
+    "buildId": "0e8e2811-aa9c-4dd3-b858-0af11eb4ca46",
+    "state": "SUCCEEDED",
+    "backend": "android-native",
+    "pid": 25365,
+    "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-2e78ee96-4fe0-49f4-b2fa-7055f6fc121c",
+    "startedAt": 1790449510433,
+    "stage": "verify",
+    "artifact": "/data/user/0/dev.forge.mobile/files/native-builds/0e8e2811-aa9c-4dd3-b858-0af11eb4ca46/output/app.apk",
+    "sha256": "cdf7073644b39cd091b0002fb5aa987199f4b0b768183eafcfb1f5740caf830e",
+    "sourceSnapshotId": "b0f88c293bc9d7bf37cbd1e11ceff39e68c77c385db15ae4b19820b0419ce740",
+    "cacheHit": true,
+    "stagesMs": {
+      "inspect": 5,
+      "snapshot": 16,
+      "dependencies": 0,
+      "cache-hit": 0,
+      "verify": 104
+    },
+    "durationMs": 214,
+    "diagnostics": []
+  },
+  {
+    "buildId": "68432786-75e5-44c2-a36e-01f7ed729388",
+    "state": "FAILED",
+    "backend": "android-native",
+    "pid": 25365,
+    "error": "Build root is outside this application's workspaces",
+    "durationMs": 4,
+    "diagnostics": []
+  }
+]

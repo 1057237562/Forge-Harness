@@ -1,0 +1,16 @@
+Source SHA-256: 3afce94b75bfd3af8d61175a0609e7381335c55f5bb9e9646de4ba7659eb77dc
+START inspect
+Legacy Java/XML layout imported with compileSdk 29. Use .forge/project.json to select another installed SDK.
+Native Java/XML debug build; Gradle scripts and plugins are not executed.
+END inspect 107ms
+START snapshot
+END snapshot 146ms
+START dependencies
+END dependencies 0ms
+START manifest
+END manifest 98ms
+START resources
+/data/data/dev.forge.nativeprobe/files/runs/3ba1a750-8e42-4f4d-b6b1-86862158d0fb/project/res/values/strings.xml:0: error: xml parser error: no element found.
+error /data/data/dev.forge.nativeprobe/files/runs/3ba1a750-8e42-4f4d-b6b1-86862158d0fb/project/res/values/strings.xml:0 xml parser error: no element found.
+/data/data/dev.forge.nativeprobe/files/runs/3ba1a750-8e42-4f4d-b6b1-86862158d0fb/project/res/values/strings.xml: error: file failed to compile.
+END resources 114ms

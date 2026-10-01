@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Forge Native Sample</string>
+    <string name="message">Built on Android with ECJ + aapt2 + D8. No Termux, PRoot or Gradle.</string>
+</resources>

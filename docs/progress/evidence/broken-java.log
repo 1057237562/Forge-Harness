@@ -1,0 +1,21 @@
+START prepare
+Source SHA-256: da4e929df72e5db90f2fd45c497fb45d3d6b5f04a640b3a0c9c429ff4dcb715e
+D8 2.1.7-r1 (build 4443fac8e25c38e6ecfb5a8b0d212a3fad6f7f63 from go/r8bot (luci-r8-ci-archive-0-ewc5))
+END prepare 251ms
+START aapt2-version
+Android Asset Packaging Tool (aapt) 2.19-10DLDLD175C00E175
+END aapt2-version 110ms
+START resources-compile
+END resources-compile 106ms
+START resources-link
+END resources-link 306ms
+START ecj
+----------
+1. ERROR in /data/data/dev.forge.nativeprobe/files/runs/8e1b0fc6-b3dc-46cd-afc4-0becdb2e0b90/project/src/dev/forge/sample/MainActivity.java (at line 7)
+	missingMethodForProbe();
+	^^^^^^^^^^^^^^^^^^^^^
+The method missingMethodForProbe() is undefined for the type MainActivity
+----------
+1 problem (1 error)
+
+END ecj 685ms

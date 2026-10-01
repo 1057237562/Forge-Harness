@@ -1,0 +1,32 @@
+{
+  "buildId": "b93d49ce-1176-4297-b69b-fa84d530dad5",
+  "state": "SUCCEEDED",
+  "backend": "android-native",
+  "pid": 27387,
+  "offline": true,
+  "projectPath": "\/data\/user\/0\/dev.forge.mobile\/files\/workspaces\/migration-c390b7be-d724-4289-84be-a80476b3980f",
+  "startedAt": 1790456980173,
+  "stage": "cache-store",
+  "artifact": "\/data\/user\/0\/dev.forge.mobile\/files\/native-builds\/b93d49ce-1176-4297-b69b-fa84d530dad5\/output\/app.apk",
+  "sha256": "c7a2ee1e07ef9fc11f8195d61dd966c48769d09ecb04d58a66b465022a57307c",
+  "sourceSnapshotId": "511a2d3adfae91068079d70b115e76d58caf2a766636709a82eb692d728e2c5e",
+  "cacheHit": false,
+  "stagesMs": {
+    "inspect": 12,
+    "snapshot": 48,
+    "dependencies": 3,
+    "manifest": 25,
+    "resources": 508,
+    "java": 559,
+    "dex": 545,
+    "package": 2,
+    "align": 104,
+    "sign": 136,
+    "verify": 124,
+    "cache-store": 4
+  },
+  "dependencyFingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stageCacheHits": {},
+  "durationMs": 2228,
+  "diagnostics": []
+}

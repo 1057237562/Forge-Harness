@@ -1,0 +1,25 @@
+{
+  "fingerprint": "803c621bd92351893ac075c1e4699059febba6df6111d47fd2e929a5a885f791",
+  "metadata": {
+    "pom:androidx.annotation:annotation:1.0.0": "a179c12db43d9c0300c9db63f4811db496504be5401b951d422b78490ad1e5b4@https:\/\/dl.google.com\/dl\/android\/maven2\/",
+    "pom:androidx.cardview:cardview:1.0.0": "e64ef4e08b58358fe27b599e6fe80a1b153db014c644beee630ab271061c3e6c@https:\/\/dl.google.com\/dl\/android\/maven2\/"
+  },
+  "artifacts": [
+    {
+      "id": "androidx.annotation:annotation:1.0.0",
+      "type": "jar",
+      "sha256": "0baae9755f7caf52aa80cd04324b91ba93af55d4d1d17dcc9a7b53d99ef7c016",
+      "repository": "https:\/\/dl.google.com\/dl\/android\/maven2\/",
+      "compile": true,
+      "runtime": true
+    },
+    {
+      "id": "androidx.cardview:cardview:1.0.0",
+      "type": "aar",
+      "sha256": "1193c04c22a3d6b5946dae9f4e8c59d6adde6a71b6bd5d87fb99d82dda1afec7",
+      "repository": "https:\/\/dl.google.com\/dl\/android\/maven2\/",
+      "compile": true,
+      "runtime": true
+    }
+  ]
+}

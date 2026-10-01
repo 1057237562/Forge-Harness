@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.MavenResolverTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-09-26T19:28:23.088Z" hostname="MSI" time="0.633">
+  <properties/>
+  <testcase name="compileOnlyDoesNotLeakTransitiveRuntimeArtifacts" classname="dev.forge.build.MavenResolverTest" time="0.05"/>
+  <testcase name="importsBomAndLocalManagementWins" classname="dev.forge.build.MavenResolverTest" time="0.052"/>
+  <testcase name="detectsCorruptionAndRepairsItOnline" classname="dev.forge.build.MavenResolverTest" time="0.037"/>
+  <testcase name="detectsDependencyAndParentCycles" classname="dev.forge.build.MavenResolverTest" time="0.046"/>
+  <testcase name="doesNotSilentlyDropGradleModuleOnlyDependencies" classname="dev.forge.build.MavenResolverTest" time="0.015"/>
+  <testcase name="picksAarPackagingWithoutAssumingJar" classname="dev.forge.build.MavenResolverTest" time="0.02"/>
+  <testcase name="cachedResolutionNeedsNoNetworkAndKeepsFingerprint" classname="dev.forge.build.MavenResolverTest" time="0.027"/>
+  <testcase name="inheritsParentManagementAndChildPropertyOverrides" classname="dev.forge.build.MavenResolverTest" time="0.045"/>
+  <testcase name="excludedPathDoesNotSuppressAnIndependentPath" classname="dev.forge.build.MavenResolverTest" time="0.078"/>
+  <testcase name="reusableResolverDoesNotLeakPreviousGraphMetadata" classname="dev.forge.build.MavenResolverTest" time="0.053"/>
+  <testcase name="missingOfflineDependencyIsExplicit" classname="dev.forge.build.MavenResolverTest" time="0.003"/>
+  <testcase name="conflictsRequireAnExplicitRootPin" classname="dev.forge.build.MavenResolverTest" time="0.077"/>
+  <testcase name="cancellationStopsBeforeDownloading" classname="dev.forge.build.MavenResolverTest" time="0.001"/>
+  <testcase name="resolvesTransitivesAndExcludesNonRuntimeScopes" classname="dev.forge.build.MavenResolverTest" time="0.049"/>
+  <testcase name="mergesScopesReachedThroughDifferentRoots" classname="dev.forge.build.MavenResolverTest" time="0.034"/>
+  <testcase name="supportsDirectWildcardExclusions" classname="dev.forge.build.MavenResolverTest" time="0.02"/>
+  <testcase name="rejectsAmbiguousDuplicatePomDependencies" classname="dev.forge.build.MavenResolverTest" time="0.014"/>
+  <testcase name="rejectsMaliciousPomAndRepositoryPaths" classname="dev.forge.build.MavenResolverTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

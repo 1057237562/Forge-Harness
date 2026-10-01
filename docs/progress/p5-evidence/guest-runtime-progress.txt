@@ -1,0 +1,4 @@
+Preparing Agent runtime
+Setup complete
+Testing guest Node to native compiler
+PASS: guest Node called Android native compiler; scripted repair succeeded

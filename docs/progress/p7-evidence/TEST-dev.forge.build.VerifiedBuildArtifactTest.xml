@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.VerifiedBuildArtifactTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-26T20:53:25.756Z" hostname="MSI" time="0.008">
+  <properties/>
+  <testcase name="checksBothBuildIdentityAndContent" classname="dev.forge.build.VerifiedBuildArtifactTest" time="0.007"/>
+  <testcase name="rejectsTraversalAndMissingHash" classname="dev.forge.build.VerifiedBuildArtifactTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

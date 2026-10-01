@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.ModuleMetadataTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-09-26T19:46:04.049Z" hostname="MSI" time="0.409">
+  <properties/>
+  <testcase name="strictConstraintCannotBeOverriddenByAnIncompatiblePin" classname="dev.forge.build.ModuleMetadataTest" time="0.042"/>
+  <testcase name="prefersAndroidVariantAndIgnoresFeatureCapabilities" classname="dev.forge.build.ModuleMetadataTest" time="0.02"/>
+  <testcase name="compileOnlyDoesNotDemandUnusedRuntimeVariant" classname="dev.forge.build.ModuleMetadataTest" time="0.021"/>
+  <testcase name="rejectsForeignComponentOwner" classname="dev.forge.build.ModuleMetadataTest" time="0.017"/>
+  <testcase name="usesModuleOnlyDependenciesWithSeparateApiRuntimeScopes" classname="dev.forge.build.ModuleMetadataTest" time="0.054"/>
+  <testcase name="acceptsMultiplatformOwnerAndArtifactAlias" classname="dev.forge.build.ModuleMetadataTest" time="0.036"/>
+  <testcase name="followsAvailableAtForEachUsage" classname="dev.forge.build.ModuleMetadataTest" time="0.038"/>
+  <testcase name="metadataAndRedirectsWorkOfflineAfterCaching" classname="dev.forge.build.ModuleMetadataTest" time="0.033"/>
+  <testcase name="acceptsNewerNumericVersionForMinimumConstraint" classname="dev.forge.build.ModuleMetadataTest" time="0.039"/>
+  <testcase name="supportsDistinctApiAndRuntimeFiles" classname="dev.forge.build.ModuleMetadataTest" time="0.027"/>
+  <testcase name="rejectsIncompatibleJvmTarget" classname="dev.forge.build.ModuleMetadataTest" time="0.015"/>
+  <testcase name="refusesAmbiguityInsteadOfPickingFirstVariant" classname="dev.forge.build.ModuleMetadataTest" time="0.015"/>
+  <testcase name="verifiesPublishedChecksum" classname="dev.forge.build.ModuleMetadataTest" time="0.022"/>
+  <testcase name="rejectsForeignRedirectAndUnsafeFileUrls" classname="dev.forge.build.ModuleMetadataTest" time="0.03"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

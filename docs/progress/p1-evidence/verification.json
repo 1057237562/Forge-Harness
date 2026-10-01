@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cases": 13,
+  "baselineRuns": 5,
+  "baselineMinMs": 373,
+  "baselineMedianMs": 676,
+  "baselineMaxMs": 3012,
+  "repeatableArtifact": true,
+  "changedArtifacts": true,
+  "failureStopsPipeline": true,
+  "activityVerified": 10,
+  "visibleUiVerified": 0,
+  "cacheHits": 4,
+  "cacheHitMinMs": 373.0,
+  "cacheHitMaxMs": 786.0
+}

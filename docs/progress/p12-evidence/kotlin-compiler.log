@@ -1,0 +1,5 @@
+
+PASS: Kotlin class compiled on ART, converted by D8 and executed answer() == 42
+data/user/0/dev.forge.mobile/cache/kotlin-probe-70cc17c4-145c-460d-a308-c5aeacfc284c/Broken.kt:2:27: error: unresolved reference: MissingType
+class Broken { val value: MissingType? = null }
+                          ^

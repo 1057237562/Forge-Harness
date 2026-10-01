@@ -1,0 +1,32 @@
+{
+  "buildId": "c6e360bc-980e-478e-862c-728ccfc6251b",
+  "state": "SUCCEEDED",
+  "backend": "android-native",
+  "pid": 29312,
+  "offline": true,
+  "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/native-test-411e2a96-9895-4bb1-a798-3181326cfeb5",
+  "startedAt": 1790450955209,
+  "stage": "cache-store",
+  "artifact": "/data/user/0/dev.forge.mobile/files/native-builds/c6e360bc-980e-478e-862c-728ccfc6251b/output/app.apk",
+  "sha256": "7d0db4179883e430963814e9231c76570da0e13cd93af4e5d414bef124d14d77",
+  "sourceSnapshotId": "b716accce785d919e304cc0220788d2c34e45630424e1ac16a70368adcbac4cc",
+  "cacheHit": false,
+  "stagesMs": {
+    "inspect": 4,
+    "snapshot": 14,
+    "dependencies": 9,
+    "manifest": 1,
+    "resources": 412,
+    "java": 287,
+    "dex": 2341,
+    "package": 18,
+    "align": 106,
+    "sign": 86,
+    "verify": 109,
+    "cache-store": 5
+  },
+  "dependencyFingerprint": "67d5303af91e7f1ed521d584d44626604ecf7e0ebfcfaac88dd60d1e7ff58dd7",
+  "durationMs": 3563,
+  "diagnostics": [],
+  "runtimeResult": "\"maven-on-android\""
+}

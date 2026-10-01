@@ -1,0 +1,39 @@
+{
+  "kind": "development-probe",
+  "androidPlatform": "android-29",
+  "desktopBuildTools": "30.0.3",
+  "files": [
+    {
+      "name": "android.jar",
+      "sha256": "d4ce0daae1695abc7497009c61237f774f52c6ffdc222784e03f60effb917532"
+    },
+    {
+      "name": "ecj-3.18.0.jar",
+      "sha256": "69dad18a1fcacd342a7d44c5abf74f50e7529975553a24c64bce0b29b86af497"
+    },
+    {
+      "name": "d8.jar",
+      "sha256": "3958eda74eb298337361e974c9b733856eae08795516bf78a0dd16df620e83bc"
+    },
+    {
+      "name": "apksigner.jar",
+      "sha256": "4295ef085c0de5cbd5d8e4c73126e948e20d3126db26a4f60125864c15f8b8cb"
+    },
+    {
+      "name": "aapt2",
+      "sha256": "be2cea61814678f7a9e61bf818a6666e6097a7d67d6c19498a4d7aa690bc4151"
+    },
+    {
+      "name": "zipalign",
+      "sha256": "cb9486230c1589d065eacfd6c294a628eb1f94c941be0a48862562d75a406d57"
+    },
+    {
+      "name": "libc++.so",
+      "sha256": "2942f62ca6c514aa645a145580872218eac71e859a7b39f38051fc69b99032d8"
+    },
+    {
+      "name": "forge-native-probe.apk",
+      "sha256": "bdf1aa30f69235039adf9c3ec5e8cfac652803b6b568d85174e357a1dda4f460"
+    }
+  ]
+}

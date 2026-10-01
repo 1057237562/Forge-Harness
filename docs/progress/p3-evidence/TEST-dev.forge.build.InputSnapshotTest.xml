@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.build.InputSnapshotTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-26T19:46:02.862Z" hostname="MSI" time="0.657">
+  <properties/>
+  <testcase name="rejectsTraversalAndWindowsAbsolutePaths" classname="dev.forge.build.InputSnapshotTest" time="0.008"/>
+  <testcase name="detectsConfigChangeAndKeepsStableDigestForSameInputs" classname="dev.forge.build.InputSnapshotTest" time="0.154"/>
+  <testcase name="cannotCaptureInsideProjectOrOverwriteDestination" classname="dev.forge.build.InputSnapshotTest" time="0.041"/>
+  <testcase name="newNonJavaSourceCannotEvadeSnapshotConsistencyCheck" classname="dev.forge.build.InputSnapshotTest" time="0.084"/>
+  <testcase name="newForgeConfigInvalidatesLegacySnapshot" classname="dev.forge.build.InputSnapshotTest" time="0.077"/>
+  <testcase name="additionsDeletesAndRenamesInvalidateSnapshot" classname="dev.forge.build.InputSnapshotTest" time="0.107"/>
+  <testcase name="snapshotIsIndependentAndDetectsContentChange" classname="dev.forge.build.InputSnapshotTest" time="0.09"/>
+  <testcase name="buildOutputsDoNotPolluteInputIdentity" classname="dev.forge.build.InputSnapshotTest" time="0.078"/>
+  <testcase name="rejectsSymlinkInputWhenPlatformSupportsCreatingIt" classname="dev.forge.build.InputSnapshotTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

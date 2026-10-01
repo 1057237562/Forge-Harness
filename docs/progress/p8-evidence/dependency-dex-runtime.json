@@ -1,0 +1,36 @@
+{
+  "buildId": "7c6d8d65-ba93-4960-81bb-be246a30227e",
+  "state": "SUCCEEDED",
+  "backend": "android-native",
+  "pid": 21914,
+  "offline": true,
+  "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/kotlin-apk-5edd4713-f640-4f3b-bccc-0e8d6b8c3592",
+  "startedAt": 1790833951384,
+  "stage": "cache-store",
+  "artifact": "/data/user/0/dev.forge.mobile/files/native-builds/7c6d8d65-ba93-4960-81bb-be246a30227e/output/app.apk",
+  "sha256": "77a04bcf0c180b36f837b04f67ecb031d400026ff550da914730b495ed64a085",
+  "sourceSnapshotId": "be4953be015bf1c3277b61854b231200207d031718b84b7272a88f2762d1f262",
+  "cacheHit": false,
+  "stagesMs": {
+    "inspect": 4,
+    "snapshot": 19,
+    "dependencies": 24,
+    "manifest": 2,
+    "resources": 303,
+    "kotlin": 1104,
+    "java": 1410,
+    "dex": 1387,
+    "package": 111,
+    "align": 104,
+    "sign": 101,
+    "verify": 108,
+    "cache-store": 10
+  },
+  "dependencyFingerprint": "294a8d99b21f74e1126b39adadb8994173217295e420aff9640a85b97ec59a00",
+  "stageCacheHits": {
+    "dependency-dex": 1
+  },
+  "durationMs": 3760,
+  "diagnostics": [],
+  "runtimeResult": "kotlin-apk:43"
+}

@@ -1,0 +1,44 @@
+{
+  "fingerprint": "c4aa2568ed424419599ac8230e5be26c9a81180284aad25e0bdf22e26f53f014",
+  "metadata": {
+    "module:com.squareup.okio:okio:2.10.0": "11cbeabc3a765c9a803242fa2024a11853eb0865da536c4b05afdcdbb2346370@https:\/\/repo.maven.apache.org\/maven2\/",
+    "pom:com.squareup.okio:okio:2.10.0": "4b96060b6d1a2b96e90e42ad7158adbe3469316b80fea0817c6c33993ee1cc72@https:\/\/repo.maven.apache.org\/maven2\/",
+    "pom:org.jetbrains.kotlin:kotlin-stdlib-common:1.4.20": "7c5706ebba57d444c2c9024289313a49386bea0996c03294c2b5709a750ff429@https:\/\/repo.maven.apache.org\/maven2\/",
+    "pom:org.jetbrains.kotlin:kotlin-stdlib:1.4.20": "3985ef1f92828d582a43cec9cedb2626742e0fe1505d3136ebc298cc98bc234a@https:\/\/repo.maven.apache.org\/maven2\/",
+    "pom:org.jetbrains:annotations:13.0": "965aeb2bedff369819bdde1bf7a0b3b89b8247dd69c88b86375d76163bb8c397@https:\/\/repo.maven.apache.org\/maven2\/"
+  },
+  "artifacts": [
+    {
+      "id": "org.jetbrains:annotations:13.0",
+      "type": "jar",
+      "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+      "repository": "https:\/\/repo.maven.apache.org\/maven2\/",
+      "compile": true,
+      "runtime": true
+    },
+    {
+      "id": "org.jetbrains.kotlin:kotlin-stdlib-common:1.4.20",
+      "type": "jar",
+      "sha256": "a7112c9b3cefee418286c9c9372f7af992bd1e6e030691d52f60cb36dbec8320",
+      "repository": "https:\/\/repo.maven.apache.org\/maven2\/",
+      "compile": true,
+      "runtime": true
+    },
+    {
+      "id": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20",
+      "type": "jar",
+      "sha256": "b8ab1da5cdc89cb084d41e1f28f20a42bd431538642a5741c52bbfae3fa3e656",
+      "repository": "https:\/\/repo.maven.apache.org\/maven2\/",
+      "compile": true,
+      "runtime": true
+    },
+    {
+      "id": "com.squareup.okio:okio:2.10.0@okio-jvm-2.10.0.jar",
+      "type": "jar",
+      "sha256": "a27f091d34aa452e37227e2cfa85809f29012a8ef2501a9b5a125a978e4fcbc1",
+      "repository": "https:\/\/repo.maven.apache.org\/maven2\/",
+      "compile": true,
+      "runtime": true
+    }
+  ]
+}

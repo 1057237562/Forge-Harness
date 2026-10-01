@@ -1,0 +1,24 @@
+Source SHA-256: da4e929df72e5db90f2fd45c497fb45d3d6b5f04a640b3a0c9c429ff4dcb715e
+START inspect
+Legacy Java/XML layout imported with compileSdk 29. Use .forge/project.json to select another installed SDK.
+Native Java/XML debug build; Gradle scripts and plugins are not executed.
+END inspect 125ms
+START snapshot
+END snapshot 208ms
+START dependencies
+END dependencies 0ms
+START manifest
+END manifest 58ms
+START resources
+END resources 432ms
+START java
+error /data/data/dev.forge.nativeprobe/files/runs/30a464ec-73cd-4403-8025-0ef43fb62a57/project/src/dev/forge/sample/MainActivity.java:7 The method missingMethodForProbe() is undefined for the type MainActivity
+----------
+1. ERROR in /data/data/dev.forge.nativeprobe/files/runs/30a464ec-73cd-4403-8025-0ef43fb62a57/project/src/dev/forge/sample/MainActivity.java (at line 7)
+	missingMethodForProbe();
+	^^^^^^^^^^^^^^^^^^^^^
+The method missingMethodForProbe() is undefined for the type MainActivity
+----------
+1 problem (1 error)
+
+END java 539ms

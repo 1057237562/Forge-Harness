@@ -1,0 +1,11 @@
+START prepare
+Source SHA-256: 3afce94b75bfd3af8d61175a0609e7381335c55f5bb9e9646de4ba7659eb77dc
+D8 2.1.7-r1 (build 4443fac8e25c38e6ecfb5a8b0d212a3fad6f7f63 from go/r8bot (luci-r8-ci-archive-0-ewc5))
+END prepare 274ms
+START aapt2-version
+Android Asset Packaging Tool (aapt) 2.19-10DLDLD175C00E175
+END aapt2-version 108ms
+START resources-compile
+/data/user/0/dev.forge.nativeprobe/files/runs/b109a944-e827-49b3-9251-f7c361e491b3/project/res/values/strings.xml:0: error: xml parser error: no element found.
+/data/user/0/dev.forge.nativeprobe/files/runs/b109a944-e827-49b3-9251-f7c361e491b3/project/res/values/strings.xml: error: file failed to compile.
+END resources-compile 106ms

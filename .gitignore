@@ -1,0 +1,12 @@
+.cache/
+research/
+/mobile/build/
+/mobile/*/build/
+/probes/native-build/build/
+**/local.properties
+*.jks
+*.keystore
+/mobile/third_party/proot/
+/mobile/third_party/libandroid-shmem/
+**/.gradle/
+**/.cxx/

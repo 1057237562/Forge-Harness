@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.forge.compiler.LibraryRGeneratorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-26T20:29:25.815Z" hostname="MSI" time="0.023">
+  <properties/>
+  <testcase name="preservesLibraryIndicesWhenAppAddsEarlierAttribute" classname="dev.forge.compiler.LibraryRGeneratorTest" time="0.011"/>
+  <testcase name="rejectsMissingLinkedSymbolsInsteadOfUsingZeroIds" classname="dev.forge.compiler.LibraryRGeneratorTest" time="0.008"/>
+  <testcase name="rejectsIncompleteStyleableMapping" classname="dev.forge.compiler.LibraryRGeneratorTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
