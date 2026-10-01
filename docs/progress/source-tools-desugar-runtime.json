@@ -1,0 +1,35 @@
+{
+  "buildId": "a481f3df-0155-4be5-90fa-5aa2355066f3",
+  "state": "SUCCEEDED",
+  "backend": "android-native",
+  "pid": 12367,
+  "offline": true,
+  "projectPath": "/data/user/0/dev.forge.mobile/files/workspaces/desugar-8e05f3c7-f71e-4094-a533-206197ae23c8",
+  "startedAt": 1790837399746,
+  "stage": "cache-store",
+  "artifact": "/data/user/0/dev.forge.mobile/files/native-builds/a481f3df-0155-4be5-90fa-5aa2355066f3/output/app.apk",
+  "sha256": "b4e987124372bd69ba499755407377b85a498e74f6503b291b8620678adc742f",
+  "sourceSnapshotId": "3853d279053437816793868ce4fd5243ef5ba7f7b2220535e931da56fca8655f",
+  "cacheHit": false,
+  "stagesMs": {
+    "inspect": 3,
+    "snapshot": 11,
+    "dependencies": 1,
+    "manifest": 1,
+    "resources": 409,
+    "java": 416,
+    "dex": 415,
+    "package": 3,
+    "align": 104,
+    "sign": 83,
+    "verify": 112,
+    "cache-store": 4
+  },
+  "dependencyFingerprint": "51d20fedf539245d1fb6adc604aaf415a7e637ae390fdcd783625d7d02ae2a75",
+  "stageCacheHits": {
+    "dependency-dex": 1
+  },
+  "durationMs": 1723,
+  "diagnostics": [],
+  "runtimeResult": "desugar:42:41"
+}

@@ -9,6 +9,8 @@ function Get-Checkout([string]$Url, [string]$Path, [string]$Commit, [string]$Ref
     }
     $actual = & git -C $Path rev-parse HEAD
     if ($LASTEXITCODE -ne 0 -or $actual -ne $Commit) { throw "Unexpected source revision: $Path (expected $Commit, got $actual)" }
+    & git -C $Path diff HEAD --quiet
+    if ($LASTEXITCODE -ne 0) { throw "Tracked source changes must be recorded before building: $Path" }
 }
 # The build recipes are also pinned; preserve existing local work on mismatch.
 if (!(Test-Path -LiteralPath (Join-Path $Destination '.git'))) {

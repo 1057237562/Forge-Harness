@@ -1,0 +1,15 @@
+package: name='dev.forge.sample' versionCode='1' versionName='0.1' platformBuildVersionName='10' platformBuildVersionCode='29' compileSdkVersion='29' compileSdkVersionCodename='10'
+minSdkVersion:'28'
+targetSdkVersion:'29'
+application-label:'Forge Native Sample'
+application: label='Forge Native Sample' icon=''
+application-debuggable
+launchable-activity: name='dev.forge.sample.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'

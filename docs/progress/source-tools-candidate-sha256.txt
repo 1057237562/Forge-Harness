@@ -1,0 +1,9 @@
+
+Algorithm : SHA256
+Hash      : D8DA9EBC60BC50D48A426F75B79F672370A283C659E951A3939FB66D83F824BB
+Path      : E:\Workspace\AI\Forge\.cache\native-tools\forge-source-candidate\aapt2
+
+Algorithm : SHA256
+Hash      : BC8A379B20B849E16B9A8181120CCA11E0DBFEF2F7474C32ED464DCBCB5372B5
+Path      : E:\Workspace\AI\Forge\.cache\native-tools\forge-source-candidate\zipalign
+

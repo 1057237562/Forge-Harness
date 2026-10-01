@@ -1,0 +1,33 @@
+Performing Incremental Install
+Performing Streamed Install
+Success
+baseline SUCCEEDED 4163ms buildId=c07b438f-b1f6-4d2d-b37c-f7ea444a0ff4
+baseline SUCCEEDED 385ms buildId=271f6377-37b5-40a0-8238-2bbc4ce3b66b
+baseline SUCCEEDED 512ms buildId=a61a2a59-ec70-4a08-a552-6f1dfdd2f673
+baseline SUCCEEDED 548ms buildId=4c845bc9-4a00-4382-a803-8faffcc62ee3
+baseline SUCCEEDED 475ms buildId=d2d92cd3-fcd4-4ade-95aa-ccb34a8f32db
+java-change SUCCEEDED 3061ms buildId=53278db4-a1d9-4bfc-a63f-8f718ed9424e
+resource-change SUCCEEDED 2534ms buildId=da910f58-a529-4894-bda6-78a29342aa4c
+gradle-layout SUCCEEDED 2535ms buildId=90b57a2c-98f5-44bb-a567-d1e010e912d2
+explicit-config SUCCEEDED 2911ms buildId=6775caa5-e91d-46e0-b4b3-f2d46eb445e7
+local-jar SUCCEEDED 3359ms buildId=1f462480-3199-4d2a-8255-5f1ca82692c7
+broken-java FAILED 1484ms buildId=5b55e2ef-4fb1-4c16-95c7-61895ad4283a
+broken-resource FAILED 499ms buildId=9a2312cb-bbb8-44df-a4d0-c8a3a64f98e8
+cancel-at-resources CANCELLED 396ms buildId=a9d05307-f51f-45c7-880b-050774cc5a7f
+PASS: 13 device build cases and successful artifact hashes verified. UI validation skipped: True. Results: E:\Workspace\AI\Forge\probes\native-build\build\device-results
+{
+  "passed": true,
+  "cases": 13,
+  "baselineRuns": 5,
+  "baselineMinMs": 385,
+  "baselineMedianMs": 512,
+  "baselineMaxMs": 4163,
+  "repeatableArtifact": true,
+  "changedArtifacts": true,
+  "failureStopsPipeline": true,
+  "activityVerified": 10,
+  "visibleUiVerified": 0,
+  "cacheHits": 4,
+  "cacheHitMinMs": 385.0,
+  "cacheHitMaxMs": 548.0
+}

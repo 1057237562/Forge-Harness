@@ -53,12 +53,19 @@ add_subdirectory("${SRC}/expat/expat" expat EXCLUDE_FROM_ALL)
 include("${FORGE_SDK_SOURCE}/lib/libandroidfw.cmake")
 include("${FORGE_SDK_SOURCE}/lib/libbuildversion.cmake")
 target_sources(libutils PRIVATE
+    "${SRC}/core/libutils/binder/RefBase.cpp"
+    "${SRC}/core/libutils/binder/StrongPointer.cpp"
     "${SRC}/core/libutils/FileMap.cpp"
     "${SRC}/core/libutils/JenkinsHash.cpp"
     "${SRC}/core/libutils/binder/Errors.cpp"
     "${SRC}/core/libutils/binder/String8.cpp"
     "${SRC}/core/libutils/binder/String16.cpp"
     "${SRC}/core/libutils/binder/Unicode.cpp")
+target_include_directories(libutils PRIVATE "${SRC}/libbase/include")
+target_sources(libutils PRIVATE
+    "${SRC}/logging/liblog/log_event_write.cpp"
+    "${SRC}/logging/liblog/log_event_list.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/security_log_compat.cpp")
 
 # Generate into the build directory; pinned source checkouts remain unchanged.
 set(PROTO_DIR "${CMAKE_CURRENT_BINARY_DIR}/aapt-proto")

@@ -63,6 +63,41 @@
 
 ## 当前环境与下一步
 
+探针来源更正与验证：审查 native-probe/build.gradle.kts 确认其始终复用主应用 generated/forge-native，
+此前“独立探针仍保留旧工具路径”的描述不正确；默认切换后探针也使用源码工具。已删除准备脚本
+中不再使用的 34.0.4 归档下载/解压，BUILDING.md 同步更正。完整执行 probe build.ps1（含源码准备）
+及 test-device.ps1 -BuildOnly：13 场景、10 个 Activity 结果通过，4 次缓存命中，产物可重复/变更/失败中止
+检查通过；可见 UI 检查为 0。5 次 baseline 385–4163 ms，中位 512 ms，混合冷构建与缓存命中，
+不能当成冷编译基准。证据 source-probe-device.txt、source-probe-toolchain.json。
+
+源码工具默认切换完成：主应用默认使用 forge-source-candidate；prepare-native-tools.ps1 自动调用
+固定源码重建入口，BUILDING.md 已同步。aapt2 摘要与前次通过版本一致；最新 zipalign 摘要变化后
+重新执行全部 10 项设备回归，通过（102.24 秒），Kotlin 产物独立 v2 验签/安装/运行返回 kotlin-apk:43。
+证据 default-source-tools-device-tests.txt、default-source-tools-kotlin-runtime.json、
+default-source-tools-tested-profile.json。源码准备新增拒绝受跟踪文件未记录修改，当前 19 个 checkout 校验通过。
+此处不宣称干净环境字节级复现、许可完整审计或 16 KB 实机兼容；独立探针仍保留旧工具路径。
+
+源码工具应用内验证：通过 forgeNativeToolsDir 属性选择候选目录，已打包安装并完成 10 项
+Java/JAR/AAR/Kotlin/默认方法设备测试（101.449 秒）；Kotlin、AndroidX、desugar 产物分别
+独立验签、安装和 Activity 回读通过。证据 source-tools-app-device-tests.txt、
+source-tools-{kotlin,androidx,desugar}-runtime.json；实际测试工具摘要记录于 source-tools-tested-profile.json。
+新增 native-tools-build/build-tools.ps1，固定源码和 protoc 摘要、NDK 配置/编译/剥离/通知导出，
+已完整执行通过。脚本重建的候选文件不应自动等同于已测试 profile，替换须核对摘要。
+默认工具路径尚未切换；第三方嵌套许可完整清单、干净机器复现和 16 KB/旧 Android 设备验收仍待完成。
+
+aapt2 源码重建成功：全部 LOAD 为 0x4000，仅依赖系统 dl/log/m/z/c 库。私有日志 API 通过
+系统 liblog 动态解析；不可用时返回 ENOSYS，普通错误事件另向公开日志接口报告，未伪造成功。
+真机执行 version、示例资源 compile/link、dump badging 均通过，包名 dev.forge.sample、SDK 29。
+证据 aapt2-source-build.txt、aapt2-source-elf.txt、aapt2-source-device.txt；调试符号剥离后的
+候选工具保存于 .cache/native-tools/forge-source-candidate，摘要见 source-tools-candidate-sha256.txt。
+尚未切换正式打包工具；仍需嵌入应用后全编译链、AAR/Kotlin 回归，以及低版本/16 KB 实机验证。
+
+aapt2 依赖链接进展：BoringSSL/PCRE/SELinux/libcutils/incfs 已接入并编译；Expat 改为静态链接。
+修正低 API native_handle 的 fdsan 分支及 SELinux 错误的 HAVE_REALLOCARRAY 声明，
+补齐字符串/Unicode/RefBase/FileMap 与 AOSP 错误事件日志实现。最终链接目前只报告
+`__android_log_security_bwrite` 缺失（来自 log_event_list），仍未生成工具；需要补全日志实现或
+合法的平台可用性适配，不能静默丢弃错误日志。最新链接证据覆盖在 aapt2-source-link-attempt.txt。
+
 aapt2 构建更新：新增可选 FORGE_BUILD_AAPT2 和 aapt2.cmake，严格核对 protoc 3.21.12，
 在构建目录生成 protobuf 文件，不修改固定源码。修正 Expat/PNG 生成头、Windows 符号链接对应的
 Binder 真实 include 目录，以及 protobuf Android config.h。C++ 编译推进至最终链接；

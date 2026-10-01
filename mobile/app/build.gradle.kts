@@ -48,7 +48,8 @@ val packageDesugarFixture = tasks.register<Jar>("packageDesugarFixture") {
     dependsOn(compileDesugarFixture); from(desugarFixtureClasses); archiveFileName.set("default-methods.jar")
     destinationDirectory.set(desugarFixtureAssets.map { it.dir("desugar-fixtures") })
 }
-val forgeTools = rootProject.file("../.cache/native-tools/arm64/build-tools/34.0.4")
+val forgeTools = rootProject.file(providers.gradleProperty("forgeNativeToolsDir")
+    .getOrElse("../.cache/native-tools/forge-source-candidate"))
 val forgeGenerated = layout.buildDirectory.dir("generated/forge-native")
 val localSdk = Properties().apply {
     rootProject.file("local.properties").takeIf { it.isFile }?.inputStream()?.use { load(it) }
@@ -162,8 +163,8 @@ android {
         targetSdk = if (playBuild) 36 else 28
         // Keep literal defaults so F-Droid's static manifest parser can detect
         // the tagged release. Gradle properties may still override Play builds.
-        versionCode = 5
-        versionName = "1.0.4"
+        versionCode = 6
+        versionName = "0.0.1-alpha.1"
         providers.gradleProperty("appVersionCode").orNull?.toIntOrNull()?.let { versionCode = it }
         providers.gradleProperty("appVersionName").orNull?.let { versionName = it }
 

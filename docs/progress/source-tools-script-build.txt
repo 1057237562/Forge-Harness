@@ -1,0 +1,295 @@
+All locked source revisions verified.
+-- Version: 10.2.0
+-- Build type: Release
+CMake Deprecation Warning at E:/Workspace/AI/Forge/research/android-sdk-tools/src/zopfli/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Could NOT find BZip2 (missing: BZIP2_LIBRARIES BZIP2_INCLUDE_DIR) 
+-- Could not find OPTIONAL package Readline
+-- Could not find OPTIONAL package Editline
+-- 
+-- 
+-- PCRE2-10.44 configuration summary:
+-- 
+--   Install prefix .................. : C:/Program Files (x86)/forge_sdk_tools
+--   C compiler ...................... : E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+--   C compiler flags ................ : -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O3 -DNDEBUG 
+-- 
+--   Build 8 bit PCRE2 library ....... : ON
+--   Build 16 bit PCRE2 library ...... : OFF
+--   Build 32 bit PCRE2 library ...... : OFF
+--   Enable JIT compiling support .... : OFF
+--   Use SELinux allocator in JIT .... : IGNORE
+--   Enable Unicode support .......... : ON
+--   Newline char/sequence ........... : LF
+--   \R matches only ANYCRLF ......... : OFF
+--   \C is disabled .................. : OFF
+--   EBCDIC coding ................... : OFF
+--   EBCDIC coding with NL=0x25 ...... : OFF
+--   Rebuild char tables ............. : OFF
+--   Internal link size .............. : 2
+--   Maximum variable lookbehind ..... : 255
+--   Parentheses nest limit .......... : 250
+--   Heap limit ...................... : 20000000
+--   Match limit ..................... : 10000000
+--   Match depth limit ............... : MATCH_LIMIT
+--   Build shared libs ............... : OFF
+--   Build static libs ............... : ON
+--      with PIC enabled ............. : OFF
+--   Build pcre2grep ................. : OFF
+--   Enable JIT in pcre2grep ......... : ON
+--   Enable callouts in pcre2grep .... : ON
+--   Enable callout fork in pcre2grep. : ON
+--   Buffer size for pcre2grep ....... : 20480
+--   Build tests (implies pcre2test .. : OFF
+--                and pcre2grep)
+--   Link pcre2grep with libz ........ : ON
+--   Link pcre2grep with libbz2 ...... : Library not found
+--   Link pcre2test with libeditline . : Library not found
+--   Link pcre2test with libreadline . : Library not found
+--   Support Valgrind .................: OFF
+--   Use %zu and %td ..................: AUTO
+-- 
+-- 
+-- 3.21.12.0
+-- Could not find an AWK-compatible program
+-- ===========================================================================
+-- 
+-- Configuration
+--   Generator .................. Ninja
+--   Build type ................. Release
+--   Prefix ..................... C:/Program Files (x86)/forge_sdk_tools
+--   Shared libraries ........... OFF
+--   Character type ............. char (UTF-8)
+--   Library name postfix ....... 
+-- 
+--   Build documentation ........ OFF
+--   Build examples ............. OFF
+--   Build fuzzers .............. OFF
+--   Build tests ................ OFF
+--   Build tools (xmlwf) ........ OFF
+--   Build pkg-config file ...... ON
+--   Install files .............. ON
+-- 
+--   Features
+--     // Advanced options, changes not advised
+--     Attributes info .......... OFF
+--     Context bytes ............ 1024
+--     DTD support .............. ON
+--     General entities ......... ON
+--     Large size ............... OFF
+--     Minimum size ............. OFF
+--     Namespace support ........ ON
+-- 
+--   Entropy sources
+--     getrandom ................ 1
+--     syscall SYS_getrandom .... 1
+--     libbsd ................... OFF
+--     /dev/random .............. ON
+-- 
+-- ===========================================================================
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/Workspace/AI/Forge/.cache/sdk-tools-build
+[1/125] Building CXX object CMakeFiles/libincfs.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/incremental_delivery/incfs/util/map_ptr.cpp.o
+[2/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Asset.cpp.o
+[3/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AttributeResolution.cpp.o
+[4/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ApkAssets.cpp.o
+[5/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetsProvider.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetsProvider.cpp:107:18: warning: nested designators are a C99 extension [-Wc99-designator]
+  107 |   struct stat sb{.st_mtime = -1};
+      |                  ^~~~~~~~~
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetsProvider.cpp:140:18: warning: nested designators are a C99 extension [-Wc99-designator]
+  140 |   struct stat sb{.st_mtime = -1};
+      |                  ^~~~~~~~~
+2 warnings generated.
+[6/125] Building CXX object CMakeFiles/libincfs.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/incremental_delivery/incfs/incfs.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/incremental_delivery/incfs/incfs.cpp:557:23: warning: bitwise operation between different enumeration types ('IncFsMountFlags' and 'android::incfs::MountFlags') is deprecated [-Wdeprecated-enum-enum-conversion]
+  557 |     if (options.flags & createOnly) {
+      |         ~~~~~~~~~~~~~ ^ ~~~~~~~~~~
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/incremental_delivery/incfs/incfs.cpp:562:30: warning: bitwise operation between different enumeration types ('IncFsMountFlags' and 'android::incfs::MountFlags') is deprecated [-Wdeprecated-enum-enum-conversion]
+  562 |     } else if (options.flags & android::incfs::truncate) {
+
+      |                ~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+
+2 warnings generated.
+
+[7/125] Building CXX object CMakeFiles/libincfs.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/incremental_delivery/incfs/MountRegistry.cpp.o
+[8/125] Linking CXX static library liblibincfs.a
+[9/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/FileStream.cpp.o
+[10/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetManager.cpp.o
+[11/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ConfigDescription.cpp.o
+[12/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ChunkIterator.cpp.o
+[13/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Idmap.cpp.o
+[14/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Locale.cpp.o
+[15/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceTimer.cpp.o
+[16/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Png.cpp.o
+[17/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/NinePatch.cpp.o
+[18/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/LoadedArsc.cpp.o
+[19/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ZipUtils.cpp.o
+[20/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceUtils.cpp.o
+[21/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/TypeWrappers.cpp.o
+[22/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/AssetManager2.cpp.o
+[23/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/StringPool.cpp.o
+[24/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/Util.cpp.o
+[25/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/XmlIdCollector.cpp.o
+[26/125] Building CXX object CMakeFiles/libandroidfw.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceTypes.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/ResourceTypes.cpp:2288:52: warning: bitwise operation between different enumeration types ('android::ResTable_config::(unnamed enum at E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/include/androidfw/ResourceTypes.h:1065:5)' and 'android::ResTable_config::(unnamed enum at E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/libs/androidfw/include/androidfw/ResourceTypes.h:1073:5)') is deprecated [-Wdeprecated-anon-enum-enum-conversion]
+ 2288 |     if (((inputFlags^o.inputFlags)&(MASK_KEYSHIDDEN|MASK_NAVHIDDEN)) != 0)
+
+      |                                     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[27/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/Pseudolocalizer.cpp.o
+[28/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/PseudolocaleGenerator.cpp.o
+[29/125] Linking CXX static library liblibandroidfw.a
+[30/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/Archive.cpp.o
+[31/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/InlineXmlFormatParser.cpp.o
+[32/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/filter/AbiFilter.cpp.o
+[33/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/compile/IdAssigner.cpp.o
+[34/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/filter/ConfigFilter.cpp.o
+[35/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/ResChunkPullParser.cpp.o
+[36/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/ResEntryWriter.cpp.o
+[37/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/Container.cpp.o
+[38/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/XmlFlattener.cpp.o
+[39/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/BinaryResourceParser.cpp.o
+[40/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/FileSystem.cpp.o
+[41/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/Util.cpp.o
+[42/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/ZipArchive.cpp.o
+[43/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/io/File.cpp.o
+[44/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/configuration/ConfigurationParser.cpp.o
+[45/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoDeserialize.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoDeserialize.cpp:947:37: warning: 'dimension_value_deprecated' is deprecated [-Wdeprecated-declarations]
+  947 |           float dimen_val = pb_prim.dimension_value_deprecated();
+      |                                     ^
+E:/Workspace/AI/Forge/.cache/sdk-tools-build/aapt-proto/Resources.pb.h:6562:3: note: 'dimension_value_deprecated' has been explicitly marked deprecated here
+ 6562 |   PROTOBUF_DEPRECATED float dimension_value_deprecated() const;
+      |   ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/protobuf/src/google/protobuf/port_def.inc:339:45: note: expanded from macro 'PROTOBUF_DEPRECATED'
+  339 | # define PROTOBUF_DEPRECATED __attribute__((deprecated))
+      |                                             ^
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoDeserialize.cpp:952:40: warning: 'fraction_value_deprecated' is deprecated [-Wdeprecated-declarations]
+  952 |           float fraction_val = pb_prim.fraction_value_deprecated();
+      |                                        ^
+E:/Workspace/AI/Forge/.cache/sdk-tools-build/aapt-proto/Resources.pb.h:6575:3: note: 'fraction_value_deprecated' has been explicitly marked deprecated here
+
+ 6575 |   PROTOBUF_DEPRECATED float fraction_value_deprecated() const;
+
+      |   ^
+
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/protobuf/src/google/protobuf/port_def.inc:339:45: note: expanded from macro 'PROTOBUF_DEPRECATED'
+
+  339 | # define PROTOBUF_DEPRECATED __attribute__((deprecated))
+
+      |                                             ^
+
+2 warnings generated.
+
+[46/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/binary/TableFlattener.cpp.o
+[47/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/PrivateAttributeMover.cpp.o
+[48/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/NoDefaultResourceRemover.cpp.o
+[49/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/AutoVersioner.cpp.o
+[50/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/format/proto/ProtoSerialize.cpp.o
+[51/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/ReferenceLinker.cpp.o
+[52/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/FeatureFlagsFilter.cpp.o
+[53/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/XmlNamespaceRemover.cpp.o
+[54/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/ResourceExcluder.cpp.o
+[55/125] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/abi_compatibility.cpp.o
+[56/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/ManifestFixer.cpp.o
+[57/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/XmlReferenceLinker.cpp.o
+[58/125] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/mapped_file.cpp.o
+[59/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/TableMerger.cpp.o
+[60/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/ResourceDeduper.cpp.o
+[61/125] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/cmsg.cpp.o
+[62/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/link/XmlCompatVersioner.cpp.o
+[63/125] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/file.cpp.o
+[64/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/dump/DumpManifest.cpp.o
+[65/125] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipAlignMain.cpp.o
+[66/125] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/test_utils.cpp.o
+[67/125] Building CXX object CMakeFiles/libziparchive.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libziparchive/zip_archive_stream_entry.cc.o
+[68/125] Building CXX object CMakeFiles/libbase.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/libbase/logging.cpp:242:7: warning: array designators are a C99 extension [-Wc99-designator]
+  242 |       [android::base::VERBOSE] = 7,              // KERN_DEBUG (there is no verbose kernel log
+
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[69/125] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipAlign.cpp.o
+[70/125] Linking CXX static library liblibbase.a
+[71/125] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipFile.cpp.o
+[72/125] Building CXX object CMakeFiles/libcutils.dir/compat/native_handle.cpp.o
+[73/125] Building CXX object CMakeFiles/zipalign.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/build/tools/zipalign/ZipEntry.cpp.o
+[74/125] Building CXX object CMakeFiles/libcutils.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/core/libcutils/android_get_control_file.cpp.o
+[75/125] Building CXX object CMakeFiles/libziparchive.dir/compat/zip_archive.cc.o
+[76/125] Linking CXX static library liblibziparchive.a
+[77/125] Linking CXX executable zipalign
+[78/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/MultiApkGenerator.cpp.o
+[79/125] Building CXX object CMakeFiles/libcutils.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/core/libcutils/ashmem-dev.cpp.o
+[80/125] Linking CXX static library liblibcutils.a
+[81/125] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/ResourcesInternal.pb.cc.o
+[82/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Command.cpp.o
+[83/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/ApkInfo.cpp.o
+[84/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Main.cpp.o
+[85/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Dump.cpp.o
+[86/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Convert.cpp.o
+[87/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Diff.cpp.o
+[88/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Compile.cpp.o
+[89/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/VersionCollapser.cpp.o
+[90/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/ResourceFilter.cpp.o
+[91/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/split/TableSplitter.cpp.o
+[92/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Optimize.cpp.o
+[93/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/process/SymbolTable.cpp.o
+[94/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/util/Util.cpp.o
+[95/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/process/ProductFilter.cpp.o
+[96/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Util.cpp.o
+[97/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/optimize/Obfuscator.cpp.o
+[98/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/text/Printer.cpp.o
+[99/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/util/Files.cpp.o
+[100/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/DominatorTree.cpp.o
+[101/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/ManifestClassGenerator.cpp.o
+[102/125] Building CXX object CMakeFiles/aapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/cmd/Link.cpp.o
+[103/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/ClassDefinition.cpp.o
+[104/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Debug.cpp.o
+[105/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/AnnotationProcessor.cpp.o
+[106/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/ProguardRules.cpp.o
+[107/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/Resource.cpp.o
+[108/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/java/JavaClassGenerator.cpp.o
+[109/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceUtils.cpp.o
+[110/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/SdkConstants.cpp.o
+[111/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/LoadedApk.cpp.o
+[112/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlActionExecutor.cpp.o
+[113/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ValueTransformer.cpp.o
+[114/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceParser.cpp.o
+[115/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlPullParser.cpp.o
+[116/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceTable.cpp.o
+[117/125] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/Configuration.pb.cc.o
+[118/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceValues.cpp.o
+E:/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/ResourceValues.cpp:447:17: warning: implicit conversion from 'type' (aka 'long') to 'float' changes value from 9223372036854775807 to 9223372036854775808 [-Wimplicit-const-int-float-conversion]
+
+  447 |   if (fabs(f) > std::numeric_limits<int64_t>::max() || fabs(f) < 1e-10) {
+
+      |               ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1 warning generated.
+
+[119/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlUtil.cpp.o
+[120/125] Building CXX object CMakeFiles/libaapt2.dir/E_/Workspace/AI/Forge/research/android-sdk-tools/src/base/tools/aapt2/xml/XmlDom.cpp.o
+[121/125] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/ResourceMetadata.pb.cc.o
+[122/125] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/ApkInfo.pb.cc.o
+[123/125] Building CXX object CMakeFiles/libaapt2.dir/aapt-proto/Resources.pb.cc.o
+[124/125] Linking CXX static library liblibaapt2.a
+[125/125] Linking CXX executable aapt2
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          D8DA9EBC60BC50D48A426F75B79F672370A283C659E951A3939FB66D83F824BB       E:\Workspace\AI\Forge\.cache\nat…
+SHA256          177E17F064C236C9E96B55311490CA3E01559588EB1EBBAE532DD4ED35673661       E:\Workspace\AI\Forge\.cache\nat…
+Tools prepared at E:\Workspace\AI\Forge\.cache\native-tools\forge-source-candidate. Use -PforgeNativeToolsDir=E:\Workspace\AI\Forge\.cache\native-tools\forge-source-candidate for the host APK build.
+
