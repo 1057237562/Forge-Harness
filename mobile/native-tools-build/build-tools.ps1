@@ -28,7 +28,9 @@ $build = if ($BuildDirectory) { [IO.Path]::GetFullPath($BuildDirectory) } else {
 if ($LASTEXITCODE -ne 0) { throw 'Native tool configuration failed' }
 & $cmake --build $build --target aapt2 zipalign -j 8
 if ($LASTEXITCODE -ne 0) { throw 'Native tool build failed' }
-$output = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $cache 'native-tools/forge-source-candidate' }
+$destination = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $cache 'native-tools/forge-source-candidate' }
+# Prepare the complete bundle before touching the previously verified output.
+$output = Join-Path $cache ("native-tools/staging-" + [Guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Force $output | Out-Null
 foreach ($name in @('aapt2','zipalign')) {
     Copy-Item -LiteralPath (Join-Path $build $name) -Destination (Join-Path $output $name)
@@ -60,5 +62,18 @@ $provenance = [ordered]@{
     noticeInventorySha256 = (Get-FileHash (Join-Path $output 'notice-inventory.json') -Algorithm SHA256).Hash.ToLowerInvariant()
 }
 $provenance | ConvertTo-Json -Depth 8 | Set-Content (Join-Path $output 'provenance.json') -Encoding utf8
+New-Item -ItemType Directory -Force $destination | Out-Null
+# Publish provenance last. If publication is interrupted, the packaging hash
+# checks reject mixed contents rather than accepting them as a valid tool set.
+foreach ($name in @('aapt2','zipalign','NOTICE.txt','notice-inventory.json','provenance.json')) {
+    $temporary = Join-Path $destination (".$name-" + [Guid]::NewGuid().ToString('N') + '.tmp')
+    Copy-Item -LiteralPath (Join-Path $output $name) -Destination $temporary
+    [IO.File]::Move($temporary, (Join-Path $destination $name), $true)
+}
+foreach ($name in @('aapt2','zipalign','NOTICE.txt','notice-inventory.json','provenance.json')) {
+    [IO.File]::Delete((Join-Path $output $name))
+}
+[IO.Directory]::Delete($output, $false)
+$output = $destination
 Get-FileHash (Join-Path $output 'aapt2'),(Join-Path $output 'zipalign') -Algorithm SHA256
 Write-Output "Tools prepared at $output. Use -PforgeNativeToolsDir=$output for the host APK build."

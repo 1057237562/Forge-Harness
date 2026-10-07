@@ -2061,7 +2061,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun consumeToast() = _state.update { it.copy(toastMessage = null) }
 
-    fun createProject(name: String, androidTemplate: Boolean = true) {
+    fun createProject(name: String, androidTemplate: Boolean = true, kotlinTemplate: Boolean = false) {
         if (name.isBlank()) return
         if (_state.value.isRunning || _state.value.projectTerminalRunning) {
             _state.update { it.copy(toastMessage = "Stop the background task before creating another project") }
@@ -2074,13 +2074,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             .first { it !in usedSlugs }
         val project = Project(
             name = name.trim(),
-            description = if (androidTemplate) "Native Android Java/XML application" else "Empty project workspace",
-            language = if (androidTemplate) "Java" else "General",
+            description = if (androidTemplate) "Native Android ${if (kotlinTemplate) "Kotlin" else "Java"}/XML application" else "Empty project workspace",
+            language = if (androidTemplate) { if (kotlinTemplate) "Kotlin" else "Java" } else "General",
             slug = slug,
         )
         val workspace = File(getApplication<Application>().filesDir, "workspaces/${project.id}")
         val prepared = runCatching {
-            if (androidTemplate) dev.forge.build.AndroidProjectTemplate.create(workspace, project.name, "dev.forge.apps.p" + project.id.replace("-", "").take(12))
+            if (androidTemplate) dev.forge.build.AndroidProjectTemplate.create(workspace, project.name, "dev.forge.apps.p" + project.id.replace("-", "").take(12), kotlinTemplate)
             else check(workspace.mkdirs()) { "Could not create project directory" }
         }
         if (prepared.isFailure) {
@@ -2284,9 +2284,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun detectImportedProjectMetadata(root: File): Pair<String, String> {
+        if (File(root, ".forge/project.json").isFile) {
+            val model = runCatching { dev.forge.build.ProjectInspector().inspect(root) }.getOrNull()
+            val language = when {
+                model == null -> "Android"
+                model.kotlinRoots.isEmpty() -> "Java / XML"
+                model.javaRoots.isEmpty() -> "Kotlin / XML"
+                else -> "Java + Kotlin / XML"
+            }
+            return "Imported Forge Android project" to language
+        }
         val names = root.walkTopDown().maxDepth(3).filter(File::isFile).map { it.name.lowercase() }.toSet()
         return when {
-            File(root, ".forge/project.json").isFile -> "Imported Forge Android project" to "Java / XML"
             "androidmanifest.xml" in names && names.none { it.startsWith("build.gradle") } -> "Imported Android project" to "Java / XML"
             names.any { it == "settings.gradle.kts" || it == "build.gradle.kts" } -> "Imported Gradle project" to "Kotlin"
             names.any { it == "settings.gradle" || it == "build.gradle" } -> "Imported Gradle project" to "Java"
@@ -3697,4 +3706,3 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         private const val TEST_OPENROUTER_MODEL = "stealth/ox-alpha"
     }
 }
-

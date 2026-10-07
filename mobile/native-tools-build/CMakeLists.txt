@@ -20,6 +20,11 @@ endif()
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
 set(SRC "${FORGE_SDK_SOURCE}/src")
+add_compile_options(
+    "-ffile-prefix-map=${FORGE_SDK_SOURCE}=/forge/sdk-sources"
+    "-ffile-prefix-map=${CMAKE_CURRENT_SOURCE_DIR}=/forge/tool-recipes"
+    "-ffile-prefix-map=${CMAKE_CURRENT_BINARY_DIR}=/forge/tool-build"
+    "-fdebug-compilation-dir=/forge/tool-build")
 add_compile_definitions(_FILE_OFFSET_BITS=64)
 # libbase guards newer log APIs with __builtin_available; ask the NDK to
 # declare them as weak so those guards remain usable on API 28.

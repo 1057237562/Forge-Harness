@@ -63,6 +63,31 @@
 
 ## 当前环境与下一步
 
+Kotlin 工程模板已接产品入口：新建 Android 工程可选 Java/Kotlin，保留 XML 布局、点击计数和
+状态保存。Kotlin 模板声明 kotlin=[src]/java=[]，使用内置 1.9.24 标准库，无须下载依赖。
+主应用构建安装通过，核心模板模型测试通过；未修改的 Java 与 Kotlin 模板均真机离线编译成功，
+两项设备测试通过（29.379 秒），生成 APK 包名验证通过。证据 kotlin-template-device-tests.txt、
+kotlin-template-build-result.json、kotlin-template-model-tests.xml。模板 Activity 点击/旋转行为和
+新建对话框的可见 UI 尚未验收，不能把构建测试等同于交互完成。
+
+工具导出失败路径改进：先在唯一暂存目录完成剥离、通知及来源清单生成，再逐文件原子替换发布，
+provenance 最后更新。准备阶段失败不会先覆盖旧工具；发布中断若留下混合内容，既有摘要校验
+会拒绝打包。成功后仅删除本次已知暂存文件及空目录，不递归清理其他目录。
+两次正常脚本导出通过，发布摘要核对通过，日志 staged-tools-build.txt；尚未做进程强杀的发布中断实验。
+
+路径归一化工具已应用内回归：重新导出来源清单并打包安装，10 项 Java/JAR/AAR/Kotlin/默认方法
+设备测试全部通过（104.557 秒），证据 remapped-tools-device-tests.txt；实际工具 profile 保存于
+remapped-tools-tested-profile.json。直接从 APK 提取的九个 ARM64 ELF 文件全部通过 LOAD 对齐
+及虚拟地址/文件偏移模 16 KB 一致性检查，证据 current-apk-native-alignment.json。
+这仍不代表 16 KB 页设备运行、可见 UI 或完整 Agent 模型闭环验收。
+
+独立构建目录复现：新增 build-tools.ps1 的 BuildDirectory/OutputDirectory 参数，在空目录完整
+重建成功，首次摘要不同，发现生成源码的绝对构建路径进入二进制。已添加源码/配方/构建目录
+的编译路径映射及固定调试编译目录，再在两个目录各完整构建，剥离调试信息后 aapt2/zipalign
+摘要分别完全一致。证据 source-tools-clean-comparison.json（首次差异）、
+source-tools-remapped-comparison.json（修复后相同）。这是同一机器/NDK、共享固定源码的独立构建目录
+复现，不是另一台干净机器验证。新路径映射版本尚未替换已设备验证的 candidate 工具。
+
 源码工具增量构建修复：兼容头/源及生成 CMake 配方仅在内容变化时写入；protoc 输出先进入 staging，
 再用 COPYONLY 内容比较更新实际编译输入。连续两次完整 build-tools.ps1 执行均显示
 `ninja: no work to do`，两个工具 SHA-256 与修改前相同，避免每次配置重编译约百个对象文件。

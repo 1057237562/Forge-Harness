@@ -2566,6 +2566,7 @@ private fun ProviderChoiceRow(
         ProviderKind.KIMI -> Color(0xFF8B7CF6)
         ProviderKind.OPENCODE_ZEN -> Color(0xFF22C55E)
         ProviderKind.NVIDIA_NIM -> Color(0xFF76B900)
+        ProviderKind.ZEROSEAL -> Color(0xFF0EA5E9)
         ProviderKind.CUSTOM -> MaterialTheme.colorScheme.primary
     }
     val mark = when (provider) {
@@ -2576,6 +2577,7 @@ private fun ProviderChoiceRow(
         ProviderKind.KIMI -> "K"
         ProviderKind.OPENCODE_ZEN -> "Z"
         ProviderKind.NVIDIA_NIM -> "NV"
+        ProviderKind.ZEROSEAL -> "ZS"
         ProviderKind.CUSTOM -> "<>"
     }
 
@@ -3052,7 +3054,7 @@ private fun ProjectsScreen(
     state: AppUiState,
     listState: LazyListState = rememberSaveable(saver = LazyListState.Saver) { LazyListState() },
     onOpen: (Project) -> Unit,
-    onCreate: (String, Boolean) -> Unit,
+    onCreate: (String, Boolean, Boolean) -> Unit,
     onCreateQuickProject: () -> Unit,
     onImportZip: (Uri) -> Unit,
     onCloneGit: (String) -> Unit,
@@ -3328,6 +3330,7 @@ private fun ProjectsScreen(
         }
     }
     var createAndroidTemplate by rememberSaveable { mutableStateOf(true) }
+    var createKotlinTemplate by rememberSaveable { mutableStateOf(false) }
     if (showCreate) AlertDialog(
         onDismissRequest = { showCreate = false },
         title = { Text("Create a starter project") },
@@ -3336,7 +3339,13 @@ private fun ProjectsScreen(
                 OutlinedTextField(name, { name = it }, label = { Text("Project name") }, singleLine = true)
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     androidx.compose.material3.Checkbox(checked = createAndroidTemplate, onCheckedChange = { createAndroidTemplate = it })
-                    Text("Android Java / XML template")
+                    Text("Android / XML template")
+                }
+                if (createAndroidTemplate) Row(verticalAlignment = Alignment.CenterVertically) {
+                    androidx.compose.material3.RadioButton(selected = !createKotlinTemplate, onClick = { createKotlinTemplate = false })
+                    Text("Java")
+                    androidx.compose.material3.RadioButton(selected = createKotlinTemplate, onClick = { createKotlinTemplate = true })
+                    Text("Kotlin")
                 }
                 Text(if (createAndroidTemplate) "Ready to build with the included native compiler." else "Start with an empty workspace.", style = MaterialTheme.typography.bodySmall)
                 if (name.isNotBlank()) {
@@ -3349,7 +3358,7 @@ private fun ProjectsScreen(
                 }
             }
         },
-        confirmButton = { TextButton(onClick = { onCreate(name, createAndroidTemplate); showCreate = false; name = "" }, enabled = name.isNotBlank()) { Text("Create") } },
+        confirmButton = { TextButton(onClick = { onCreate(name, createAndroidTemplate, createKotlinTemplate); showCreate = false; name = "" }, enabled = name.isNotBlank()) { Text("Create") } },
         dismissButton = { TextButton(onClick = { showCreate = false }) { Text("Cancel") } },
     )
     if (showGitDialog) AlertDialog(

@@ -18,6 +18,15 @@ enum class ProviderKind(
     val fixedBaseUrl: Boolean = false,
     val fixedProtocol: Boolean = false,
 ) {
+    ZEROSEAL(
+        "ZeroSeal",
+        "Use your ZeroSeal API key",
+        ProviderProtocol.OPENAI_CHAT,
+        "https://gw.zeroseal.cn/v1",
+        "deepseek-flash",
+        fixedBaseUrl = true,
+        fixedProtocol = true,
+    ),
     CLAUDE("Claude subscription", "Pro, Max, Team or Enterprise", ProviderProtocol.CLAUDE_LOGIN, "", "default"),
     ANTHROPIC("Anthropic API", "Usage billed through Console", ProviderProtocol.ANTHROPIC, "https://api.anthropic.com", "claude-sonnet-4-6"),
     LLM_ROUTER("OpenRouter", "Use your OpenRouter API key", ProviderProtocol.OPENROUTER, "https://openrouter.ai/api", "~anthropic/claude-sonnet-latest"),
@@ -89,6 +98,7 @@ val DEEPSEEK_HARNESS_PROVIDERS: Set<ProviderKind> = setOf(
     ProviderKind.KIMI,
     ProviderKind.OPENCODE_ZEN,
     ProviderKind.NVIDIA_NIM,
+    ProviderKind.ZEROSEAL,
     ProviderKind.CUSTOM,
 )
 
@@ -96,12 +106,14 @@ val DSH_PROTOCOL_PROVIDERS: Set<ProviderKind> = setOf(
     ProviderKind.KIMI,
     ProviderKind.OPENCODE_ZEN,
     ProviderKind.NVIDIA_NIM,
+    ProviderKind.ZEROSEAL,
     ProviderKind.CUSTOM,
 )
 
 fun defaultDshApiForProvider(kind: ProviderKind): String = when (kind) {
     ProviderKind.OPENCODE_ZEN -> "openai-responses"
     ProviderKind.NVIDIA_NIM -> "openai-completions"
+    ProviderKind.ZEROSEAL -> "openai-completions"
     else -> "anthropic-messages"
 }
 

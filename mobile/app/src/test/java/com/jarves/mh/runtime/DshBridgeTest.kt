@@ -233,6 +233,14 @@ class DshRouteMapperTest {
         assertEquals("https://integrate.api.nvidia.com/v1", route.custom?.baseUrl)
     }
 
+    @Test
+    fun zerosealUsesFixedOpenAiCompletionsRoute() {
+        val route = DshRouteMapper.forProfile(ProviderProfile(ProviderKind.ZEROSEAL))
+        assertEquals("zeroseal", route.name)
+        assertEquals("openai-completions", route.custom?.api)
+        assertEquals("https://gw.zeroseal.cn/v1", route.custom?.baseUrl)
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun claudeSubscriptionIsRejected() {
         DshRouteMapper.forProfile(ProviderProfile(ProviderKind.CLAUDE))
@@ -269,6 +277,16 @@ class AgentProviderPresetTest {
     }
 
     @Test
+    fun zeroSealPresetIsLocked() {
+        val zeroseal = ProviderKind.ZEROSEAL
+        assertEquals("https://gw.zeroseal.cn/v1", zeroseal.defaultBaseUrl)
+        assertTrue(zeroseal.fixedBaseUrl)
+        assertTrue(zeroseal.fixedProtocol)
+        assertEquals("https://gw.zeroseal.cn/v1", ProviderProfile(zeroseal).resolvedBaseUrl)
+        assertEquals(ProviderProtocol.OPENAI_CHAT, zeroseal.protocol)
+    }
+
+    @Test
     fun storedDriftCannotOverrideFixedUrl() {
         val profile = ProviderProfile(ProviderKind.OPENCODE_ZEN, baseUrl = "https://evil.example/", model = "x")
         assertEquals("https://opencode.ai/zen/v1", profile.resolvedBaseUrl)
@@ -287,7 +305,8 @@ class AgentProviderPresetTest {
         assertTrue(ProviderKind.OPENCODE_ZEN in DEEPSEEK_HARNESS_PROVIDERS)
         assertTrue(ProviderKind.DEEPSEEK in DEEPSEEK_HARNESS_PROVIDERS)
         assertTrue(ProviderKind.NVIDIA_NIM in DEEPSEEK_HARNESS_PROVIDERS)
-        assertEquals(7, DEEPSEEK_HARNESS_PROVIDERS.size)
+        assertTrue(ProviderKind.ZEROSEAL in DEEPSEEK_HARNESS_PROVIDERS)
+        assertEquals(8, DEEPSEEK_HARNESS_PROVIDERS.size)
     }
 
     @Test

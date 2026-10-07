@@ -1,0 +1,107 @@
+All locked source revisions verified.
+-- Version: 10.2.0
+-- Build type: Release
+CMake Deprecation Warning at E:/Workspace/AI/Forge/research/android-sdk-tools/src/zopfli/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Could NOT find BZip2 (missing: BZIP2_LIBRARIES BZIP2_INCLUDE_DIR) 
+-- Could not find OPTIONAL package Readline
+-- Could not find OPTIONAL package Editline
+-- 
+-- 
+-- PCRE2-10.44 configuration summary:
+-- 
+--   Install prefix .................. : C:/Program Files (x86)/forge_sdk_tools
+--   C compiler ...................... : E:/Android_SDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+--   C compiler flags ................ : -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O3 -DNDEBUG 
+-- 
+--   Build 8 bit PCRE2 library ....... : ON
+--   Build 16 bit PCRE2 library ...... : OFF
+--   Build 32 bit PCRE2 library ...... : OFF
+--   Enable JIT compiling support .... : OFF
+--   Use SELinux allocator in JIT .... : IGNORE
+--   Enable Unicode support .......... : ON
+--   Newline char/sequence ........... : LF
+--   \R matches only ANYCRLF ......... : OFF
+--   \C is disabled .................. : OFF
+--   EBCDIC coding ................... : OFF
+--   EBCDIC coding with NL=0x25 ...... : OFF
+--   Rebuild char tables ............. : OFF
+--   Internal link size .............. : 2
+--   Maximum variable lookbehind ..... : 255
+--   Parentheses nest limit .......... : 250
+--   Heap limit ...................... : 20000000
+--   Match limit ..................... : 10000000
+--   Match depth limit ............... : MATCH_LIMIT
+--   Build shared libs ............... : OFF
+--   Build static libs ............... : ON
+--      with PIC enabled ............. : OFF
+--   Build pcre2grep ................. : OFF
+--   Enable JIT in pcre2grep ......... : ON
+--   Enable callouts in pcre2grep .... : ON
+--   Enable callout fork in pcre2grep. : ON
+--   Buffer size for pcre2grep ....... : 20480
+--   Build tests (implies pcre2test .. : OFF
+--                and pcre2grep)
+--   Link pcre2grep with libz ........ : ON
+--   Link pcre2grep with libbz2 ...... : Library not found
+--   Link pcre2test with libeditline . : Library not found
+--   Link pcre2test with libreadline . : Library not found
+--   Support Valgrind .................: OFF
+--   Use %zu and %td ..................: AUTO
+-- 
+-- 
+-- 3.21.12.0
+-- Could not find an AWK-compatible program
+-- ===========================================================================
+-- 
+-- Configuration
+--   Generator .................. Ninja
+--   Build type ................. Release
+--   Prefix ..................... C:/Program Files (x86)/forge_sdk_tools
+--   Shared libraries ........... OFF
+--   Character type ............. char (UTF-8)
+--   Library name postfix ....... 
+-- 
+--   Build documentation ........ OFF
+--   Build examples ............. OFF
+--   Build fuzzers .............. OFF
+--   Build tests ................ OFF
+--   Build tools (xmlwf) ........ OFF
+--   Build pkg-config file ...... ON
+--   Install files .............. ON
+-- 
+--   Features
+--     // Advanced options, changes not advised
+--     Attributes info .......... OFF
+--     Context bytes ............ 1024
+--     DTD support .............. ON
+--     General entities ......... ON
+--     Large size ............... OFF
+--     Minimum size ............. OFF
+--     Namespace support ........ ON
+-- 
+--   Entropy sources
+--     getrandom ................ 1
+--     syscall SYS_getrandom .... 1
+--     libbsd ................... OFF
+--     /dev/random .............. ON
+-- 
+-- ===========================================================================
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/Workspace/AI/Forge/.cache/sdk-tools-build
+ninja: no work to do.
+Collected 151 notices; source-header review still required.
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          8B07937EF5C439460B5C12499B9025C5B85D8F9BA439A445D43FF48C60868478       E:\Workspace\AI\Forge\.cache\nat…
+SHA256          CB82BE4CA05631D2D83B971B425B3FD2940E8C9B333A0CDF0AC2524528F8DF35       E:\Workspace\AI\Forge\.cache\nat…
+Tools prepared at E:\Workspace\AI\Forge\.cache\native-tools\forge-source-candidate. Use -PforgeNativeToolsDir=E:\Workspace\AI\Forge\.cache\native-tools\forge-source-candidate for the host APK build.
+

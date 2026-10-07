@@ -87,4 +87,17 @@ class RuntimeLaunchConfigBuilderTest {
         assertEquals("http://127.0.0.1:12345", config.environment["ANTHROPIC_BASE_URL"])
         assertEquals("claude-sonnet-4-6", config.environment["ANTHROPIC_MODEL"])
     }
+
+    @Test
+    fun zeroSealUsesOpenAiCompatibilityGateway() {
+        val config = RuntimeLaunchConfigBuilder.build(
+            ProviderProfile(ProviderKind.ZEROSEAL),
+            authToken = "zs-secret",
+            localGatewayUrl = "http://127.0.0.1:12345",
+        )
+
+        assertEquals("http://127.0.0.1:12345", config.environment["ANTHROPIC_BASE_URL"])
+        assertEquals("claude-sonnet-4-6", config.environment["ANTHROPIC_MODEL"])
+        assertEquals("zs-secret", config.environment["ANTHROPIC_API_KEY"])
+    }
 }

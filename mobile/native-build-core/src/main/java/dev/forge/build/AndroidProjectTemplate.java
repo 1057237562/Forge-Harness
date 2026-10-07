@@ -6,10 +6,13 @@ import java.nio.file.*;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
-/** Creates a standalone native Java/XML project without scripts or downloaded dependencies. */
+/** Creates a standalone native Java or Kotlin/XML project using bundled compiler dependencies. */
 public final class AndroidProjectTemplate {
     private AndroidProjectTemplate() { }
     public static void create(File root, String displayName, String applicationId) throws IOException {
+        create(root, displayName, applicationId, false);
+    }
+    public static void create(File root, String displayName, String applicationId, boolean kotlin) throws IOException {
         if (displayName == null || displayName.trim().isEmpty() || displayName.length() > 100 || displayName.chars().anyMatch(c -> c < 32))
             throw new IOException("App name must contain 1–100 printable characters");
         if (applicationId == null || !applicationId.matches("[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+")) throw new IOException("Invalid application ID");
@@ -18,8 +21,9 @@ public final class AndroidProjectTemplate {
         Files.createDirectory(root.toPath());
         JSONObject config = new JSONObject().put("schemaVersion", 1).put("applicationId", applicationId).put("namespace", applicationId)
             .put("compileSdk", 29).put("minSdk", 28).put("targetSdk", 29).put("versionCode", 1).put("versionName", "1.0")
-            .put("manifest", "AndroidManifest.xml").put("java", new JSONArray().put("src"))
+            .put("manifest", "AndroidManifest.xml").put("java", kotlin ? new JSONArray() : new JSONArray().put("src"))
             .put("resources", new JSONArray().put("res")).put("assets", new JSONArray().put("assets"));
+        if (kotlin) config.put("kotlin", new JSONArray().put("src"));
         write(root, ".forge/project.json", config.toString(2) + "\n");
         write(root, "AndroidManifest.xml", "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"" + applicationId + "\">\n" +
             "  <application android:label=\"@string/app_name\" android:theme=\"@android:style/Theme.Material.Light.NoActionBar\">\n" +
@@ -32,7 +36,16 @@ public final class AndroidProjectTemplate {
         write(root, "res/layout/main.xml", "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:layout_width=\"match_parent\" android:layout_height=\"match_parent\" android:orientation=\"vertical\" android:gravity=\"center\" android:padding=\"24dp\">\n" +
             "  <TextView android:id=\"@+id/message\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:text=\"@string/welcome\" android:textSize=\"22sp\"/>\n" +
             "  <Button android:id=\"@+id/tap\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:text=\"@string/tap\"/>\n</LinearLayout>\n");
-        write(root, "src/" + applicationId.replace('.', '/') + "/MainActivity.java", "package " + applicationId + ";\n\n" +
+        if (kotlin) {
+            write(root, "src/" + applicationId.replace('.', '/') + "/MainActivity.kt", "package " + applicationId + "\n\n" +
+                "class MainActivity : android.app.Activity() {\n    private var taps = 0\n" +
+                "    override fun onCreate(state: android.os.Bundle?) {\n        super.onCreate(state)\n        setContentView(R.layout.main)\n" +
+                "        taps = state?.getInt(\"taps\") ?: 0\n        updateMessage()\n" +
+                "        findViewById<android.view.View>(R.id.tap).setOnClickListener { taps++; updateMessage() }\n    }\n" +
+                "    private fun updateMessage() {\n        findViewById<android.widget.TextView>(R.id.message).text =\n" +
+                "            if (taps == 0) getString(R.string.welcome) else \"Taps: $taps\"\n    }\n" +
+                "    override fun onSaveInstanceState(state: android.os.Bundle) {\n        state.putInt(\"taps\", taps)\n        super.onSaveInstanceState(state)\n    }\n}\n");
+        } else write(root, "src/" + applicationId.replace('.', '/') + "/MainActivity.java", "package " + applicationId + ";\n\n" +
             "public class MainActivity extends android.app.Activity {\n    private int taps;\n" +
             "    @Override public void onCreate(android.os.Bundle state) {\n        super.onCreate(state);\n        setContentView(R.layout.main);\n" +
             "        if (state != null) taps = state.getInt(\"taps\");\n        updateMessage();\n" +
@@ -40,9 +53,9 @@ public final class AndroidProjectTemplate {
             "            @Override public void onClick(android.view.View view) { taps++; updateMessage(); }\n        });\n    }\n" +
             "    private void updateMessage() {\n        ((android.widget.TextView) findViewById(R.id.message)).setText(taps == 0 ? getString(R.string.welcome) : \"Taps: \" + taps);\n    }\n" +
             "    @Override protected void onSaveInstanceState(android.os.Bundle state) { state.putInt(\"taps\", taps); super.onSaveInstanceState(state); }\n}\n");
-        write(root, "README.md", "# " + displayName.trim() + "\n\nOpen the project in Forge, edit Java/XML files, then use Build and run.\n" +
+        write(root, "README.md", "# " + displayName.trim() + "\n\nOpen the project in Forge, edit " + (kotlin ? "Kotlin" : "Java") + "/XML files, then use Build and run.\n" +
             "The project uses the bundled Android native compiler and needs no Gradle wrapper or Termux.\n" +
-            "Configuration: `.forge/project.json`. Java 8, SDK 29, minimum Android 9.\n");
+            "Configuration: `.forge/project.json`. " + (kotlin ? "Kotlin 1.9.24" : "Java 8") + ", SDK 29, minimum Android 9.\n");
         write(root, ".gitignore", "build/\n.forge/local/\n");
         new ProjectInspector().inspect(root);
     }

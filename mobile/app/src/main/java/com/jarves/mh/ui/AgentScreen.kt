@@ -1981,6 +1981,16 @@ private fun defaultModelsForProvider(kind: ProviderKind): List<DiscoveredModel> 
     ProviderKind.NVIDIA_NIM -> listOf(
         DiscoveredModel(ProviderKind.NVIDIA_NIM.defaultModel, "Qwen 2.5 Coder 32B"),
     )
+    ProviderKind.ZEROSEAL -> listOf(
+        DiscoveredModel("deepseek-flash", "DeepSeek Flash"),
+        DiscoveredModel("deepseek-v4-pro", "DeepSeek V4 Pro"),
+        DiscoveredModel("kimi-k3", "Kimi K3"),
+        DiscoveredModel("glm-5.3", "GLM 5.3"),
+        DiscoveredModel("glm-5.3-flash", "GLM 5.3 Flash"),
+        DiscoveredModel("glm-5.3-flashx", "GLM 5.3 FlashX"),
+        DiscoveredModel("qwen3.8-max", "Qwen 3.8 Max"),
+        DiscoveredModel("doubao-seed-2.1-pro", "Doubao Seed 2.1 Pro"),
+    )
     ProviderKind.ANTHROPIC -> listOf(
         DiscoveredModel("claude-3-7-sonnet-20250219", "Claude 3.7 Sonnet (Hybrid)"),
         DiscoveredModel("claude-3-5-sonnet-20241022", "Claude 3.5 Sonnet v2"),
